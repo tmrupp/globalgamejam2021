@@ -26,6 +26,6 @@ public class MoreCube : MonoBehaviour
         var cG = GameObject.Instantiate(cubeGuy);
         var renderer = cG.GetComponent<Renderer>();
         renderer.material.SetColor("_Color", Random.ColorHSV());
-        cG.transform.position = transform.position + new Vector3(Random.Range(-1, 1), Random.Range(0, 3), Random.Range(-1, 1));
+        cG.transform.position = new Vector3(Random.Range(-1, 1), Random.Range(0, 3), Random.Range(-1, 1));
     }
 }
