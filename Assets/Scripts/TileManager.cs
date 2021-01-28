@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
 
-public enum Terrain
-{
+//TODO! Create a "gamemanager" to manage some of this stuff
+
+public enum Terrain {
     four,
     t,
     straight,
@@ -12,12 +13,8 @@ public enum Terrain
     ritual
 }
 
-public class TileManager : MonoBehaviour
-{
-    
-    
-    public static Dictionary<Terrain, string> terrainFiles = new Dictionary<Terrain, string> () 
-    {
+public class TileManager : MonoBehaviour {
+    public static Dictionary<Terrain, string> terrainFiles = new Dictionary<Terrain, string>() {
         {Terrain.four, "path_four_way"},
         {Terrain.t, "path_t"},
         {Terrain.straight, "path_straight"},
@@ -29,8 +26,7 @@ public class TileManager : MonoBehaviour
 
     static public readonly List<Vector2Int> directions = new List<Vector2Int>() {up, right, down, left};
 
-    public static Dictionary<Terrain, List<int>> terrainDirections = new Dictionary<Terrain, List<int>> () 
-    {
+    public static Dictionary<Terrain, List<int>> terrainDirections = new Dictionary<Terrain, List<int>>() {
         {Terrain.four, new List<int>() {0, 1, 2, 3}},
         {Terrain.t, new List<int>() {1, 2, 3}},
         {Terrain.straight, new List<int>() {0, 2}},
@@ -43,56 +39,58 @@ public class TileManager : MonoBehaviour
     List<Terrain> terrains = new List<Terrain>();
     
     public int length = 9, width = 9;
+    public float spacing = 1f; // makes it easier to keep it 1...
 
-    public static Sprite GetSpriteOfTerrain (Terrain t)
-    {
+    List<GameObject> agents = new List<GameObject>();
+
+    public static Sprite GetSpriteOfTerrain (Terrain t) {
         return terrainSprites[t];
     }
 
-    public static List<int> GetDirectionsOfTerrain (Terrain t)
-    {
+    public static List<int> GetDirectionsOfTerrain (Terrain t) {
         return new List<int> (terrainDirections[t]);
     }
 
-    public Terrain GetRandomTerrain ()
-    {
+    public Terrain GetRandomTerrain () {
         return terrains[Random.Range(0, terrains.Count-1)];
     }
 
-    public GameTile GetTileAt (Vector2Int v)
-    {
+    public Vector2Int GetRitualLocation () {
+        return new Vector2Int(width/2, length/2);
+    }
+
+    public GameTile GetTileAt (Vector2Int v) {
         if (v.x >= 0 && v.x < width && v.y >= 0 && v.y < length)
             return tiles[v.x][v.y].GetComponent<GameTile>();
-        else
-        {
+        else {
             Debug.LogError("v out of range " + v.ToString());
             return null;
         }
     }
 
-    public List<Vector2Int> GetNeighborsAt (Vector2Int v)
-    {
+    public List<Vector2Int> GetNeighborsAt (Vector2Int v) {
         return GetTileAt(v).GetDirections().Select(
             x => v + directions[x]).Where(
                 x => !(GetTileAt(x) is null)).ToList();
     }
 
-    void Start()
-    {
+
+    public Vector2 GridToActual (Vector2Int v) { 
+        return v; //TODO!!! 
+    }
+
+    void Start() {
         // load in the sprites
-        foreach (var t in terrainFiles)
-        {
+        foreach (var t in terrainFiles) {
             terrainSprites[t.Key] = (Sprite) Resources.Load("Sprites/" + t.Value, typeof(Sprite));
         }
 
         terrains = System.Enum.GetValues(typeof(Terrain)).OfType<Terrain>().ToList();
 
         // populate the map of tiles with the prefabs
-        for (int i = 0; i < width; i++)
-        {
+        for (int i = 0; i < width; i++) {
             var row = new List<GameObject>();
-            for (int j = 0; j < length; j++)
-            {
+            for (int j = 0; j < length; j++) {
                 Terrain t = GetRandomTerrain();
 
                 // the center is a ritual
@@ -103,5 +101,7 @@ public class TileManager : MonoBehaviour
             }
             tiles.Add(row);
         }
+
+        agents.Add(AgentManager.Create(0, 0, gameObject));
     }
 }

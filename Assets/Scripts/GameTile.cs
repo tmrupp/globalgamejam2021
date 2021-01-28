@@ -13,26 +13,22 @@ public class GameTile : MonoBehaviour
     TileManager tileManager;
     Vector2Int location;
 
-    public static void LoadPrefabs ()
-    {
+    public static void LoadPrefabs () {
         if (tilePrefab is null)
             tilePrefab = (GameObject) Resources.Load("Prefabs/GameTile", typeof(GameObject));
     }
 
     // +n => rotate n times 90 clockwise, - => rotate n times 90 coutner-clockwise
-    public void Rotate (int rotation)
-    {
+    public void Rotate (int rotation) {
         transform.Rotate(transform.eulerAngles + new Vector3(0, 0, -90f * rotation));
         directions = directions.Select(x => (x + rotation) % TileManager.directions.Count).ToList();
     }
 
-    public List<int> GetDirections ()
-    {
+    public List<int> GetDirections () {
         return directions;
     }
     
-    public static GameObject Create (Terrain t, int i, int j, GameObject caller)
-    {
+    public static GameObject Create (Terrain t, int i, int j, GameObject caller) {
         LoadPrefabs();
         var gameTile = GameObject.Instantiate(tilePrefab, new Vector3(i, j, 0), Quaternion.identity);
         gameTile.GetComponent<SpriteRenderer>().sprite = TileManager.GetSpriteOfTerrain(t);
@@ -40,7 +36,8 @@ public class GameTile : MonoBehaviour
         var gt = gameTile.GetComponent<GameTile>();
         gt.terrain = t;
         gt.directions = TileManager.GetDirectionsOfTerrain(t);
-        gt.Rotate(Random.Range(0,3));
+        if (t != Terrain.ritual)
+            gt.Rotate(Random.Range(0,3));
         gt.tileManager = caller.GetComponent<TileManager>();
         gt.location = new Vector2Int(i, j);
 
