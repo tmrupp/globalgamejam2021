@@ -22,7 +22,7 @@ public class GameTile : MonoBehaviour
     // +n => rotate n times 90 clockwise, - => rotate n times 90 coutner-clockwise
     public void Rotate (int rotation)
     {
-        transform.Rotate(transform.eulerAngles + new Vector3(0, 0, 90f * rotation));
+        transform.Rotate(transform.eulerAngles + new Vector3(0, 0, -90f * rotation));
         directions = directions.Select(x => (x + rotation) % TileManager.directions.Count).ToList();
     }
 
