@@ -8,7 +8,8 @@ public enum Terrain
     four,
     t,
     straight,
-    bent
+    bent,
+    ritual
 }
 
 public class TileManager : MonoBehaviour
@@ -20,7 +21,8 @@ public class TileManager : MonoBehaviour
         {Terrain.four, "path_four_way"},
         {Terrain.t, "path_t"},
         {Terrain.straight, "path_straight"},
-        {Terrain.bent, "path_bent"}
+        {Terrain.bent, "path_bent"},
+        {Terrain.ritual, "ritual"}
     };
 
     static Vector2Int up = new Vector2Int(0, 1), right = new Vector2Int(1, 0), down = new Vector2Int(0, -1), left = new Vector2Int(-1, 0);
@@ -32,7 +34,8 @@ public class TileManager : MonoBehaviour
         {Terrain.four, new List<int>() {0, 1, 2, 3}},
         {Terrain.t, new List<int>() {1, 2, 3}},
         {Terrain.straight, new List<int>() {0, 2}},
-        {Terrain.bent, new List<int>() {1, 2}}
+        {Terrain.bent, new List<int>() {1, 2}},
+        {Terrain.ritual, new List<int>()}
     };
     
     public static Dictionary<Terrain, Sprite> terrainSprites = new Dictionary<Terrain, Sprite> ();
@@ -53,7 +56,7 @@ public class TileManager : MonoBehaviour
 
     public Terrain GetRandomTerrain ()
     {
-        return terrains[Random.Range(0, terrains.Count)];
+        return terrains[Random.Range(0, terrains.Count-1)];
     }
 
     public GameTile GetTileAt (Vector2Int v)
@@ -90,7 +93,13 @@ public class TileManager : MonoBehaviour
             var row = new List<GameObject>();
             for (int j = 0; j < length; j++)
             {
-                row.Add(GameTile.Create(GetRandomTerrain(), i, j, gameObject));
+                Terrain t = GetRandomTerrain();
+
+                // the center is a ritual
+                if (width/2 == i && length/2 == j)
+                    t = Terrain.ritual;
+
+                row.Add(GameTile.Create(t, i, j, gameObject));
             }
             tiles.Add(row);
         }
