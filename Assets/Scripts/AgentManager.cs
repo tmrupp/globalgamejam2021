@@ -66,6 +66,13 @@ public class AgentManager : MonoBehaviour
     public delegate void SatisfiesConditions (AgentManager a);
     public static void MonsterCondition (AgentManager a) {
         //... a monster's work is never done
+        foreach (var g in a.tileManager.agents.ToList()) {
+            var agent = g.GetComponent<AgentManager>();
+            if (agent.position == a.position && agent.agentType != AgentType.monster) {
+                agent.KillAgent();
+                Debug.Log("MUNCH");
+            }
+        }
     }
 
     public static void HumanCondition (AgentManager a) {
