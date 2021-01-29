@@ -52,9 +52,9 @@ public class GameTile : MonoBehaviour
     }
 
     private void OnMouseDown() {
-        string s = "neighbors for " + location.ToString() + ": ";
-        tileManager.GetNeighborsAt(location).ForEach(x => s = s + x.ToString() + " ");
-        Debug.Log(s);
+        // string s = "neighbors for " + location.ToString() + ": ";
+        // tileManager.GetNeighborsAt(location).ForEach(x => s = s + x.ToString() + " ");
+        // Debug.Log(s);
 
         // no swappa-da ritual
         if (terrain != Terrain.ritual)
