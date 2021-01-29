@@ -92,8 +92,10 @@ public class TileManager : MonoBehaviour {
         tile.gameObject.transform.position = GridToActual(tile.GetLocation());
     }
 
-    public List<Vector2Int> GetAgentLocations () {
-        return agents.Select(x => x.GetComponent<AgentManager>().position).ToList();
+    public List<(AgentType, Vector2Int)> GetAgentLocations () {
+        return agents.Select(
+            x => x.GetComponent<AgentManager>()).Select(
+                x => (x.agentType, x.position)).ToList();
     }
 
     //Swap the position of two passed in tiles
@@ -131,6 +133,7 @@ public class TileManager : MonoBehaviour {
 
         // create a hunter
         agents.Add(AgentManager.Create(AgentType.hunter, 0, 0, gameObject));
+        agents.Add(AgentManager.Create(AgentType.monster, 5, 5, gameObject));
     }
 
     GameObject swapTile = null;

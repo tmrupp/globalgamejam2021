@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
 
 public enum AgentType {
     hunter,
@@ -14,11 +15,18 @@ public class AgentManager : MonoBehaviour
     List<Vector2Int> targets = new List<Vector2Int>();
     static GameObject agentPrefab;
     TileManager tileManager;
+    public AgentType agentType;
 
     public static Dictionary<AgentType, Color> agentColors = new Dictionary<AgentType, Color>() {
         {AgentType.hunter, Color.red},
         {AgentType.victim, Color.magenta},
         {AgentType.monster, Color.green},
+    };
+
+    public static Dictionary<AgentType, SetTargets> targetGetters = new Dictionary<AgentType, SetTargets>() {
+        {AgentType.hunter, HunterSetTargets},
+        {AgentType.victim, VictimSetTargets},
+        {AgentType.monster, MonsterSetTargets},
     };
 
     public static void LoadPrefabs () {
@@ -28,32 +36,42 @@ public class AgentManager : MonoBehaviour
 
     private void GetHunterTargets () {
         targets = new List<Vector2Int>();
-        targets.Add(tileManager.GetRitualLocation());
     }
 
     private void GetMonsterTargets () {
-        targets = new List<Vector2Int>();
-        targets.Add(tileManager.GetRitualLocation());
     }
 
+    public delegate void SetTargets (AgentManager a);
+    public static void MonsterSetTargets (AgentManager a) {
+        a.targets = a.tileManager.GetAgentLocations().Where(
+            x => x.Item1 != AgentType.monster).ToList().Select(
+                x => x.Item2).ToList();
+    }
 
+    public static void HunterSetTargets (AgentManager a) {
+        a.targets = new List<Vector2Int>() {a.tileManager.GetRitualLocation()};
+    }
 
-    private void SetTargets () {
-
+    public static void VictimSetTargets (AgentManager a) {
+        // TODO...
     }
 
     // must be called from a tilemanager
     public static GameObject Create (AgentType type, int i, int j, GameObject caller) {
         LoadPrefabs();
-        var gO = GameObject.Instantiate(agentPrefab, new Vector3(i, j, 0), Quaternion.identity);
+        Vector2Int v = new Vector2Int(i, j);
+        TileManager tm = caller.GetComponent<TileManager>();
+        var gO = GameObject.Instantiate(agentPrefab, tm.GridToActual(v), Quaternion.identity);
 
         var agent = gO.GetComponent<AgentManager>();
-        agent.tileManager = caller.GetComponent<TileManager>();
+        agent.agentType = type;
+        agent.tileManager = tm;
+        agent.position = v;
 
         gO.GetComponent<SpriteRenderer>().color = agentColors[type];
 
         // assume hunter to begin with
-        agent.targets.Add(agent.tileManager.GetRitualLocation());
+        targetGetters[type](agent);
         agent.FindNextMove();
         return gO;
     }
@@ -96,9 +114,10 @@ public class AgentManager : MonoBehaviour
     public void FindNextMove () {
         Dictionary<Vector2Int, Vector2Int> cameFrom = new Dictionary<Vector2Int, Vector2Int>();
         Queue<Vector2Int> search = new Queue<Vector2Int>();
-        (Vector2Int, int) closest = (position, int.MaxValue/*Manhattan(position, targets[0])*/);
+        (Vector2Int, int) closest = (position, int.MaxValue);
         search.Enqueue(position);
         cameFrom[position] = position;
+        targetGetters[agentType](this);
 
         while (search.Count != 0) {
             var v = search.Dequeue();
@@ -122,15 +141,12 @@ public class AgentManager : MonoBehaviour
         }
 
         var path = GetPath(cameFrom, closest.Item1);
-        // path.ForEach(x => Debug.Log(x.ToString()));
         nextPosition = path[path.Count-1];
         Face(nextPosition);
-
-        // Debug.Log("did not find a path, despair!");
     }
 
     public void Move () {
-        transform.position = new Vector3(nextPosition.x, nextPosition.y, 0);
+        transform.position = tileManager.GridToActual(nextPosition);
         prevPosition = position;
         position = nextPosition;
         FindNextMove();
