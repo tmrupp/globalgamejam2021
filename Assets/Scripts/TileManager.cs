@@ -156,14 +156,32 @@ public class TileManager : MonoBehaviour {
         }
 
         //Debug: take stock of tiles we've created
+        Dictionary<string, int> uniqueTiles = new Dictionary<string, int>();
         foreach (var row in tiles)
         {
             foreach (var tile in row)
             {
                 GameTile gt = tile.GetComponent<GameTile>();
-                //continue working here
+                if (gt.Terrain != Terrain.ritual)
+                {
+                    string uniqueString = terrainFiles[gt.Terrain] + ":" + (gt.Directions.Sum() + gt.Directions.Aggregate<int>((product, next) => product *= next));
+                    if (uniqueTiles.ContainsKey(uniqueString))
+                    {
+                        uniqueTiles[uniqueString]++;
+                    }
+                    else
+                    {
+                        uniqueTiles.Add(uniqueString, 1);
+                    }
+                }
             }
         }
+        string outstring = string.Empty;
+        foreach (var tile in uniqueTiles)
+        {
+            outstring += tile.Key + ":\t\t" + tile.Value + "\n";
+        }
+        Debug.Log(outstring);
 
         // create a hunter
         agents.Add(AgentManager.Create(AgentType.hunter, 0, 0, gameObject));

@@ -17,6 +17,20 @@ public class AgentManager : MonoBehaviour
     TileManager tileManager;
     public AgentType agentType;
 
+    public static bool ResolvingMovement = false;
+
+    public static List<AgentManager> allAgents = new List<AgentManager>();
+
+    public static void Register(AgentManager am)
+    {
+        allAgents.Add(am);
+    }
+
+    public static void Unregister(AgentManager am)
+    {
+        allAgents.Remove(am);
+    }
+
     public static Dictionary<AgentType, Color> agentColors = new Dictionary<AgentType, Color>() {
         {AgentType.hunter, Color.red},
         {AgentType.victim, Color.magenta},
@@ -173,6 +187,18 @@ public class AgentManager : MonoBehaviour
         Face(nextPosition);
     }
 
+    public static void MoveAll()
+    {
+        ResolvingMovement = true;
+
+        foreach(var agent in allAgents)
+        {
+            agent.Move();
+        }
+
+        ResolvingMovement = false;
+    }
+
     public void Move () {
         transform.position = tileManager.GridToActual(nextPosition);
         prevPosition = position;
@@ -184,7 +210,7 @@ public class AgentManager : MonoBehaviour
     public void Update () {
         if (Input.GetKeyDown(KeyCode.Return)) {
             // Debug.Log("got a return");
-            Move();
+            MoveAll();
         }
     }   
 }
