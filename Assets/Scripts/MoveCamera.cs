@@ -34,6 +34,6 @@ public class MoveCamera : MonoBehaviour
             move += Vector3.right;
         }
 
-        mc.transform.position += move;
+        mc.transform.position += move * speed;
     }
 }
