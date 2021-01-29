@@ -1,0 +1,718 @@
+fileFormatVersion: 2
+guid: e171604ef48285f458b0dd064f52fb00
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5073610493914845983
+    second: Julia Sprite-Sheet_0
+  - first:
+      213: 1681633409139238611
+    second: Julia Sprite-Sheet_1
+  - first:
+      213: -6459312001640726141
+    second: Julia Sprite-Sheet_2
+  - first:
+      213: -5263376244901972875
+    second: Julia Sprite-Sheet_3
+  - first:
+      213: -1086854842141360458
+    second: Julia Sprite-Sheet_4
+  - first:
+      213: -6837750012894666618
+    second: Julia Sprite-Sheet_5
+  - first:
+      213: 1930212250300780736
+    second: Julia Sprite-Sheet_6
+  - first:
+      213: -6164617990536940060
+    second: Julia Sprite-Sheet_7
+  - first:
+      213: -4550431916908752391
+    second: Julia Sprite-Sheet_8
+  - first:
+      213: -7060136970811905108
+    second: Julia Sprite-Sheet_9
+  - first:
+      213: 7782763401539542202
+    second: Julia Sprite-Sheet_10
+  - first:
+      213: -4713163941806085734
+    second: Julia Sprite-Sheet_11
+  - first:
+      213: 5108597363551568729
+    second: Julia Sprite-Sheet_12
+  - first:
+      213: 1566772826493438930
+    second: Julia Sprite-Sheet_13
+  - first:
+      213: -3613663112646464062
+    second: Julia Sprite-Sheet_14
+  - first:
+      213: 3518952949992791203
+    second: Julia Sprite-Sheet_15
+  - first:
+      213: -6494813210469473496
+    second: Julia Sprite-Sheet_16
+  - first:
+      213: -6256160644100349796
+    second: Julia Sprite-Sheet_17
+  - first:
+      213: -3622264980894089300
+    second: Julia Sprite-Sheet_18
+  - first:
+      213: -3370611406473541278
+    second: Julia Sprite-Sheet_19
+  - first:
+      213: 8767039049485116897
+    second: Julia Sprite-Sheet_20
+  - first:
+      213: -4004983277899606000
+    second: Julia Sprite-Sheet_21
+  - first:
+      213: 836420014280397614
+    second: Julia Sprite-Sheet_22
+  - first:
+      213: 3249576862457875199
+    second: Julia Sprite-Sheet_23
+  - first:
+      213: -7127176244748247852
+    second: Julia Sprite-Sheet_24
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Julia Sprite-Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 18
+        width: 31
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ece28d032ae699b0800000000000000
+      internalID: -5073610493914845983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Julia Sprite-Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 18
+        width: 31
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d66c2a0dac565710800000000000000
+      internalID: 1681633409139238611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Julia Sprite-Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 305
+        y: 18
+        width: 30
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38189c815f9eb56a0800000000000000
+      internalID: -6459312001640726141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Julia Sprite-Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 434
+        y: 18
+        width: 29
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 574736b113bb4f6b0800000000000000
+      internalID: -5263376244901972875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Julia Sprite-Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 562
+        y: 18
+        width: 29
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6be30cb8747bae0f0800000000000000
+      internalID: -1086854842141360458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Julia Sprite-Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 689
+        y: 18
+        width: 31
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 680ad7a579e6b11a0800000000000000
+      internalID: -6837750012894666618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Julia Sprite-Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 817
+        y: 18
+        width: 31
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c01940a0dd79ca10800000000000000
+      internalID: 1930212250300780736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Julia Sprite-Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 945
+        y: 18
+        width: 31
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e530126990e27aa0800000000000000
+      internalID: -6164617990536940060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Julia Sprite-Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 1073
+        y: 18
+        width: 31
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f1dd02e74e99d0c0800000000000000
+      internalID: -4550431916908752391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Julia Sprite-Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 1201
+        y: 16
+        width: 32
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cab672dc4da550e90800000000000000
+      internalID: -7060136970811905108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Julia Sprite-Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 1329
+        y: 17
+        width: 31
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abcdcaf241ee10c60800000000000000
+      internalID: 7782763401539542202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Julia Sprite-Sheet_11
+      rect:
+        serializedVersion: 2
+        x: 1457
+        y: 18
+        width: 31
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a99e778cd5a779eb0800000000000000
+      internalID: -4713163941806085734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Julia Sprite-Sheet_12
+      rect:
+        serializedVersion: 2
+        x: 1585
+        y: 18
+        width: 33
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9530df25c3265e640800000000000000
+      internalID: 5108597363551568729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Julia Sprite-Sheet_13
+      rect:
+        serializedVersion: 2
+        x: 1713
+        y: 17
+        width: 32
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2db40e6a59b4eb510800000000000000
+      internalID: 1566772826493438930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Julia Sprite-Sheet_14
+      rect:
+        serializedVersion: 2
+        x: 1840
+        y: 18
+        width: 32
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2cd66c88b80b9ddc0800000000000000
+      internalID: -3613663112646464062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Julia Sprite-Sheet_15
+      rect:
+        serializedVersion: 2
+        x: 1970
+        y: 17
+        width: 29
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ac12a55015d5d030800000000000000
+      internalID: 3518952949992791203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Julia Sprite-Sheet_16
+      rect:
+        serializedVersion: 2
+        x: 2098
+        y: 18
+        width: 32
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 823e37bcbc9cdd5a0800000000000000
+      internalID: -6494813210469473496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Julia Sprite-Sheet_17
+      rect:
+        serializedVersion: 2
+        x: 2223
+        y: 16
+        width: 32
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c90ae9e6a07ad29a0800000000000000
+      internalID: -6256160644100349796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Julia Sprite-Sheet_18
+      rect:
+        serializedVersion: 2
+        x: 2352
+        y: 17
+        width: 31
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: caf787301312bbdc0800000000000000
+      internalID: -3622264980894089300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Julia Sprite-Sheet_19
+      rect:
+        serializedVersion: 2
+        x: 2480
+        y: 18
+        width: 31
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 269c349b8ce2931d0800000000000000
+      internalID: -3370611406473541278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Julia Sprite-Sheet_20
+      rect:
+        serializedVersion: 2
+        x: 2606
+        y: 18
+        width: 32
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e5e984d097caa970800000000000000
+      internalID: 8767039049485116897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Julia Sprite-Sheet_21
+      rect:
+        serializedVersion: 2
+        x: 2735
+        y: 17
+        width: 31
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0181a659de07b68c0800000000000000
+      internalID: -4004983277899606000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Julia Sprite-Sheet_22
+      rect:
+        serializedVersion: 2
+        x: 2865
+        y: 18
+        width: 31
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e23d53a429f8b9b00800000000000000
+      internalID: 836420014280397614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Julia Sprite-Sheet_23
+      rect:
+        serializedVersion: 2
+        x: 2992
+        y: 17
+        width: 31
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ffa412d70f0d81d20800000000000000
+      internalID: 3249576862457875199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Julia Sprite-Sheet_24
+      rect:
+        serializedVersion: 2
+        x: 3117
+        y: 18
+        width: 34
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4dc9d2087fe271d90800000000000000
+      internalID: -7127176244748247852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 712d236d7f726244cb5b90a01404cdaf
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
