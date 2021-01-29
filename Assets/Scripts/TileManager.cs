@@ -63,7 +63,6 @@ public class TileManager : MonoBehaviour {
         if (v.x >= 0 && v.x < width && v.y >= 0 && v.y < length)
             return tiles[v.x][v.y].GetComponent<GameTile>();
         else {
-            Debug.LogError("v out of range " + v.ToString());
             return null;
         }
     }
@@ -75,8 +74,8 @@ public class TileManager : MonoBehaviour {
     }
 
 
-    public Vector2 GridToActual (Vector2Int v) { 
-        return v; //TODO!!! 
+    public Vector3 GridToActual (Vector2Int v) { 
+        return new Vector3(v.x, v.y, 0); //TODO!!! 
     }
 
     void Start() {

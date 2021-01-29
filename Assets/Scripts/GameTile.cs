@@ -5,7 +5,6 @@ using System.Linq;
 
 public class GameTile : MonoBehaviour
 {
-    // TODO: Indicate viable paths out!
     Terrain terrain;
     // setup the tile prefab
     static GameObject tilePrefab;
@@ -18,7 +17,7 @@ public class GameTile : MonoBehaviour
             tilePrefab = (GameObject) Resources.Load("Prefabs/GameTile", typeof(GameObject));
     }
 
-    // +n => rotate n times 90 clockwise, - => rotate n times 90 coutner-clockwise
+    // +n => rotate n times 90 clockwise, - => rotate n times 90 counter-clockwise
     public void Rotate (int rotation) {
         transform.Rotate(transform.eulerAngles + new Vector3(0, 0, -90f * rotation));
         directions = directions.Select(x => (x + rotation) % TileManager.directions.Count).ToList();
