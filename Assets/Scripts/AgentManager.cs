@@ -119,7 +119,7 @@ public class AgentManager : MonoBehaviour
         while (search.Count != 0) {
             var v = search.Dequeue();
 
-            int distance = GetClosest(v, targets);
+            int distance = v == position ? int.MaxValue : GetClosest(v, targets);
             // if this position is closer, but also not the previous position or the current one
             if (distance < closest.Item2) {
                 closest = (v, distance);
