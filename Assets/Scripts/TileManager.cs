@@ -41,7 +41,7 @@ public class TileManager : MonoBehaviour {
     public int length = 9, width = 9;
     public float spacing = 1f; // makes it easier to keep it 1...
 
-    List<GameObject> agents = new List<GameObject>();
+    public List<GameObject> agents = new List<GameObject>();
 
     public static Sprite GetSpriteOfTerrain (Terrain t) {
         return terrainSprites[t];
