@@ -43,7 +43,7 @@ public class AgentManager : MonoBehaviour
     }
 
     void Face (Vector2Int v) {
-        transform.LookAt(new Vector3 (v.x, v.y, 0));
+        // transform.LookAt(new Vector3 (v.x, v.y, 0));
     }
 
     public void FindNextMove () {
