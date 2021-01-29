@@ -68,11 +68,35 @@ public class TileManager : MonoBehaviour {
     }
 
     public List<Vector2Int> GetNeighborsAt (Vector2Int v) {
-        return GetTileAt(v).GetDirections().Select(
-            x => v + directions[x]).Where(
+        return GetNeighborsAtNoBounds(v).Where(
                 x => !(GetTileAt(x) is null)).ToList();
     }
 
+    public List<Vector2Int> GetNeighborsAtNoBounds (Vector2Int v) {
+        if (GetTileAt(v) is null)
+            return new List<Vector2Int>();
+        else
+            return GetTileAt(v).GetDirections().Select(
+                x => v + directions[x]).ToList();
+    }
+
+    public List<Vector2Int> GetEdges () {
+        List<Vector2Int> edges = new List<Vector2Int>();
+
+        for (int i = -1; i <= width; i++) {
+            edges.Add(new Vector2Int(i, -1));
+            edges.Add(new Vector2Int(i, length));
+        }
+
+        for (int i = 0; i < width; i++) {
+            edges.Add(new Vector2Int(-1, i));
+            edges.Add(new Vector2Int(width, i));
+        }
+
+        // edges.ForEach(x => Debug.Log(x.ToString()));
+
+        return edges;
+    }
 
     public Vector3 GridToActual (Vector2Int v) { 
         return new Vector3(v.x, v.y, 0); //TODO!!! 
@@ -134,6 +158,7 @@ public class TileManager : MonoBehaviour {
         // create a hunter
         agents.Add(AgentManager.Create(AgentType.hunter, 0, 0, gameObject));
         agents.Add(AgentManager.Create(AgentType.monster, 5, 5, gameObject));
+        agents.Add(AgentManager.Create(AgentType.victim, 3, 5, gameObject));
     }
 
     GameObject swapTile = null;

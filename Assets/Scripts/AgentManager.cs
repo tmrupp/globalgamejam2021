@@ -34,15 +34,10 @@ public class AgentManager : MonoBehaviour
             agentPrefab = (GameObject) Resources.Load("Prefabs/Agent", typeof(GameObject));
     }
 
-    private void GetHunterTargets () {
-        targets = new List<Vector2Int>();
-    }
-
-    private void GetMonsterTargets () {
-    }
 
     public delegate void SetTargets (AgentManager a);
     public static void MonsterSetTargets (AgentManager a) {
+        // only one that is dynamic
         a.targets = a.tileManager.GetAgentLocations().Where(
             x => x.Item1 != AgentType.monster).ToList().Select(
                 x => x.Item2).ToList();
@@ -53,8 +48,9 @@ public class AgentManager : MonoBehaviour
     }
 
     public static void VictimSetTargets (AgentManager a) {
-        // TODO...
+        a.targets = a.tileManager.GetEdges();
     }
+
 
     // must be called from a tilemanager
     public static GameObject Create (AgentType type, int i, int j, GameObject caller) {
@@ -132,7 +128,7 @@ public class AgentManager : MonoBehaviour
                 break;
             }
 
-            foreach (var n in tileManager.GetNeighborsAt(v)) {
+            foreach (var n in tileManager.GetNeighborsAtNoBounds(v)) {
                 if (!cameFrom.ContainsKey(n)) {
                     cameFrom[n] = v;
                     search.Enqueue(n);
