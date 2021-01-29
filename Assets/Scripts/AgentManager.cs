@@ -29,11 +29,16 @@ public class AgentManager : MonoBehaviour
         {AgentType.monster, MonsterSetTargets},
     };
 
+    public static Dictionary<AgentType, SatisfiesConditions> agentConditions = new Dictionary<AgentType, SatisfiesConditions>() {
+        {AgentType.hunter, HumanCondition},
+        {AgentType.victim, HumanCondition},
+        {AgentType.monster, MonsterCondition},
+    };
+
     public static void LoadPrefabs () {
         if (agentPrefab is null)
             agentPrefab = (GameObject) Resources.Load("Prefabs/Agent", typeof(GameObject));
     }
-
 
     public delegate void SetTargets (AgentManager a);
     public static void MonsterSetTargets (AgentManager a) {
@@ -49,6 +54,30 @@ public class AgentManager : MonoBehaviour
 
     public static void VictimSetTargets (AgentManager a) {
         a.targets = a.tileManager.GetEdges();
+    }
+
+    public void KillAgent () {
+        tileManager.RemoveAgent(gameObject);
+        Destroy(gameObject);
+    }
+
+    public delegate void SatisfiesConditions (AgentManager a);
+    public static void MonsterCondition (AgentManager a) {
+        //... a monster's work is never done
+    }
+
+    public static void HumanCondition (AgentManager a) {
+        if (a.targets.Contains(a.position)) {
+            a.KillAgent();
+            Debug.Log("got where I wanted to go");
+            return;
+        }
+
+        if (a.position == a.tileManager.GetRitualLocation()) {
+            a.KillAgent();
+            Debug.Log("Victim consumed!");
+            return;
+        }
     }
 
 
@@ -115,7 +144,6 @@ public class AgentManager : MonoBehaviour
         cameFrom[position] = position;
         targetGetters[agentType](this);
         
-
         while (search.Count != 0) {
             var v = search.Dequeue();
 
@@ -149,6 +177,7 @@ public class AgentManager : MonoBehaviour
         transform.position = tileManager.GridToActual(nextPosition);
         prevPosition = position;
         position = nextPosition;
+        agentConditions[agentType](this);
         FindNextMove();
     }
 

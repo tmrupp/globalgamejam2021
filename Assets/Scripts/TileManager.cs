@@ -181,6 +181,10 @@ public class TileManager : MonoBehaviour {
         }
     }
 
+    public void RemoveAgent (GameObject a) {
+        agents.Remove(a);
+    }
+
     void Update () {
         // ...
     }
