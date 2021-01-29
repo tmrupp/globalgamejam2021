@@ -49,7 +49,7 @@ public class GameTile : MonoBehaviour
         gt.terrain = t;
         gt.directions = TileManager.GetDirectionsOfTerrain(t);
         if (t != Terrain.ritual)
-            gt.Rotate(Random.Range(0,3));
+            gt.Rotate(Random.Range(0, 4));
         gt.tileManager = tm;
         gt.location = v;
 
