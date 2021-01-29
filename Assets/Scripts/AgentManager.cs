@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class AgentManager : MonoBehaviour
 {
-    Vector2Int position, nextPosition;
+    Vector2Int position, nextPosition, prevPosition;
     List<Vector2Int> targets = new List<Vector2Int>();
     static GameObject agentPrefab;
     TileManager tileManager;
@@ -74,7 +74,7 @@ public class AgentManager : MonoBehaviour
         while (search.Count != 0) {
             var v = search.Dequeue();
 
-            if (GetClosest(v, targets) < closest.Item2) {
+            if (GetClosest(v, targets) < closest.Item2 && v != prevPosition) {
                 closest = (v, GetClosest(v, targets));
             }
 
@@ -101,6 +101,7 @@ public class AgentManager : MonoBehaviour
 
     public void Move () {
         transform.position = new Vector3(nextPosition.x, nextPosition.y, 0);
+        prevPosition = position;
         position = nextPosition;
         FindNextMove();
     }
