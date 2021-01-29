@@ -78,6 +78,38 @@ public class TileManager : MonoBehaviour {
         return new Vector3(v.x, v.y, 0); //TODO!!! 
     }
 
+    //This is a dumb method.
+    //TODO: replace this with a map
+    public Vector2Int GetCoordOfTile(GameTile tile)
+    {
+        for (int i = 0; i < tiles.Count; i++)
+        {
+            for (int j = 0; j < tiles.Count; j++)
+            {
+                if (tile.gameObject == tiles[i][j])
+                {
+                    return new Vector2Int(i, j);
+                }
+            }
+        }
+
+        return new Vector2Int(-1, -1);
+    }
+
+    //Swap the position of two passed in tiles
+    void SwapTiles(GameTile first, GameTile second)
+    {
+        Vector2Int firstCoord = GetCoordOfTile(first);
+        Vector2Int secondCoord = GetCoordOfTile(second);
+
+        Vector3 temp = first.transform.position;
+        first.transform.position = second.transform.position;
+        second.transform.position = temp;
+
+        first.UpdateLocation(secondCoord);
+        second.UpdateLocation(firstCoord);
+    }
+
     void Start() {
         // load in the sprites
         foreach (var t in terrainFiles) {
@@ -105,8 +137,9 @@ public class TileManager : MonoBehaviour {
     }
 
     void Update () {
-        if (Input.GetMouseButton(0)) {
-            // Debug.Log("le click");
+        if (Input.GetMouseButtonDown(0)) {
+            Debug.Log("swapping");
+            SwapTiles(tiles[0][0].GetComponent<GameTile>(), tiles[0][1].GetComponent<GameTile>());
         }
     }
 }

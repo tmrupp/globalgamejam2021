@@ -27,6 +27,11 @@ public class GameTile : MonoBehaviour
         return directions;
     }
     
+    public void UpdateLocation(Vector2Int v)
+    {
+        location = v;
+    }
+
     public static GameObject Create (Terrain t, int i, int j, GameObject caller) {
         LoadPrefabs();
         var gameTile = GameObject.Instantiate(tilePrefab, new Vector3(i, j, 0), Quaternion.identity);
