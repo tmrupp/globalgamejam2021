@@ -78,36 +78,28 @@ public class TileManager : MonoBehaviour {
         return new Vector3(v.x, v.y, 0); //TODO!!! 
     }
 
-    //This is a dumb method.
-    //TODO: replace this with a map
-    public Vector2Int GetCoordOfTile(GameTile tile)
-    {
-        for (int i = 0; i < tiles.Count; i++)
-        {
-            for (int j = 0; j < tiles.Count; j++)
-            {
-                if (tile.gameObject == tiles[i][j])
-                {
-                    return new Vector2Int(i, j);
-                }
-            }
-        }
+    public Vector2Int ActualToGrid (Vector3 v) {
+        var pos = transform.position;
+        return new Vector2Int((int) (v.x - pos.x), (int) (v.y - pos.y));
+    }
 
-        return new Vector2Int(-1, -1);
+    //This is a dumb method.
+    // > yes the location is already associated with the gametile (.location)
+
+    public void SetTileLocation (GameTile tile, Vector2Int v) {
+        tile.UpdateLocation(v);
+        tiles[v.x][v.y] = tile.gameObject;
+        tile.gameObject.transform.position = GridToActual(tile.GetLocation());
     }
 
     //Swap the position of two passed in tiles
     void SwapTiles(GameTile first, GameTile second)
     {
-        Vector2Int firstCoord = GetCoordOfTile(first);
-        Vector2Int secondCoord = GetCoordOfTile(second);
+        Vector2Int firstCoord = first.GetLocation(); 
+        Vector2Int secondCoord = second.GetLocation(); 
 
-        Vector3 temp = first.transform.position;
-        first.transform.position = second.transform.position;
-        second.transform.position = temp;
-
-        first.UpdateLocation(secondCoord);
-        second.UpdateLocation(firstCoord);
+        SetTileLocation(first, secondCoord);
+        SetTileLocation(second, firstCoord);
     }
 
     void Start() {
@@ -136,10 +128,18 @@ public class TileManager : MonoBehaviour {
         agents.Add(AgentManager.Create(0, 0, gameObject));
     }
 
-    void Update () {
-        if (Input.GetMouseButtonDown(0)) {
-            Debug.Log("swapping");
-            SwapTiles(tiles[0][0].GetComponent<GameTile>(), tiles[0][1].GetComponent<GameTile>());
+    GameObject swapTile = null;
+    public void SwapThis (GameObject o) {
+        Debug.Log("swapping");
+        if (swapTile is null)
+            swapTile = o;
+        else {
+            SwapTiles(swapTile.GetComponent<GameTile>(), o.GetComponent<GameTile>());
+            swapTile = null;
         }
+    }
+
+    void Update () {
+        // ...
     }
 }

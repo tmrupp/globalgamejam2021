@@ -27,14 +27,21 @@ public class GameTile : MonoBehaviour
         return directions;
     }
     
-    public void UpdateLocation(Vector2Int v)
+    public void UpdateLocation (Vector2Int v)
     {
         location = v;
     }
 
+    public Vector2Int GetLocation () {
+        return location;
+    }
+
     public static GameObject Create (Terrain t, int i, int j, GameObject caller) {
         LoadPrefabs();
-        var gameTile = GameObject.Instantiate(tilePrefab, new Vector3(i, j, 0), Quaternion.identity);
+        Vector2Int v =  new Vector2Int(i, j);
+        TileManager tm =  caller.GetComponent<TileManager>();
+
+        var gameTile = GameObject.Instantiate(tilePrefab, tm.GridToActual(v), Quaternion.identity);
         gameTile.GetComponent<SpriteRenderer>().sprite = TileManager.GetSpriteOfTerrain(t);
 
         var gt = gameTile.GetComponent<GameTile>();
@@ -42,8 +49,8 @@ public class GameTile : MonoBehaviour
         gt.directions = TileManager.GetDirectionsOfTerrain(t);
         if (t != Terrain.ritual)
             gt.Rotate(Random.Range(0,3));
-        gt.tileManager = caller.GetComponent<TileManager>();
-        gt.location = new Vector2Int(i, j);
+        gt.tileManager = tm;
+        gt.location = v;
 
         gameTile.transform.SetParent(caller.transform);
         return gameTile;
@@ -53,5 +60,9 @@ public class GameTile : MonoBehaviour
         string s = "neighbors for " + location.ToString() + ": ";
         tileManager.GetNeighborsAt(location).ForEach(x => s = s + x.ToString() + " ");
         Debug.Log(s);
+
+        // no swappa-da ritual
+        if (terrain != Terrain.ritual)
+            tileManager.SwapThis(gameObject);
     }
 }
