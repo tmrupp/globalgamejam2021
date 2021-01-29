@@ -46,22 +46,40 @@ public class AgentManager : MonoBehaviour
         // transform.LookAt(new Vector3 (v.x, v.y, 0));
     }
 
+    int Manhattan (Vector2Int a, Vector2Int b) {
+        Vector2Int d = a - b;
+        return Mathf.Abs(d.x) + Mathf.Abs(d.y);
+    }
+
+    int GetClosest (Vector2Int a, List<Vector2Int> xs) {
+        int closest = int.MaxValue;
+        
+        foreach (var x in xs) {
+            int d = Manhattan(a, x);
+            if (d < closest)
+                closest = d;
+        }
+
+        return closest;
+    }
+
     public void FindNextMove () {
         Dictionary<Vector2Int, Vector2Int> cameFrom = new Dictionary<Vector2Int, Vector2Int>();
         Queue<Vector2Int> search = new Queue<Vector2Int>();
+        (Vector2Int, int) closest = (position, Manhattan(position, targets[0]));
         search.Enqueue(position);
         cameFrom[position] = position;
 
         while (search.Count != 0) {
             var v = search.Dequeue();
 
+            if (GetClosest(v, targets) < closest.Item2) {
+                closest = (v, GetClosest(v, targets));
+            }
+
             if (targets.Contains(v)) {
                 // found target return path
-                var path = GetPath(cameFrom, v);
-                // path.ForEach(x => Debug.Log(x.ToString()));
-                nextPosition = path[path.Count-1];
-                Face(nextPosition);
-                return;
+                break;
             }
 
             foreach (var n in tileManager.GetNeighborsAt(v)) {
@@ -71,6 +89,11 @@ public class AgentManager : MonoBehaviour
                 }
             }
         }
+
+        var path = GetPath(cameFrom, closest.Item1);
+        // path.ForEach(x => Debug.Log(x.ToString()));
+        nextPosition = path[path.Count-1];
+        Face(nextPosition);
 
         Debug.Log("did not find a path, despair!");
     }

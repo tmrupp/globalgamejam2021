@@ -103,4 +103,10 @@ public class TileManager : MonoBehaviour {
 
         agents.Add(AgentManager.Create(0, 0, gameObject));
     }
+
+    void Update () {
+        if (Input.GetMouseButton(0)) {
+            Debug.Log("le click");
+        }
+    }
 }
