@@ -143,9 +143,6 @@ public class AgentManager : MonoBehaviour
         var path = GetPath(cameFrom, closest.Item1);
         nextPosition = path[path.Count-1];
         Face(nextPosition);
-
-
-        Debug.Log("prev=" + prevPosition.ToString() + " pos=" + position.ToString() + " next=" + nextPosition.ToString());
     }
 
     public void Move () {
