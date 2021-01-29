@@ -6,10 +6,17 @@ using System.Linq;
 public class GameTile : MonoBehaviour
 {
     Terrain terrain;
+    public Terrain @Terrain { get { return terrain; } }
+
     static GameObject tilePrefab;
+
     List<int> directions;
+    public List<int> Directions { get { return directions; } }
+
     TileManager tileManager;
+
     Vector2Int location;
+    public Vector2Int Location { get { return location; } set { location = value; } }
 
 
     // setup the tile prefab
@@ -22,19 +29,6 @@ public class GameTile : MonoBehaviour
     public void Rotate (int rotation) {
         transform.Rotate(transform.eulerAngles + new Vector3(0, 0, -90f * rotation));
         directions = directions.Select(x => (x + rotation) % TileManager.directions.Count).ToList();
-    }
-
-    public List<int> GetDirections () {
-        return directions;
-    }
-    
-    public void UpdateLocation (Vector2Int v)
-    {
-        location = v;
-    }
-
-    public Vector2Int GetLocation () {
-        return location;
     }
 
     public static GameObject Create (Terrain t, int i, int j, GameObject caller) {

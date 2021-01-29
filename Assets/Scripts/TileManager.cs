@@ -76,7 +76,7 @@ public class TileManager : MonoBehaviour {
         if (GetTileAt(v) is null)
             return new List<Vector2Int>();
         else
-            return GetTileAt(v).GetDirections().Select(
+            return GetTileAt(v).Directions.Select(
                 x => v + directions[x]).ToList();
     }
 
@@ -111,9 +111,9 @@ public class TileManager : MonoBehaviour {
     // > yes the location is already associated with the gametile (.location)
 
     public void SetTileLocation (GameTile tile, Vector2Int v) {
-        tile.UpdateLocation(v);
+        tile.Location = v;
         tiles[v.x][v.y] = tile.gameObject;
-        tile.gameObject.transform.position = GridToActual(tile.GetLocation());
+        tile.gameObject.transform.position = GridToActual(tile.Location);
     }
 
     public List<(AgentType, Vector2Int)> GetAgentLocations () {
@@ -125,8 +125,8 @@ public class TileManager : MonoBehaviour {
     //Swap the position of two passed in tiles
     void SwapTiles(GameTile first, GameTile second)
     {
-        Vector2Int firstCoord = first.GetLocation(); 
-        Vector2Int secondCoord = second.GetLocation(); 
+        Vector2Int firstCoord = first.Location; 
+        Vector2Int secondCoord = second.Location; 
 
         SetTileLocation(first, secondCoord);
         SetTileLocation(second, firstCoord);
@@ -153,6 +153,16 @@ public class TileManager : MonoBehaviour {
                 row.Add(GameTile.Create(t, i, j, gameObject));
             }
             tiles.Add(row);
+        }
+
+        //Debug: take stock of tiles we've created
+        foreach (var row in tiles)
+        {
+            foreach (var tile in row)
+            {
+                GameTile gt = tile.GetComponent<GameTile>();
+                //continue working here
+            }
         }
 
         // create a hunter
