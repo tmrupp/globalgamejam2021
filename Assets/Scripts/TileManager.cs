@@ -106,7 +106,7 @@ public class TileManager : MonoBehaviour {
 
     void Update () {
         if (Input.GetMouseButton(0)) {
-            Debug.Log("le click");
+            // Debug.Log("le click");
         }
     }
 }
