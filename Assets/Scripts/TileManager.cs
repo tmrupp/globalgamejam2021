@@ -92,6 +92,10 @@ public class TileManager : MonoBehaviour {
         tile.gameObject.transform.position = GridToActual(tile.GetLocation());
     }
 
+    public List<Vector2Int> GetAgentLocations () {
+        return agents.Select(x => x.GetComponent<AgentManager>().position).ToList();
+    }
+
     //Swap the position of two passed in tiles
     void SwapTiles(GameTile first, GameTile second)
     {

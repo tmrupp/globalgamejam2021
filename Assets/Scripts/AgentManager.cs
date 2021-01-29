@@ -10,14 +10,36 @@ public enum AgentType {
 
 public class AgentManager : MonoBehaviour
 {
-    Vector2Int position, nextPosition, prevPosition;
+    public Vector2Int position, nextPosition, prevPosition;
     List<Vector2Int> targets = new List<Vector2Int>();
     static GameObject agentPrefab;
     TileManager tileManager;
 
+    public static Dictionary<AgentType, Color> agentColors = new Dictionary<AgentType, Color>() {
+        {AgentType.hunter, Color.red},
+        {AgentType.victim, Color.magenta},
+        {AgentType.monster, Color.green},
+    };
+
     public static void LoadPrefabs () {
         if (agentPrefab is null)
             agentPrefab = (GameObject) Resources.Load("Prefabs/Agent", typeof(GameObject));
+    }
+
+    private void GetHunterTargets () {
+        targets = new List<Vector2Int>();
+        targets.Add(tileManager.GetRitualLocation());
+    }
+
+    private void GetMonsterTargets () {
+        targets = new List<Vector2Int>();
+        targets.Add(tileManager.GetRitualLocation());
+    }
+
+
+
+    private void SetTargets () {
+
     }
 
     // must be called from a tilemanager
@@ -28,8 +50,10 @@ public class AgentManager : MonoBehaviour
         var agent = gO.GetComponent<AgentManager>();
         agent.tileManager = caller.GetComponent<TileManager>();
 
+        gO.GetComponent<SpriteRenderer>().color = agentColors[type];
+
         // assume hunter to begin with
-        agent.GetComponent<AgentManager>().targets.Add(agent.tileManager.GetRitualLocation());
+        agent.targets.Add(agent.tileManager.GetRitualLocation());
         agent.FindNextMove();
         return gO;
     }
@@ -38,8 +62,7 @@ public class AgentManager : MonoBehaviour
     {  
         Vector2Int next = vs[target], current = target;
         List<Vector2Int> path = new List<Vector2Int>() {target};
-        while (next != current)
-        {
+        while (next != current) {
             path.Add(current);
             Vector2Int temp = next;
             next = vs[next];
