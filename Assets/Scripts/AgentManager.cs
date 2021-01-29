@@ -2,6 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum AgentType {
+    hunter,
+    victim,
+    monster
+}
+
 public class AgentManager : MonoBehaviour
 {
     Vector2Int position, nextPosition, prevPosition;
@@ -15,7 +21,7 @@ public class AgentManager : MonoBehaviour
     }
 
     // must be called from a tilemanager
-    public static GameObject Create (int i, int j, GameObject caller) {
+    public static GameObject Create (AgentType type, int i, int j, GameObject caller) {
         LoadPrefabs();
         var gO = GameObject.Instantiate(agentPrefab, new Vector3(i, j, 0), Quaternion.identity);
 
@@ -67,14 +73,15 @@ public class AgentManager : MonoBehaviour
     public void FindNextMove () {
         Dictionary<Vector2Int, Vector2Int> cameFrom = new Dictionary<Vector2Int, Vector2Int>();
         Queue<Vector2Int> search = new Queue<Vector2Int>();
-        (Vector2Int, int) closest = (position, Manhattan(position, targets[0]));
+        (Vector2Int, int) closest = (position, int.MaxValue/*Manhattan(position, targets[0])*/);
         search.Enqueue(position);
         cameFrom[position] = position;
 
         while (search.Count != 0) {
             var v = search.Dequeue();
 
-            if (GetClosest(v, targets) < closest.Item2 && v != prevPosition) {
+            // if this position is closer, but also not the previous position or the current one
+            if (GetClosest(v, targets) < closest.Item2 && v != prevPosition && v != position) {
                 closest = (v, GetClosest(v, targets));
             }
 

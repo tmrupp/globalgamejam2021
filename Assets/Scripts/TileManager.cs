@@ -125,7 +125,8 @@ public class TileManager : MonoBehaviour {
             tiles.Add(row);
         }
 
-        agents.Add(AgentManager.Create(0, 0, gameObject));
+        // create a hunter
+        agents.Add(AgentManager.Create(AgentType.hunter, 0, 0, gameObject));
     }
 
     GameObject swapTile = null;
