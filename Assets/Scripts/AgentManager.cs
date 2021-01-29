@@ -114,15 +114,14 @@ public class AgentManager : MonoBehaviour
         search.Enqueue(position);
         cameFrom[position] = position;
         targetGetters[agentType](this);
+        
 
         while (search.Count != 0) {
             var v = search.Dequeue();
 
             int distance = GetClosest(v, targets);
             // if this position is closer, but also not the previous position or the current one
-            if (distance < closest.Item2 && 
-                v != prevPosition && 
-                v != position) {
+            if (distance < closest.Item2) {
                 closest = (v, distance);
             }
 
@@ -132,7 +131,9 @@ public class AgentManager : MonoBehaviour
             }
 
             foreach (var n in tileManager.GetNeighborsAtNoBounds(v)) {
-                if (!cameFrom.ContainsKey(n)) {
+                if (!cameFrom.ContainsKey(n) && 
+                    n != position &&
+                    n != prevPosition) {
                     cameFrom[n] = v;
                     search.Enqueue(n);
                 }
@@ -142,6 +143,9 @@ public class AgentManager : MonoBehaviour
         var path = GetPath(cameFrom, closest.Item1);
         nextPosition = path[path.Count-1];
         Face(nextPosition);
+
+
+        Debug.Log("prev=" + prevPosition.ToString() + " pos=" + position.ToString() + " next=" + nextPosition.ToString());
     }
 
     public void Move () {

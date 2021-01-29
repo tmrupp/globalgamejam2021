@@ -163,7 +163,6 @@ public class TileManager : MonoBehaviour {
 
     GameObject swapTile = null;
     public void SwapThis (GameObject o) {
-        Debug.Log("swapping");
         if (swapTile is null)
             swapTile = o;
         else {
