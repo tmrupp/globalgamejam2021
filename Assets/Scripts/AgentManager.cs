@@ -96,7 +96,7 @@ public class AgentManager : MonoBehaviour
         nextPosition = path[path.Count-1];
         Face(nextPosition);
 
-        Debug.Log("did not find a path, despair!");
+        // Debug.Log("did not find a path, despair!");
     }
 
     public void Move () {
