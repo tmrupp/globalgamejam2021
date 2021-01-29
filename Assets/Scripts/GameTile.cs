@@ -6,12 +6,13 @@ using System.Linq;
 public class GameTile : MonoBehaviour
 {
     Terrain terrain;
-    // setup the tile prefab
     static GameObject tilePrefab;
     List<int> directions;
     TileManager tileManager;
     Vector2Int location;
 
+
+    // setup the tile prefab
     public static void LoadPrefabs () {
         if (tilePrefab is null)
             tilePrefab = (GameObject) Resources.Load("Prefabs/GameTile", typeof(GameObject));
