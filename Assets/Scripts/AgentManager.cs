@@ -110,7 +110,5 @@ public class AgentManager : MonoBehaviour
             // Debug.Log("got a return");
             Move();
         }
-    }
-
-    
+    }   
 }
