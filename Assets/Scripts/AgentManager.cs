@@ -19,18 +19,6 @@ public class AgentManager : MonoBehaviour
 
     public static bool ResolvingMovement = false;
 
-    public static List<AgentManager> allAgents = new List<AgentManager>();
-
-    public static void Register(AgentManager am)
-    {
-        allAgents.Add(am);
-    }
-
-    public static void Unregister(AgentManager am)
-    {
-        allAgents.Remove(am);
-    }
-
     public static Dictionary<AgentType, Color> agentColors = new Dictionary<AgentType, Color>() {
         {AgentType.hunter, Color.red},
         {AgentType.victim, Color.magenta},
@@ -191,10 +179,7 @@ public class AgentManager : MonoBehaviour
     {
         ResolvingMovement = true;
 
-        foreach(var agent in allAgents)
-        {
-            agent.Move();
-        }
+        //TODO
 
         ResolvingMovement = false;
     }
@@ -210,7 +195,7 @@ public class AgentManager : MonoBehaviour
     public void Update () {
         if (Input.GetKeyDown(KeyCode.Return)) {
             // Debug.Log("got a return");
-            MoveAll();
+            Move();
         }
     }   
 }
