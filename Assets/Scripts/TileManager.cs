@@ -88,7 +88,7 @@ public class TileManager : MonoBehaviour {
                 return neighbors;
             else {
                 foreach (var n in GetTileAt(v).Directions.Select(x => v + directions[x])) {
-                    Debug.Log("n=" + n.ToString());
+                    // Debug.Log("n=" + n.ToString());
                     if (n == GetRitualLocation() || GetEdges().Contains(n) || ((GetTileAt(n) != null) && GetTileAt(n).Directions.Select(x => n + directions[x]).Contains(v))) 
                         neighbors.Add(n);
                 }
