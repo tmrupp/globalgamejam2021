@@ -11,11 +11,16 @@ public enum AgentType {
 
 public class AgentManager : MonoBehaviour
 {
+    public SpriteRenderer Indicator = null;
+    private SpriteRenderer CharacterSR;
+    private Animator animator;
+    private int walkParamId;
     public Vector2Int position, nextPosition, prevPosition;
     List<Vector2Int> targets = new List<Vector2Int>();
     static GameObject agentPrefab;
     TileManager tileManager;
     public AgentType agentType;
+    private bool animatingMovement = false;
 
     public static bool ResolvingMovement = false;
 
@@ -63,6 +68,13 @@ public class AgentManager : MonoBehaviour
         Destroy(gameObject);
     }
 
+    private void Awake()
+    {
+        animator = GetComponent<Animator>();
+        walkParamId = Animator.StringToHash("Walk");
+        CharacterSR = GetComponent<SpriteRenderer>();
+    }
+
     public delegate void SatisfiesConditions (AgentManager a);
     public static void MonsterCondition (AgentManager a) {
         //... a monster's work is never done
@@ -101,8 +113,7 @@ public class AgentManager : MonoBehaviour
         agent.agentType = type;
         agent.tileManager = tm;
         agent.position = v;
-
-        gO.GetComponent<SpriteRenderer>().color = agentColors[type];
+        agent.Indicator.color = agentColors[type];
 
         // assume hunter to begin with
         targetGetters[type](agent);
@@ -124,8 +135,11 @@ public class AgentManager : MonoBehaviour
     }
 
     void Face (Vector2Int v) {
-        transform.up = new Vector3(v.x, v.y, 0) - transform.position;
-        //Debug.DrawLine(transform.position, new Vector3(v.x, v.y, 0) - transform.position, Color.red, float.MaxValue);
+        var displacement = v - position;
+        if (displacement.x == 0) { CharacterSR.flipX = displacement.y == -1; }
+        else { CharacterSR.flipX = displacement.x == -1; }
+        Indicator.transform.up = new Vector3(displacement.x, displacement.y);
+        //Debug.DrawLine(Indicator.transform.position, new Vector3(v.x, v.y, 0) - Indicator.transform.position, Color.red, float.MaxValue);
     }
 
     int Manhattan (Vector2Int a, Vector2Int b) {
@@ -191,8 +205,19 @@ public class AgentManager : MonoBehaviour
         ResolvingMovement = false;
     }
 
+    private IEnumerator<WaitForSeconds> AnimateMovement()
+    {
+        if (animatingMovement) { yield break; }
+        animatingMovement = true;
+        animator.SetBool(walkParamId, true);
+        yield return new WaitForSeconds(1f);
+        animator.SetBool(walkParamId, false);
+        animatingMovement = false;
+    }
+
     public void Move () {
         transform.position = tileManager.GridToActual(nextPosition);
+        StartCoroutine(AnimateMovement());
         prevPosition = position;
         position = nextPosition;
         agentConditions[agentType](this);
