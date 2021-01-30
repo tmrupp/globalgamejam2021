@@ -82,6 +82,52 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &8751392674850241760
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 318152628855222025}
+  - component: {fileID: 4429869546810776769}
+  m_Layer: 0
+  m_Name: AnimatorMap
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &318152628855222025
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8751392674850241760}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 9176452063329322181}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4429869546810776769
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8751392674850241760}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ff0e46087f4a014a96a5670ea8e539e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  victim: {fileID: 22100000, guid: cf15bef34bad9564e9bcb9e719751750, type: 2}
+  hunter: {fileID: 22100000, guid: 9de65fc353038a5498494420476a9b1b, type: 2}
+  monster: {fileID: 22100000, guid: 9ad4a2e1e687dc54eacbcf9152e408fb, type: 2}
 --- !u!1 &9176452063329322187
 GameObject:
   m_ObjectHideFlags: 0
@@ -113,6 +159,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 7506352817150810404}
+  - {fileID: 318152628855222025}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -179,11 +226,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8aca45acbd9a3604b97e10582399f948, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animatorMap: {fileID: 4429869546810776769}
   Indicator: {fileID: 8799603576634177509}
   position: {x: 0, y: 0}
   nextPosition: {x: 0, y: 0}
   prevPosition: {x: 0, y: 0}
-  agentType: 0
 --- !u!95 &2188397844856197425
 Animator:
   serializedVersion: 3

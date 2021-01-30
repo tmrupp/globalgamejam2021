@@ -11,6 +11,8 @@ public enum AgentType {
 
 public class AgentManager : MonoBehaviour
 {
+    [SerializeField] private AnimatorMap animatorMap = null;
+    [SerializeField] bool spriteReversed = false;  // For sprites which where originally drawn facing left
     public SpriteRenderer Indicator = null;
     private SpriteRenderer CharacterSR;
     private Animator animator;
@@ -19,10 +21,7 @@ public class AgentManager : MonoBehaviour
     List<Vector2Int> targets = new List<Vector2Int>();
     static GameObject agentPrefab;
     TileManager tileManager;
-    public AgentType agentType;
     private bool animatingMovement = false;
-
-    public static bool ResolvingMovement = false;
 
     public static Dictionary<AgentType, Color> agentColors = new Dictionary<AgentType, Color>() {
         {AgentType.hunter, Color.red},
@@ -68,11 +67,24 @@ public class AgentManager : MonoBehaviour
         Destroy(gameObject);
     }
 
+    private AgentType privateAgentType = AgentType.hunter;
+    public AgentType agentType
+    {
+        get { return privateAgentType; }
+        set
+        {
+            privateAgentType = value;
+            animator.runtimeAnimatorController = animatorMap.GetAnimator(privateAgentType);
+            UpdateSpriteFlip();
+        }
+    }
+
     private void Awake()
     {
         animator = GetComponent<Animator>();
         walkParamId = Animator.StringToHash("Walk");
         CharacterSR = GetComponent<SpriteRenderer>();
+        CharacterSR.flipX = (Random.Range(0, 2) == 0);
     }
 
     public delegate void SatisfiesConditions (AgentManager a);
@@ -133,10 +145,15 @@ public class AgentManager : MonoBehaviour
         return path;
     }
 
+    private void UpdateSpriteFlip()
+    {
+        var displacement = nextPosition - position;
+        if (displacement.x != 0) { CharacterSR.flipX = (displacement.x == -1) ^ spriteReversed; }
+    }
+
     void Face (Vector2Int v) {
+        UpdateSpriteFlip();
         var displacement = v - position;
-        if (displacement.x == 0) { CharacterSR.flipX = displacement.y == -1; }
-        else { CharacterSR.flipX = displacement.x == -1; }
         Indicator.transform.up = new Vector3(displacement.x, displacement.y);
         //Debug.DrawLine(Indicator.transform.position, new Vector3(v.x, v.y, 0) - Indicator.transform.position, Color.red, float.MaxValue);
     }
@@ -195,15 +212,6 @@ public class AgentManager : MonoBehaviour
         Face(nextPosition);
     }
 
-    public static void MoveAll()
-    {
-        ResolvingMovement = true;
-
-        //TODO
-
-        ResolvingMovement = false;
-    }
-
     private IEnumerator<WaitForSeconds> AnimateMovement()
     {
         if (animatingMovement) { yield break; }
@@ -224,6 +232,7 @@ public class AgentManager : MonoBehaviour
     }
 
     public void Update () {
+        UpdateSpriteFlip();
         if (Input.GetKeyDown(KeyCode.Return)) {
             // Debug.Log("got a return");
             Move();

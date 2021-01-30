@@ -44,6 +44,8 @@ public class TileManager : MonoBehaviour {
 
     public List<GameObject> agents = new List<GameObject>();
 
+    public bool ResolvingMovement = false;
+
     public static Sprite GetSpriteOfTerrain (Terrain t) {
         return terrainSprites[t];
     }
@@ -146,6 +148,43 @@ public class TileManager : MonoBehaviour {
 
         SetTileLocation(first, secondCoord);
         SetTileLocation(second, firstCoord);
+
+        ResolveAllAgentsMovement();
+    }
+
+    void ResolveAllAgentsMovement()
+    {
+        ResolvingMovement = true;
+
+        //hunters move, then victims move, then monsters move
+        agents.Sort((GameObject lhs, GameObject rhs) => {
+            AgentManager am_lhs = lhs.GetComponent<AgentManager>();
+            AgentManager am_rhs = rhs.GetComponent<AgentManager>();
+
+            switch(am_lhs.agentType)
+            {
+                case AgentType.hunter:
+                    if (am_rhs.agentType == AgentType.hunter) return 0;
+                    else return -1;
+                case AgentType.victim:
+                    if (am_rhs.agentType == AgentType.hunter) return -1;
+                    if (am_rhs.agentType == AgentType.victim) return 0;
+                    if (am_rhs.agentType == AgentType.monster) return 1;
+                    break;
+                case AgentType.monster:
+                    if (am_rhs.agentType == AgentType.monster) return 0;
+                    else return 1;
+            }
+
+            return 0;
+        });
+
+        foreach (var agent in agents.ToList())
+        {
+            agent.GetComponent<AgentManager>().Move();
+        }
+
+        ResolvingMovement = false;
     }
 
     void Start() {
