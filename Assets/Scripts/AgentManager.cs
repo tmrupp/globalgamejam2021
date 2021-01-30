@@ -101,7 +101,6 @@ public class AgentManager : MonoBehaviour
         }
     }
 
-
     // must be called from a tilemanager
     public static GameObject Create (AgentType type, int i, int j, GameObject caller) {
         LoadPrefabs();
