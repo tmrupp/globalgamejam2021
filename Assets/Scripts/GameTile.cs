@@ -42,8 +42,8 @@ public class GameTile : MonoBehaviour
         var gt = gameTile.GetComponent<GameTile>();
         gt.terrain = t;
         gt.directions = TileManager.GetDirectionsOfTerrain(t);
-        if (t != Terrain.ritual)
-            gt.Rotate(Random.Range(0, 4));
+        // if (t != Terrain.ritual)
+        //     gt.Rotate(Random.Range(0, 4));
         gt.tileManager = tm;
         gt.location = v;
 

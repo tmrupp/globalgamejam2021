@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class VisiblePath : MonoBehaviour
 {
-    [SerializeField] Sprite spriteToUse; //set in editor
+    [SerializeField] Sprite spriteToUse = null; //set in editor
     List<GameObject> lines = new List<GameObject>();
 
     public void DrawLine(Vector2 start, Vector2 end, Color color)

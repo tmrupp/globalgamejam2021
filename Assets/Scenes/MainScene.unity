@@ -363,6 +363,7 @@ MonoBehaviour:
   spacing: 1
   doublyConnected: 1
   agents: []
+  ResolvingMovement: 0
 --- !u!4 &776162048
 Transform:
   m_ObjectHideFlags: 0

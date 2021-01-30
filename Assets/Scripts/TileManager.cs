@@ -46,6 +46,8 @@ public class TileManager : MonoBehaviour {
 
     public bool ResolvingMovement = false;
 
+    GameObject swapTile = null;
+
     public static Sprite GetSpriteOfTerrain (Terrain t) {
         return terrainSprites[t];
     }
@@ -116,8 +118,14 @@ public class TileManager : MonoBehaviour {
         return edges;
     }
 
+    // width = 1.05f
+    // height = 0.82f
     public Vector3 GridToActual (Vector2Int v) { 
-        return new Vector3(v.x, v.y, 0); //TODO!!! 
+        float hw = 1.06f * 0.5f, hh = 0.61f * 0.5f;
+        float x = v.x * hw - v.y * hw;
+        float y = v.x * hh + v.y * hh;
+
+        return new Vector3(x, y, 0); //TODO!!! 
     }
 
     public Vector2Int ActualToGrid (Vector3 v) {
@@ -244,7 +252,6 @@ public class TileManager : MonoBehaviour {
         agents.Add(AgentManager.Create(AgentType.monster, 5, 5, gameObject));
     }
 
-    GameObject swapTile = null;
     public void SwapThis (GameObject o) {
         if (swapTile is null)
             swapTile = o;
