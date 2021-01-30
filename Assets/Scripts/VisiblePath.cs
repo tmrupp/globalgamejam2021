@@ -11,7 +11,7 @@ public class VisiblePath : MonoBehaviour
     {
         string debugSummary = string.Empty;
 
-        GameObject line = Instantiate(new GameObject());
+        GameObject line = new GameObject();
         SpriteRenderer sr = line.AddComponent<SpriteRenderer>();
         sr.sprite = spriteToUse;
         sr.color = color;
