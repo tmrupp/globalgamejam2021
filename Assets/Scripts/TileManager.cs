@@ -20,7 +20,7 @@ public class TileManager : MonoBehaviour {
     public static Dictionary<Terrain, List<(string, string)>> terrainFiles = new Dictionary<Terrain, List<(string, string)>>() {
         {Terrain.four, new List<(string, string)>() {("cross1", "cross2")}},
 
-        {Terrain.ritual, new List<(string, string)>() {("ritual", "ritual")}},
+        {Terrain.ritual, new List<(string, string)>() {("ritual1", "ritual2")}},
 
         {Terrain.t, new List<(string, string)>() {
             ("tbotright1", "tbotright2"),
