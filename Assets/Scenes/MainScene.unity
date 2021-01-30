@@ -689,6 +689,7 @@ GameObject:
   - component: {fileID: 1608750798}
   - component: {fileID: 1608750800}
   - component: {fileID: 1608750801}
+  - component: {fileID: 1608750802}
   m_Layer: 0
   m_Name: GameObject
   m_TagString: Untagged
@@ -771,7 +772,7 @@ Animator:
   m_GameObject: {fileID: 1608750797}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 22100000, guid: 9e50d88155c3ca045be1fdaadee08aaf, type: 2}
+  m_Controller: {fileID: 22100000, guid: 9ad4a2e1e687dc54eacbcf9152e408fb, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -792,6 +793,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17f96ba5ac809df43bed877b5909a202, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1608750802
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1608750797}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8aca45acbd9a3604b97e10582399f948, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animatorMap: {fileID: 0}
+  spriteReversed: 0
+  Indicator: {fileID: 0}
+  position: {x: 0, y: 0}
+  nextPosition: {x: 0, y: 0}
+  prevPosition: {x: 0, y: 0}
 --- !u!1 &1626543201
 GameObject:
   m_ObjectHideFlags: 0
