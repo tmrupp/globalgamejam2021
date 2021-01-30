@@ -223,6 +223,7 @@ public class AgentManager : MonoBehaviour
     }
 
     public void Move () {
+        agentConditions[agentType](this);
         transform.position = tileManager.GridToActual(nextPosition);
         StartCoroutine(AnimateMovement());
         prevPosition = position;
