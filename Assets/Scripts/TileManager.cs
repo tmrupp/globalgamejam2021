@@ -40,6 +40,7 @@ public class TileManager : MonoBehaviour {
     
     public int length = 9, width = 9;
     public float spacing = 1f; // makes it easier to keep it 1...
+    public bool doublyConnected;
 
     public List<GameObject> agents = new List<GameObject>();
 
@@ -73,11 +74,26 @@ public class TileManager : MonoBehaviour {
     }
 
     public List<Vector2Int> GetNeighborsAtNoBounds (Vector2Int v) {
-        if (GetTileAt(v) is null)
-            return new List<Vector2Int>();
-        else
-            return GetTileAt(v).Directions.Select(
-                x => v + directions[x]).ToList();
+        if (!doublyConnected) {
+            if (GetTileAt(v) is null)
+                return new List<Vector2Int>();
+            else
+                return GetTileAt(v).Directions.Select(
+                    x => v + directions[x]).ToList();
+        } else {
+            List<Vector2Int> neighbors = new List<Vector2Int>();
+            if (GetTileAt(v) is null)
+                return neighbors;
+            else {
+                foreach (var n in GetTileAt(v).Directions.Select(x => v + directions[x])) {
+                    Debug.Log("n=" + n.ToString());
+                    if (n == GetRitualLocation() || GetEdges().Contains(n) || ((GetTileAt(n) != null) && GetTileAt(n).Directions.Select(x => n + directions[x]).Contains(v))) 
+                        neighbors.Add(n);
+                }
+            }
+
+            return neighbors;
+        }
     }
 
     public List<Vector2Int> GetEdges () {

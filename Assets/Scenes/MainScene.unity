@@ -361,6 +361,7 @@ MonoBehaviour:
   length: 9
   width: 9
   spacing: 1
+  doublyConnected: 1
   agents: []
 --- !u!4 &776162048
 Transform:
@@ -943,39 +944,39 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: 'The BLOOD GOD demands SACRIFICES!
 
-    
 
-    Guide SACRIFICES to the
-    RITUAL tile in the center by swapping any two TILES. They can move to any TILE
-    that their current TILE has a PATH to. The DESTINATION TILE does not need to
-    have a connecting path, only the outgoing paths matter.
 
-    
+    Guide SACRIFICES to the RITUAL
+    tile in the center by swapping any two TILES. They can move to any TILE that
+    their current TILE has a PATH to. The DESTINATION TILE does not need to have
+    a connecting path, only the outgoing paths matter.
 
-    SACRIFICES
-    are who lost souls in the forest. They will try to navigate to the edges of the
-    map to escape. They indicate their next move with a PINK ARROW. Guide them to
-    the RITUAL to appease the BLOOD GOD.
 
-    
 
-    HUNTERS will try to navigate
-    to the center and disrupt the RITUAL. Route them away to protect the RITUAL.
-    They indicate where they are going to move on the next turn with a RED ARROW.
+    SACRIFICES are who
+    lost souls in the forest. They will try to navigate to the edges of the map to
+    escape. They indicate their next move with a PINK ARROW. Guide them to the RITUAL
+    to appease the BLOOD GOD.
 
-    
 
-    MONSTERS
-    try to eat the nearest human character. They indicate their next move with a
-    GREEN ARROW. Guide them to HUNTERS to kill them and protect the RITUAL. But be
-    careful, MONSTERS will also eat SACRIFICES!
 
-    
+    HUNTERS will try to navigate to the center and
+    disrupt the RITUAL. Route them away to protect the RITUAL. They indicate where
+    they are going to move on the next turn with a RED ARROW.
 
-    Score points by killing
-    SACRIFICES in the RITUAL and killing HUNTERS with MONSTERS! Play until all SACRIFICES
-    and HUNTERS have been removed from the FOREST. If more HUNTERS reach the RITUAL
-    than SACRIFICES, the game is over!'
+
+
+    MONSTERS try
+    to eat the nearest human character. They indicate their next move with a GREEN
+    ARROW. Guide them to HUNTERS to kill them and protect the RITUAL. But be careful,
+    MONSTERS will also eat SACRIFICES!
+
+
+
+    Score points by killing SACRIFICES
+    in the RITUAL and killing HUNTERS with MONSTERS! Play until all SACRIFICES and
+    HUNTERS have been removed from the FOREST. If more HUNTERS reach the RITUAL than
+    SACRIFICES, the game is over!'
 --- !u!222 &1793906428
 CanvasRenderer:
   m_ObjectHideFlags: 0
