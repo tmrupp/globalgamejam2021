@@ -25,7 +25,7 @@ public class DialogueParser : MonoBehaviour
         {
             string name = "";
             List<string> lines = new List<string>();
-            foreach (var line in Regex.Split(file.text, "\n|\r|\r\n"))
+            foreach (var line in Regex.Split(file.text, "\r\n|\n|\r"))
             {
                 if (line == "")
                 {
@@ -42,8 +42,6 @@ public class DialogueParser : MonoBehaviour
             if (name != "")
             {
                 _dialogue[name] = new Dialogue(lines);
-                name = "";
-                lines = new List<string>();
             }
         }
     }

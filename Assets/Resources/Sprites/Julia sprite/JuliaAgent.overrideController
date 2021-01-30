@@ -1,0 +1,15 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: JuliaAgent
+  m_Controller: {fileID: 9100000, guid: f2da482c9c12a2746898aad859cadfc3, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: e8c054f6cb91f644ca1da2b08fcb7c6a, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 9ba1b62f8153e93448e65fc69372df66, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 22f760cfec4af724a91fffa43bf972dd, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 7461f8eeaccdf364fa8c40a488f770ff, type: 2}
