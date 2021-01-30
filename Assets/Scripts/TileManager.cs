@@ -150,7 +150,6 @@ public class TileManager : MonoBehaviour {
                 case AgentType.hunter:
                     if (am_rhs.agentType == AgentType.hunter) return 0;
                     else return -1;
-                    break;
                 case AgentType.victim:
                     if (am_rhs.agentType == AgentType.hunter) return -1;
                     if (am_rhs.agentType == AgentType.victim) return 0;
@@ -159,7 +158,6 @@ public class TileManager : MonoBehaviour {
                 case AgentType.monster:
                     if (am_rhs.agentType == AgentType.monster) return 0;
                     else return 1;
-                    break;
             }
 
             return 0;
