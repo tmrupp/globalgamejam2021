@@ -167,9 +167,9 @@ public class TileManager : MonoBehaviour {
                     if (am_rhs.agentType == AgentType.hunter) return 0;
                     else return -1;
                 case AgentType.victim:
-                    if (am_rhs.agentType == AgentType.hunter) return -1;
+                    if (am_rhs.agentType == AgentType.hunter) return 1;
                     if (am_rhs.agentType == AgentType.victim) return 0;
-                    if (am_rhs.agentType == AgentType.monster) return 1;
+                    if (am_rhs.agentType == AgentType.monster) return -1;
                     break;
                 case AgentType.monster:
                     if (am_rhs.agentType == AgentType.monster) return 0;
