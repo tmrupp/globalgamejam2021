@@ -242,7 +242,7 @@ public class AgentManager : MonoBehaviour
         Vector2Int current = position;
         for (int i = pathToDestination.Count-1; i >= 0; i--)
         {
-            vp.DrawLine(current, pathToDestination[i], Indicator.color);
+            vp.DrawLine(tileManager.GridToActual(current), tileManager.GridToActual(pathToDestination[i]), Indicator.color);
             current = pathToDestination[i];
         }
     }
