@@ -36,8 +36,9 @@ public class GameTile : MonoBehaviour
     void SetSprite () {
         var sprites = TileManager.GetSpriteOfTerrain(terrain, rotation);
         var renderers = gameObject.GetComponentsInChildren<SpriteRenderer>();
-        renderers[0].sprite = sprites.Item1;
-        renderers[1].sprite = sprites.Item2;
+        gameObject.transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = sprites.Item1;
+        gameObject.transform.GetChild(1).GetComponent<SpriteRenderer>().sprite = sprites.Item2;
+        // renderers[1].sprite = sprites.Item2;
     }
 
     public static GameObject Create (Terrain t, int i, int j, GameObject caller) {

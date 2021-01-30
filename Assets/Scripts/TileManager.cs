@@ -18,27 +18,27 @@ public class TileManager : MonoBehaviour {
     bool UsingIsometric = true;
 
     public static Dictionary<Terrain, List<(string, string)>> terrainFiles = new Dictionary<Terrain, List<(string, string)>>() {
-        {Terrain.four, new List<(string, string)>() {("cross2", "cross1")}},
+        {Terrain.four, new List<(string, string)>() {("cross1", "cross2")}},
 
         {Terrain.ritual, new List<(string, string)>() {("ritual", "ritual")}},
 
         {Terrain.t, new List<(string, string)>() {
-            ("tbotright2", "tbotright1"),
-            ("tbotleft2", "tbotleft1"),
-            ("ttopleft2", "ttopleft1"),
+            ("tbotright1", "tbotright2"),
+            ("tbotleft1", "tbotleft2"),
+            ("ttopleft1", "ttopleft2"),
             ("ttopright2", "ttopright1")
         }},
 
         {Terrain.straight, new List<(string, string)>() {
-            ("bar2.2", "bar2.1"),
-            ("bar1.2", "bar1.1")
+            ("bar2.1", "bar2.2"),
+            ("bar1.1", "bar1.2")
         }},
 
         {Terrain.bent, new List<(string, string)>() {
-            ("cornerr2", "cornerr1"),
-            ("cornerbot2", "cornerbot1"),
+            ("cornerr1", "cornerr2"),
+            ("cornerbot1", "cornerbot2"),
             ("cornerl2", "cornerl1"),
-            ("cornertop2", "cornertop1")
+            ("cornertop1", "cornertop2")
         }},
     };
 
@@ -221,8 +221,8 @@ public class TileManager : MonoBehaviour {
 
     Sprite LoadSprite (string name) {
         Sprite s = (Sprite) Resources.Load("Sprites/backgroundtiles/" + name, typeof(Sprite));
-        if (s is null)
-            Debug.Log("pls can't find name=" + name);
+        // if (s is null)
+            Debug.Log("laoding name=" + name);
         return s;
     }
 
