@@ -11,7 +11,7 @@ public enum AgentType {
 
 public class AgentManager : MonoBehaviour
 {
-    [SerializeField] private AnimatorMap animatorMap;
+    [SerializeField] private AnimatorMap animatorMap = null;
     public SpriteRenderer Indicator = null;
     private SpriteRenderer CharacterSR;
     private Animator animator;
