@@ -22,8 +22,6 @@ public class AgentManager : MonoBehaviour
     public AgentType agentType;
     private bool animatingMovement = false;
 
-    public static bool ResolvingMovement = false;
-
     public static Dictionary<AgentType, Color> agentColors = new Dictionary<AgentType, Color>() {
         {AgentType.hunter, Color.red},
         {AgentType.victim, Color.magenta},
@@ -193,15 +191,6 @@ public class AgentManager : MonoBehaviour
         var path = GetPath(cameFrom, closest.Item1);
         nextPosition = path[path.Count-1];
         Face(nextPosition);
-    }
-
-    public static void MoveAll()
-    {
-        ResolvingMovement = true;
-
-        //TODO
-
-        ResolvingMovement = false;
     }
 
     private IEnumerator<WaitForSeconds> AnimateMovement()
