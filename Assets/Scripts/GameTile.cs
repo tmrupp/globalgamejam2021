@@ -11,12 +11,13 @@ public class GameTile : MonoBehaviour
     static GameObject tilePrefab;
 
     List<int> directions;
-    public List<int> Directions { get { return directions; } }
+    public List<int> Directions { get { return directions.Select(x => (x + rotation) % 4).ToList(); } }
 
     TileManager tileManager;
 
     Vector2Int location;
     public Vector2Int Location { get { return location; } set { location = value; } }
+    public int rotation = 0;
 
 
     // setup the tile prefab
@@ -26,9 +27,17 @@ public class GameTile : MonoBehaviour
     }
 
     // +n => rotate n times 90 clockwise, - => rotate n times 90 counter-clockwise
-    public void Rotate (int rotation) {
-        transform.Rotate(transform.eulerAngles + new Vector3(0, 0, -90f * rotation));
-        directions = directions.Select(x => (x + rotation) % TileManager.directions.Count).ToList();
+    public void Rotate (int r) {
+        // transform.Rotate(transform.eulerAngles + new Vector3(0, 0, -90f * r));
+        // directions = directions.Select(x => (x + r) % TileManager.directions.Count).ToList();
+        rotation = r;
+    }
+
+    void SetSprite () {
+        var sprites = TileManager.GetSpriteOfTerrain(terrain, rotation);
+        var renderers = gameObject.GetComponentsInChildren<SpriteRenderer>();
+        renderers[0].sprite = sprites.Item1;
+        renderers[1].sprite = sprites.Item2;
     }
 
     public static GameObject Create (Terrain t, int i, int j, GameObject caller) {
@@ -37,15 +46,15 @@ public class GameTile : MonoBehaviour
         TileManager tm =  caller.GetComponent<TileManager>();
 
         var gameTile = GameObject.Instantiate(tilePrefab, tm.GridToActual(v), Quaternion.identity);
-        gameTile.GetComponent<SpriteRenderer>().sprite = TileManager.GetSpriteOfTerrain(t);
 
         var gt = gameTile.GetComponent<GameTile>();
         gt.terrain = t;
         gt.directions = TileManager.GetDirectionsOfTerrain(t);
-        // if (t != Terrain.ritual)
-        //     gt.Rotate(Random.Range(0, 4));
+        if (t != Terrain.ritual)
+            gt.Rotate(Random.Range(0, 4));
         gt.tileManager = tm;
         gt.location = v;
+        gt.SetSprite();
 
         gameTile.transform.SetParent(caller.transform);
         return gameTile;
