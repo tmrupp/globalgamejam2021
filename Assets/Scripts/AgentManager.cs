@@ -22,6 +22,8 @@ public class AgentManager : MonoBehaviour
     static GameObject agentPrefab;
     TileManager tileManager;
     private bool animatingMovement = false;
+    private List<Vector2Int> pathToDestination = null;
+    private VisiblePath vp; //The VisiblePath component attached to this game object
 
     public static Dictionary<AgentType, Color> agentColors = new Dictionary<AgentType, Color>() {
         {AgentType.hunter, Color.red},
@@ -125,10 +127,12 @@ public class AgentManager : MonoBehaviour
         agent.tileManager = tm;
         agent.position = v;
         agent.Indicator.color = agentColors[type];
+        agent.vp = gO.GetComponent<VisiblePath>();
 
         // assume hunter to begin with
         targetGetters[type](agent);
         agent.FindNextMove();
+
         return gO;
     }
 
@@ -207,8 +211,8 @@ public class AgentManager : MonoBehaviour
             }
         }
 
-        var path = GetPath(cameFrom, closest.Item1);
-        nextPosition = path[path.Count-1];
+        pathToDestination = GetPath(cameFrom, closest.Item1);
+        nextPosition = pathToDestination[pathToDestination.Count-1];
         Face(nextPosition);
     }
 
@@ -223,6 +227,7 @@ public class AgentManager : MonoBehaviour
     }
 
     public void Move () {
+        ClearPath();
         agentConditions[agentType](this);
         transform.position = tileManager.GridToActual(nextPosition);
         StartCoroutine(AnimateMovement());
@@ -230,6 +235,21 @@ public class AgentManager : MonoBehaviour
         position = nextPosition;
         agentConditions[agentType](this);
         FindNextMove();
+    }
+
+    public void DrawPath()
+    {
+        Vector2Int current = position;
+        for (int i = pathToDestination.Count-1; i >= 0; i--)
+        {
+            vp.DrawLine(current, pathToDestination[i], Indicator.color);
+            current = pathToDestination[i];
+        }
+    }
+
+    public void ClearPath()
+    {
+        vp.Clear();
     }
 
     public void Update () {

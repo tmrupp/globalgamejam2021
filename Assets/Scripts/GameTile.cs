@@ -60,4 +60,28 @@ public class GameTile : MonoBehaviour
         if (terrain != Terrain.ritual)
             tileManager.SwapThis(gameObject);
     }
+
+    private void OnMouseEnter()
+    {
+        foreach (var agent in tileManager.agents)
+        {
+            AgentManager am = agent.GetComponent<AgentManager>();
+            if (am.position == location)
+            {
+                am.DrawPath();
+            }
+        }
+    }
+
+    private void OnMouseExit()
+    {
+        foreach (var agent in tileManager.agents)
+        {
+            AgentManager am = agent.GetComponent<AgentManager>();
+            if (am.position == location)
+            {
+                am.ClearPath();
+            }
+        }
+    }
 }
