@@ -11,6 +11,7 @@ public enum AgentType {
 
 public class AgentManager : MonoBehaviour
 {
+    [SerializeField] private AnimatorMap animatorMap;
     public SpriteRenderer Indicator = null;
     private SpriteRenderer CharacterSR;
     private Animator animator;
@@ -19,7 +20,6 @@ public class AgentManager : MonoBehaviour
     List<Vector2Int> targets = new List<Vector2Int>();
     static GameObject agentPrefab;
     TileManager tileManager;
-    public AgentType agentType;
     private bool animatingMovement = false;
 
     public static bool ResolvingMovement = false;
@@ -66,6 +66,17 @@ public class AgentManager : MonoBehaviour
     public void KillAgent () {
         tileManager.RemoveAgent(gameObject);
         Destroy(gameObject);
+    }
+
+    private AgentType privateAgentType = AgentType.hunter;
+    public AgentType agentType
+    {
+        get { return privateAgentType; }
+        set
+        {
+            privateAgentType = value;
+            animator.runtimeAnimatorController = animatorMap.GetAnimator(privateAgentType);
+        }
     }
 
     private void Awake()
