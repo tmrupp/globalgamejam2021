@@ -377,6 +377,7 @@ public class TileManager : MonoBehaviour {
             if (turnNumber == 30) { ++victimCap; }
             if (turnNumber == 40) { ++victimCap; ++hunterCap; }
             if (turnNumber == 50) { throw new System.Exception("GAME OVER"); }
+            /*
             if (turnNumber >= 20 && turnNumber % 7 == 0)
             {
                 ResolvingMovement = true;
@@ -394,6 +395,7 @@ public class TileManager : MonoBehaviour {
                 }
                 ResolvingMovement = false;
             }
+            */
             int victimCount = 0, hunterCount = 0, monsterCount = 0;
             foreach (var agentObject in agents)
             {
