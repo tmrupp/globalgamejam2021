@@ -129,11 +129,12 @@ MonoBehaviour:
   - {fileID: 22100000, guid: cf15bef34bad9564e9bcb9e719751750, type: 2}
   - {fileID: 22100000, guid: d6bfdb15cc02c9947acff3163f9983ef, type: 2}
   - {fileID: 22100000, guid: 9e50d88155c3ca045be1fdaadee08aaf, type: 2}
+  - {fileID: 22100000, guid: c98ab2a146d40ba4fb6c37eab2515b6c, type: 2}
   hunter:
   - {fileID: 22100000, guid: 9de65fc353038a5498494420476a9b1b, type: 2}
-  - {fileID: 22100000, guid: 9de65fc353038a5498494420476a9b1b, type: 2}
-  - {fileID: 22100000, guid: 9de65fc353038a5498494420476a9b1b, type: 2}
-  - {fileID: 22100000, guid: 9de65fc353038a5498494420476a9b1b, type: 2}
+  - {fileID: 22100000, guid: ad4d4aa7f6729c54aaa41b9490d8d979, type: 2}
+  - {fileID: 22100000, guid: 26e17508624241742a7fa02e910797ca, type: 2}
+  - {fileID: 22100000, guid: 45017f5048868b240b6d85120ef10806, type: 2}
   monster:
   - {fileID: 22100000, guid: 9ad4a2e1e687dc54eacbcf9152e408fb, type: 2}
   - {fileID: 22100000, guid: 22aaea4d59ad618459ec99b1381689c6, type: 2}
@@ -254,7 +255,7 @@ Animator:
   m_GameObject: {fileID: 9176452063329322187}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 22100000, guid: 9de65fc353038a5498494420476a9b1b, type: 2}
+  m_Controller: {fileID: 22100000, guid: c98ab2a146d40ba4fb6c37eab2515b6c, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
