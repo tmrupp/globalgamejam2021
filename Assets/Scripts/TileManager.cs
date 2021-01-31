@@ -67,6 +67,12 @@ public class TileManager : MonoBehaviour {
 
     public int points = 0;
 
+    public int turnNumber = 0;
+    public int victimCap = 1;
+    public int hunterCap = 0;
+    public int monsterCap = 0;
+    private List<Vector2Int> candidates = new List<Vector2Int>();
+
     public List<GameObject> agents = new List<GameObject>();
 
     public bool ResolvingMovement = false;
@@ -285,8 +291,18 @@ public class TileManager : MonoBehaviour {
             outstring += tile.Key + ":\t\t" + tile.Value + "\n";
         }
         Debug.Log(outstring);
+        
+        for (int i = 1; i < 8; ++i)
+        {
+            for (int j = 1; j < 8; ++j)
+            {
+                if (Mathf.Abs(i - 4) > 1 && Mathf.Abs(j - 4) > 1) { candidates.Add(new Vector2Int(i, j)); }
+            }
+        }
 
         // create a hunter
+        agents.Add(AgentManager.Create(AgentType.victim, 4, 2, gameObject));
+        /*
         agents.Add(AgentManager.Create(AgentType.hunter, 0, 0, gameObject));
         agents.Add(AgentManager.Create(AgentType.hunter, 8, 8, gameObject));
         agents.Add(AgentManager.Create(AgentType.victim, 3, 5, gameObject));
@@ -295,6 +311,7 @@ public class TileManager : MonoBehaviour {
         agents.Add(AgentManager.Create(AgentType.victim, 5, 3, gameObject));
         agents.Add(AgentManager.Create(AgentType.monster, 0, 8, gameObject));
         agents.Add(AgentManager.Create(AgentType.monster, 8, 0, gameObject));
+        */
     }
 
     public GameObject GetSwapTile () {
@@ -309,7 +326,67 @@ public class TileManager : MonoBehaviour {
             var st = swapTile.GetComponent<GameTile>();
             st.SetColor(Color.white);
             StartCoroutine(SwapTiles(st, o.GetComponent<GameTile>()));
+            ++turnNumber;
+                                                                               // 1 0 0
+            if (turnNumber == 10) { ++victimCap; ++hunterCap; }                // 2 1 0
+            if (turnNumber == 20) { ++hunterCap; ++monsterCap; }               // 2 2 1
+            if (turnNumber == 30) { ++victimCap; ++monsterCap; }               // 3 2 2
+            if (turnNumber == 40) { ++victimCap; ++monsterCap; }               // 4 2 2
+            if (turnNumber == 50) { ++victimCap; ++hunterCap; ++monsterCap; }  // 5 3 3
+            if (turnNumber == 60) { ++victimCap; ++hunterCap; }                // 6 4 3
+            if (turnNumber == 70) { ++hunterCap; ++monsterCap; }               // 6 5 4
+            if (turnNumber == 80) { ++victimCap; ++hunterCap; }                // 7 6 4
+            if (turnNumber == 90) { ++hunterCap; ++monsterCap; }               // 7 7 5
+            if (turnNumber == 100) { throw new System.Exception("GAME OVER"); }
+            int victimCount = 0, hunterCount = 0, monsterCount = 0;
+            foreach (var agentObject in agents)
+            {
+                var agent = agentObject.GetComponent<AgentManager>();
+                if (agent)
+                {
+                    switch (agent.agentType)
+                    {
+                        case AgentType.victim: ++victimCount; break;
+                        case AgentType.hunter: ++hunterCount; break;
+                        case AgentType.monster: ++monsterCount; break;
+                    }
+                }
+            }
+            if (victimCount < victimCap) { TrySpawn(AgentType.victim); }
+            if (hunterCount < hunterCap) { TrySpawn(AgentType.hunter); }
+            if (monsterCount < monsterCap) { TrySpawn(AgentType.monster); }
             swapTile = null;
+        }
+    }
+
+    private void TrySpawn(AgentType type)
+    {
+        for (int i = 0; i < candidates.Count; i++)
+        {
+            var swap = Random.Range(0, candidates.Count);
+            var temp = candidates[swap];
+            candidates[swap] = candidates[i];
+            candidates[i] = temp;
+        }
+        Debug.Log("try");
+        foreach (var pos in candidates)
+        {
+            var valid = true;
+            foreach (var g in agents)
+            {
+                var agent = g.GetComponent<AgentManager>();
+                var diff = agent.position - pos;
+                if (Mathf.Abs(diff.x) + Mathf.Abs(diff.y) < 2)
+                {
+                    valid = false;
+                    break;
+                }
+            }
+            if (valid)
+            {
+                agents.Add(AgentManager.Create(type, pos.x, pos.y, gameObject));
+                break;
+            }
         }
     }
 

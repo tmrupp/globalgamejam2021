@@ -21,7 +21,6 @@ public class AgentManager : MonoBehaviour
     List<Vector2Int> targets = new List<Vector2Int>();
     static GameObject agentPrefab;
     TileManager tileManager;
-    private bool animatingMovement = false;
     private List<Vector2Int> pathToDestination = null;
     private VisiblePath vp; //The VisiblePath component attached to this game object
 
@@ -100,6 +99,12 @@ public class AgentManager : MonoBehaviour
                 agent.KillAgent();
             }
         }
+        if (a.tileManager.GetTileAt(a.position) is null)
+        {
+            // Off the map, kill me and respawn in a few turns
+            a.KillAgent();
+            return;
+        }
     }
 
     public static void HumanCondition (AgentManager a) {
@@ -109,7 +114,12 @@ public class AgentManager : MonoBehaviour
             a.KillAgent();
             return;
         }
-
+        if (a.tileManager.GetTileAt(a.position) is null)
+        {
+            // Off the map, kill me and respawn in a few turns
+            a.KillAgent();
+            return;
+        }
         if (a.position == a.tileManager.GetRitualLocation()) {
             a.tileManager.points++;
             Debug.Log("Victim consumed! points=" + a.tileManager.points.ToString());
@@ -136,12 +146,14 @@ public class AgentManager : MonoBehaviour
         targetGetters[type](agent);
         agent.FindNextMove();
 
+        /*
         var counter = 0;
         while (tm.GetEdges().Contains(agent.nextPosition)) {
             GameTile.Create(tm.GetRandomTerrain(), i, j, caller);
             agent.FindNextMove();
             if (++counter > 20) { break; }
         }
+        */
 
         return gO;
     }
@@ -236,7 +248,7 @@ public class AgentManager : MonoBehaviour
         while (progress < 1f)
         {
             yield return null;
-            progress += 1.25f * Time.deltaTime;
+            progress += 3.5f * Time.deltaTime;
             transform.position = Vector3.Lerp(src, dst, progress);
         }
         transform.position = dst;
