@@ -191,16 +191,16 @@ public class TileManager : MonoBehaviour {
     //Swap the position of two passed in tiles
     private IEnumerator<YieldInstruction> SwapTiles(GameTile first, GameTile second)
     {
+        ResolvingMovement = true;
         Vector2Int firstCoord = first.Location;
         Vector2Int secondCoord = second.Location;
         yield return StartCoroutine(AnimateTileSwap(first, second));
         yield return StartCoroutine(ResolveAllAgentsMovement());
+        ResolvingMovement = false;
     }
 
     private IEnumerator<YieldInstruction> ResolveAllAgentsMovement()
     {
-        ResolvingMovement = true;
-
         //hunters move, then victims move, then monsters move
         agents.Sort((GameObject lhs, GameObject rhs) => {
             AgentManager am_lhs = lhs.GetComponent<AgentManager>();
@@ -228,8 +228,6 @@ public class TileManager : MonoBehaviour {
         {
             yield return StartCoroutine(agent.GetComponent<AgentManager>().Move());
         }
-
-        ResolvingMovement = false;
     }
 
     Sprite LoadSprite (string name) {
