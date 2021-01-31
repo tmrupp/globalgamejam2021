@@ -52,12 +52,56 @@ public class AgentManager : MonoBehaviour
     };
 
     public static Dictionary<MonsterType, MonsterBehavior> monsterBehaviours = new Dictionary<MonsterType, MonsterBehavior>() {
-        {MonsterType.cornman, CornmanBehavior}
+        {MonsterType.human, HumanBehavior},
+        {MonsterType.cornman, CornmanBehavior},
+        {MonsterType.beholder, BeholderBehavior},
+        {MonsterType.statue, StatueBehavior},
+        {MonsterType.cultist, CultistBehavior}
     };
 
     public delegate void MonsterBehavior (AgentManager a);
-    public static void CornmanBehavior (AgentManager a) {
+    public static void HumanBehavior (AgentManager a) {
         // do nothing
+    }
+
+    public static void CornmanBehavior (AgentManager a) {
+        // if you can't find a dude to eat, randomly rotate a tile you're going to
+        if (!a.targets.Contains(a.pathToDestination[0])) {
+            a.tileManager.GetTileAt(a.nextPosition).Rotate(Random.Range(0,3));
+        }
+    }
+
+    List<Vector2Int> AdjacentHumanLocations () {
+        return AdjacentHumans().Select(x => x.position).ToList();
+    }
+
+    List<AgentManager> AdjacentHumans () {
+        return tileManager.agents
+            .Select(x => x.GetComponent<AgentManager>())
+            .Where(x => x.agentType != AgentType.monster && Manhattan(x.position, position) <= 1).ToList();
+
+    }
+
+    public static void BeholderBehavior (AgentManager a) {
+        // float to an adjacent victim
+        var adjacentAgents = a.AdjacentHumans();
+        if (adjacentAgents.Count > 0) {
+            a.nextPosition = adjacentAgents[0].position;
+        }
+    }
+
+    public static void StatueBehavior (AgentManager a) {
+        // make adjacent human path to you
+        var adjacentAgents = a.AdjacentHumans();
+        foreach (var adj in adjacentAgents) {
+            if (a.tileManager.GetNeighborsAt(adj.position).Contains(a.position)) {
+                adj.nextPosition = a.position;
+            }
+        }
+    }
+
+    public static void CultistBehavior (AgentManager a) {
+        // do nothing, just don't munch
     }
 
     public static void LoadPrefabs () {
@@ -112,13 +156,13 @@ public class AgentManager : MonoBehaviour
         foreach (var g in a.tileManager.agents.ToList()) {
             var agent = g.GetComponent<AgentManager>();
             if (agent.position == a.position && agent.agentType != AgentType.monster) {
-                if (agent.agentType == AgentType.hunter)
-                {
+                if (agent.agentType == AgentType.hunter) {
                     a.tileManager.points++;
+                    Debug.Log("MUNCH points=" + a.tileManager.points.ToString());
+                } else if (a.monsterType != MonsterType.cultist) {
+                    a.tileManager.ss?.MakeSplatter();
+                    agent.KillAgent();
                 }
-                Debug.Log("MUNCH points=" + a.tileManager.points.ToString());
-                a.tileManager.ss?.MakeSplatter();
-                agent.KillAgent();
             }
         }
         if (a.tileManager.GetTileAt(a.position) is null)
@@ -168,13 +212,6 @@ public class AgentManager : MonoBehaviour
         // assume hunter to begin with
         targetGetters[type](agent);
         agent.FindNextMove();
-
-        // var counter = 0;
-        // while (tm.GetEdges().Contains(agent.nextPosition)) {
-        //     GameTile.Create(tm.GetRandomTerrain(), i, j, caller);
-        //     agent.FindNextMove();
-        //     if (++counter > 20) { break; }
-        // }
 
         foreach (var t in tm.terrains) { // for each terrain
             for (int r = 0; r < 4; r++) { // for each rotation
@@ -233,12 +270,17 @@ public class AgentManager : MonoBehaviour
     }
 
     public void FindNextMove () {
+        targetGetters[agentType](this);
+        FindNextMove(targets);
+    }
+    
+    public void FindNextMove (List<Vector2Int> ts) {
         Dictionary<Vector2Int, Vector2Int> cameFrom = new Dictionary<Vector2Int, Vector2Int>();
         Queue<Vector2Int> search = new Queue<Vector2Int>();
         (Vector2Int, int) closest = (position, int.MaxValue);
         search.Enqueue(position);
         cameFrom[position] = position;
-        targetGetters[agentType](this);
+        targets = ts;
         
         while (search.Count != 0) {
             var v = search.Dequeue();
@@ -267,6 +309,7 @@ public class AgentManager : MonoBehaviour
         pathToDestination = GetPath(cameFrom, closest.Item1);
         nextPosition = pathToDestination[pathToDestination.Count-1];
         Face(nextPosition);
+        monsterBehaviours[monsterType](this);
     }
 
     public IEnumerator<YieldInstruction> Move() {
