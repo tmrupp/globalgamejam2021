@@ -111,8 +111,13 @@ public class GameTile : MonoBehaviour
                 dir = Vector2.left;
             }
 
-            vp?.DrawLine(tileManager.GridToActual(location), tileManager.GridToActual((Vector2)location + dir/2), Color.white, 1);
+            vp?.DrawLine(tileManager.GridToActual(location), tileManager.GridToActual((Vector2)location + dir/2), new Color(1f, 1f, 1f, 0.5f), 1);
         }
+    }
+
+    public void ClearTileType()
+    {
+        vp?.Clear();
     }
 
     private void OnMouseEnter()
@@ -145,7 +150,7 @@ public class GameTile : MonoBehaviour
         if ((tileManager.GetSwapTile() is null) || gameObject != tileManager.GetSwapTile())
             SetColor(Color.white);
 
-        vp?.Clear();
+        ClearTileType();
     }
 
     private void Start()

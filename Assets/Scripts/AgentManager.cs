@@ -100,6 +100,7 @@ public class AgentManager : MonoBehaviour
                 }
                 Debug.Log("MUNCH points=" + a.tileManager.points.ToString());
                 a.tileManager.ss?.MakeSplatter();
+                SFXPlayer.PlaySound("Kill");
                 agent.KillAgent();
             }
         }
@@ -277,7 +278,7 @@ public class AgentManager : MonoBehaviour
         Vector2Int current = position;
         for (int i = pathToDestination.Count-1; i >= 0; i--)
         {
-            vp.DrawLine(tileManager.GridToActual(current), tileManager.GridToActual(pathToDestination[i]), Indicator.color);
+            vp.DrawLine(tileManager.GridToActual(current), tileManager.GridToActual(pathToDestination[i]), new Color(Indicator.color.r, Indicator.color.g, Indicator.color.b, 0.5f));
             current = pathToDestination[i];
         }
     }
