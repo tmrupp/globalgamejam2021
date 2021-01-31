@@ -38,6 +38,7 @@ public class AgentManager : MonoBehaviour
         get { return privateMonsterType; }
         set
         {
+            Debug.Log("my type is" + value.ToString());
             privateMonsterType = value;
             agentIndex = (int)privateMonsterType - 1;
         }
