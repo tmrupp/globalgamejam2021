@@ -118,12 +118,13 @@ public class AgentManager : MonoBehaviour
             a.KillAgent();
             return;
         }
-        if (a.tileManager.GetTileAt(a.position) is null)
-        {
+
+        if (a.tileManager.GetTileAt(a.position) is null) {
             // Off the map, kill me and respawn in a few turns
             a.KillAgent();
             return;
         }
+
         if (a.position == a.tileManager.GetRitualLocation()) {
             a.tileManager.points++;
             Debug.Log("Victim consumed! points=" + a.tileManager.points.ToString());
