@@ -67,6 +67,8 @@ public class KillScreenSlide : MonoBehaviour
             yield return null;
         }
 
+        semaphore += 2;
+
         StartCoroutine(SlideIn(left, leftDestination, 0.2f, 1.5f, 0f));
         StartCoroutine(SlideIn(right, rightDestination, 0.2f, 1.5f, 0.15f));
 
