@@ -83,25 +83,25 @@ public class GameTile : MonoBehaviour
     {
         for (int i = 0; i < Directions.Count; i++)
         {
-            Vector2Int dir;
+            Vector2 dir;
             if (Directions[i] == 0)
             {
-                dir = Vector2Int.up;
+                dir = Vector2.up;
             }
             else if (Directions[i] == 1)
             {
-                dir = Vector2Int.right;
+                dir = Vector2.right;
             }
             else if (Directions[i] == 2)
             {
-                dir = Vector2Int.down;
+                dir = Vector2.down;
             }
             else //if (Directions[i] == 3)
             {
-                dir = Vector2Int.left;
+                dir = Vector2.left;
             }
 
-            vp?.DrawLine(tileManager.GridToActual(location), tileManager.GridToActual(location + dir), Color.white, 1);
+            vp?.DrawLine(tileManager.GridToActual(location), tileManager.GridToActual((Vector2)location + dir/2), Color.white, 1);
         }
     }
 

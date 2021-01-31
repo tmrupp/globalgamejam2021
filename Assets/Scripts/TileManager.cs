@@ -154,7 +154,7 @@ public class TileManager : MonoBehaviour {
 
     // width = 1.05f
     // height = 0.82f
-    public Vector3 GridToActual (Vector2Int v) { 
+    public Vector3 GridToActual (Vector2 v) { 
         float hw = 1.06f * 0.5f, hh = 0.61f * 0.5f;
         float x = v.x * hw - v.y * hw;
         float y = v.x * hh + v.y * hh;
