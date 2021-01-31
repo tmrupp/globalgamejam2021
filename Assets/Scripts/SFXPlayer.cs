@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SFXPlayer : MonoBehaviour
 {
-    [SerializeField] AudioClip KillSound;
+    [SerializeField] AudioClip KillSound = null;
 
     static Dictionary<string, AudioSource> soundNames;
 
