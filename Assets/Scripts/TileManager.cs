@@ -365,7 +365,7 @@ public class TileManager : MonoBehaviour {
                     var src = new Vector2Int(Random.Range(0, 8), Random.Range(0, 8));
                     var dst = new Vector2Int(Random.Range(0, 8), Random.Range(0, 8));
                     var center = new Vector2Int(4, 4);
-                    if (src != center || dst != center) { yield return StartCoroutine(AnimateTileSwap(tiles[src.x][src.y].GetComponent<GameTile>(), tiles[dst.x][dst.y].GetComponent<GameTile>(), 5f)); }
+                    if (src != center && dst != center) { yield return StartCoroutine(AnimateTileSwap(tiles[src.x][src.y].GetComponent<GameTile>(), tiles[dst.x][dst.y].GetComponent<GameTile>(), 5f)); }
                 }
                 ResolvingMovement = false;
             }
