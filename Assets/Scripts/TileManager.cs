@@ -221,7 +221,6 @@ public class TileManager : MonoBehaviour {
 
     Sprite LoadSprite (string name) {
         Sprite s = (Sprite) Resources.Load("Sprites/backgroundtiles/" + name, typeof(Sprite));
-            Debug.Log("laoding name=" + name);
         return s;
     }
 
