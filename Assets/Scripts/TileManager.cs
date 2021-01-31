@@ -376,7 +376,7 @@ public class TileManager : MonoBehaviour {
             if (turnNumber == 20) { ++victimCap; ++hunterCap; ++monsterCap; }
             if (turnNumber == 30) { ++victimCap; }
             if (turnNumber == 40) { ++victimCap; ++hunterCap; }
-            if (turnNumber == 50) { throw new System.Exception("GAME OVER"); }
+            //if (turnNumber == 50) { FindObjectOfType<EndScreen>().gameObject.SetActive(true); }
             /*
             if (turnNumber >= 20 && turnNumber % 7 == 0)
             {
@@ -451,7 +451,7 @@ public class TileManager : MonoBehaviour {
     public void RemoveAgent (GameObject a) {
         agents.Remove(a);
         if (agents.Select(x => x.GetComponent<AgentManager>().agentType).Where(x => x != AgentType.monster).ToList().Count == 0) {
-            Debug.Log("all humans gone tally up score!");
+            // Debug.Log("all humans gone tally up score!");
         }
     }
 
