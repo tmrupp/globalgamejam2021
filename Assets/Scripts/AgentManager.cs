@@ -32,6 +32,7 @@ public class AgentManager : MonoBehaviour
     private List<Vector2Int> pathToDestination = null;
     private VisiblePath vp; //The VisiblePath component attached to this game object
     MonsterType monsterType = MonsterType.human;
+    bool lanterned = false;
 
     public static Dictionary<AgentType, Color> agentColors = new Dictionary<AgentType, Color>() {
         {AgentType.hunter, Color.red},
@@ -96,6 +97,7 @@ public class AgentManager : MonoBehaviour
         foreach (var adj in adjacentAgents) {
             if (a.tileManager.GetNeighborsAt(adj.position).Contains(a.position)) {
                 adj.nextPosition = a.position;
+                adj.lanterned = true;
             }
         }
     }
@@ -279,6 +281,9 @@ public class AgentManager : MonoBehaviour
     }
     
     public void FindNextMove (List<Vector2Int> ts) {
+        if (lanterned) // being moved somewhere
+            return;
+
         Dictionary<Vector2Int, Vector2Int> cameFrom = new Dictionary<Vector2Int, Vector2Int>();
         Queue<Vector2Int> search = new Queue<Vector2Int>();
         (Vector2Int, int) closest = (position, int.MaxValue);
@@ -318,6 +323,7 @@ public class AgentManager : MonoBehaviour
 
     public IEnumerator<YieldInstruction> Move() {
         ClearPath();
+        lanterned = false;
         agentConditions[agentType](this);
         var src = tileManager.GridToActual(position);
         var dst = tileManager.GridToActual(nextPosition);
