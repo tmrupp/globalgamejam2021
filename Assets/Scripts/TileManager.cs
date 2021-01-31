@@ -202,8 +202,8 @@ public class TileManager : MonoBehaviour {
         ResolvingMovement = true;
         Vector2Int firstCoord = first.Location;
         Vector2Int secondCoord = second.Location;
-        yield return StartCoroutine(AnimateTileSwap(first, second));
         yield return StartCoroutine(ResolveAllAgentsMovement());
+        yield return StartCoroutine(AnimateTileSwap(first, second));
         ResolvingMovement = false;
     }
 
