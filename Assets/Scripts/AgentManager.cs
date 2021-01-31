@@ -81,8 +81,9 @@ public class AgentManager : MonoBehaviour
         if (!a.targets.Contains(a.pathToDestination[0])) {
             Debug.Log("fliping");
             var gt = a.tileManager.GetTileAt(a.nextPosition);
-            gt.Rotate(Random.Range(0,4));
-            gt.SetSprite();
+
+            gt?.Rotate(Random.Range(0,4));
+            gt?.SetSprite();
         }
     }
 
