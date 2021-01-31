@@ -113,6 +113,7 @@ public class AgentManager : MonoBehaviour
             if (a.tileManager.GetNeighborsAt(adj.position).Contains(a.position)) {
                 Debug.Log("jebaiting");
                 adj.nextPosition = a.position;
+                adj.pathToDestination = new List<Vector2Int>() {adj.nextPosition, adj.position};
                 adj.lanterned = true;
             }
         }
