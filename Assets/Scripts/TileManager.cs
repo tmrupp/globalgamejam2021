@@ -301,6 +301,9 @@ public class TileManager : MonoBehaviour {
 
     public void RemoveAgent (GameObject a) {
         agents.Remove(a);
+        if (agents.Select(x => x.GetComponent<AgentManager>().agentType).Where(x => x != AgentType.monster).ToList().Count == 0) {
+            Debug.Log("all humans gone tally up score!");
+        }
     }
 
     void Update () {
