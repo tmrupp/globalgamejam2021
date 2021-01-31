@@ -158,11 +158,15 @@ public class AgentManager : MonoBehaviour
             if (agent.position == a.position && agent.agentType != AgentType.monster) {
                 if (agent.agentType == AgentType.hunter) {
                     a.tileManager.points++;
-                    Debug.Log("MUNCH points=" + a.tileManager.points.ToString());
-                } else if (a.monsterType != MonsterType.cultist) {
-                    a.tileManager.ss?.MakeSplatter();
-                    agent.KillAgent();
                 }
+                
+                if (a.monsterType != MonsterType.cultist || agent.agentType == AgentType.hunter) {
+                    a.tileManager.ss?.MakeSplatter();
+                    SFXPlayer.PlaySound("Kill");
+                    agent.KillAgent();
+                    Debug.Log("MUNCH points=" + a.tileManager.points.ToString());
+                }
+
             }
         }
         if (a.tileManager.GetTileAt(a.position) is null)
@@ -338,7 +342,7 @@ public class AgentManager : MonoBehaviour
         Vector2Int current = position;
         for (int i = pathToDestination.Count-1; i >= 0; i--)
         {
-            vp.DrawLine(tileManager.GridToActual(current), tileManager.GridToActual(pathToDestination[i]), Indicator.color);
+            vp.DrawLine(tileManager.GridToActual(current), tileManager.GridToActual(pathToDestination[i]), new Color(Indicator.color.r, Indicator.color.g, Indicator.color.b, 0.5f));
             current = pathToDestination[i];
         }
     }
