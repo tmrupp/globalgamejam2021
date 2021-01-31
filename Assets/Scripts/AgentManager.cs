@@ -137,9 +137,11 @@ public class AgentManager : MonoBehaviour
         targetGetters[type](agent);
         agent.FindNextMove();
 
+        var counter = 0;
         while (tm.GetEdges().Contains(agent.nextPosition)) {
             GameTile.Create(tm.GetRandomTerrain(), i, j, caller);
             agent.FindNextMove();
+            if (++counter > 20) { break; }
         }
 
         return gO;
