@@ -51,14 +51,4 @@ public class VisiblePath : MonoBehaviour
         }
         lines.Clear();
     }
-
-    private void Update()
-    {
-        if (Input.GetMouseButtonDown(1))
-        {
-            Vector2 randPos = new Vector2(Random.Range(0, 9), Random.Range(0, 9));
-
-            DrawLine(transform.position, randPos, Color.white);
-        }
-    }
 }
