@@ -1,0 +1,886 @@
+fileFormatVersion: 2
+guid: e08b75554575f3243a55d27c6bdc3887
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4349063064678475469
+    second: purp Hunter Sprite-Sheet_0
+  - first:
+      213: -4316119341793616165
+    second: purp Hunter Sprite-Sheet_1
+  - first:
+      213: 6904399882804037617
+    second: purp Hunter Sprite-Sheet_2
+  - first:
+      213: -1443213392229406724
+    second: purp Hunter Sprite-Sheet_3
+  - first:
+      213: 6163271474454524029
+    second: purp Hunter Sprite-Sheet_4
+  - first:
+      213: -146457326067594627
+    second: purp Hunter Sprite-Sheet_5
+  - first:
+      213: 6279494633298560216
+    second: purp Hunter Sprite-Sheet_6
+  - first:
+      213: -9052559570391756355
+    second: purp Hunter Sprite-Sheet_7
+  - first:
+      213: 6429004353816822007
+    second: purp Hunter Sprite-Sheet_8
+  - first:
+      213: 7607788992002965491
+    second: purp Hunter Sprite-Sheet_9
+  - first:
+      213: 3844526907899561630
+    second: purp Hunter Sprite-Sheet_10
+  - first:
+      213: 686554277241894192
+    second: purp Hunter Sprite-Sheet_11
+  - first:
+      213: 289151529743537510
+    second: purp Hunter Sprite-Sheet_12
+  - first:
+      213: -3480628309808874387
+    second: purp Hunter Sprite-Sheet_13
+  - first:
+      213: -3691758764580855129
+    second: purp Hunter Sprite-Sheet_14
+  - first:
+      213: -3450774508395781207
+    second: purp Hunter Sprite-Sheet_15
+  - first:
+      213: 3875347881243439162
+    second: purp Hunter Sprite-Sheet_16
+  - first:
+      213: 8275103822777724803
+    second: purp Hunter Sprite-Sheet_17
+  - first:
+      213: 2644876034949821213
+    second: purp Hunter Sprite-Sheet_18
+  - first:
+      213: 4033113879896261015
+    second: purp Hunter Sprite-Sheet_19
+  - first:
+      213: -5044699493571709120
+    second: purp Hunter Sprite-Sheet_20
+  - first:
+      213: 9222594344965307047
+    second: purp Hunter Sprite-Sheet_21
+  - first:
+      213: 6274672867985521344
+    second: purp Hunter Sprite-Sheet_22
+  - first:
+      213: -4624084615305275467
+    second: purp Hunter Sprite-Sheet_23
+  - first:
+      213: 1399176204983523672
+    second: purp Hunter Sprite-Sheet_24
+  - first:
+      213: -4807936881088354780
+    second: purp Hunter Sprite-Sheet_25
+  - first:
+      213: -579742074884024472
+    second: purp Hunter Sprite-Sheet_26
+  - first:
+      213: -6983736994677927876
+    second: purp Hunter Sprite-Sheet_27
+  - first:
+      213: -528390727615616241
+    second: purp Hunter Sprite-Sheet_28
+  - first:
+      213: -5613119536418569985
+    second: purp Hunter Sprite-Sheet_29
+  - first:
+      213: -8463377311039466244
+    second: purp Hunter Sprite-Sheet_30
+  - first:
+      213: -2934797472132326022
+    second: purp Hunter Sprite-Sheet_31
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: purp Hunter Sprite-Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 640
+        width: 45
+        height: 110
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 339511c5f2605a3c0800000000000000
+      internalID: -4349063064678475469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purp Hunter Sprite-Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 640
+        width: 45
+        height: 110
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bded23093501a14c0800000000000000
+      internalID: -4316119341793616165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purp Hunter Sprite-Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 640
+        width: 45
+        height: 110
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f788c1cc1b51df50800000000000000
+      internalID: 6904399882804037617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purp Hunter Sprite-Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 426
+        y: 640
+        width: 57
+        height: 110
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf76415f01da8fbe0800000000000000
+      internalID: -1443213392229406724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purp Hunter Sprite-Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 554
+        y: 640
+        width: 65
+        height: 109
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d70f82960c6588550800000000000000
+      internalID: 6163271474454524029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purp Hunter Sprite-Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 682
+        y: 640
+        width: 65
+        height: 109
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7accf086dda7fdf0800000000000000
+      internalID: -146457326067594627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purp Hunter Sprite-Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 512
+        width: 67
+        height: 109
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d48bba491f352750800000000000000
+      internalID: 6279494633298560216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purp Hunter Sprite-Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 512
+        width: 68
+        height: 109
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db19cb28809de5280800000000000000
+      internalID: -9052559570391756355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purp Hunter Sprite-Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 512
+        width: 68
+        height: 109
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f001b0c569683950800000000000000
+      internalID: 6429004353816822007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purp Hunter Sprite-Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 426
+        y: 512
+        width: 64
+        height: 109
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ffb67ac7cb449960800000000000000
+      internalID: 7607788992002965491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purp Hunter Sprite-Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 554
+        y: 512
+        width: 64
+        height: 109
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e96c8c28ad08a5530800000000000000
+      internalID: 3844526907899561630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purp Hunter Sprite-Sheet_11
+      rect:
+        serializedVersion: 2
+        x: 682
+        y: 512
+        width: 64
+        height: 109
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03537064a71278900800000000000000
+      internalID: 686554277241894192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purp Hunter Sprite-Sheet_12
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 384
+        width: 64
+        height: 108
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 665df98c8c5430400800000000000000
+      internalID: 289151529743537510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purp Hunter Sprite-Sheet_13
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 384
+        width: 64
+        height: 108
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6c7cae4ef252bfc0800000000000000
+      internalID: -3480628309808874387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purp Hunter Sprite-Sheet_14
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 384
+        width: 64
+        height: 107
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a229b0a6fc34ccc0800000000000000
+      internalID: -3691758764580855129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purp Hunter Sprite-Sheet_15
+      rect:
+        serializedVersion: 2
+        x: 426
+        y: 384
+        width: 64
+        height: 107
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a3a81b1ed26c10d0800000000000000
+      internalID: -3450774508395781207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purp Hunter Sprite-Sheet_16
+      rect:
+        serializedVersion: 2
+        x: 554
+        y: 384
+        width: 64
+        height: 108
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a30f3929d5008c530800000000000000
+      internalID: 3875347881243439162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purp Hunter Sprite-Sheet_17
+      rect:
+        serializedVersion: 2
+        x: 682
+        y: 384
+        width: 64
+        height: 108
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38fa42c551317d270800000000000000
+      internalID: 8275103822777724803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purp Hunter Sprite-Sheet_18
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 256
+        width: 64
+        height: 109
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d13b02a9dbc74b420800000000000000
+      internalID: 2644876034949821213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purp Hunter Sprite-Sheet_19
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 256
+        width: 64
+        height: 109
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7910ae594bf78f730800000000000000
+      internalID: 4033113879896261015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purp Hunter Sprite-Sheet_20
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 256
+        width: 65
+        height: 109
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 047b01fd980adf9b0800000000000000
+      internalID: -5044699493571709120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purp Hunter Sprite-Sheet_21
+      rect:
+        serializedVersion: 2
+        x: 426
+        y: 256
+        width: 65
+        height: 108
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7aafe2f71bc3dff70800000000000000
+      internalID: 9222594344965307047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purp Hunter Sprite-Sheet_22
+      rect:
+        serializedVersion: 2
+        x: 554
+        y: 256
+        width: 65
+        height: 107
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0cafe029abd141750800000000000000
+      internalID: 6274672867985521344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purp Hunter Sprite-Sheet_23
+      rect:
+        serializedVersion: 2
+        x: 682
+        y: 256
+        width: 65
+        height: 108
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b75165ba83f3dfb0800000000000000
+      internalID: -4624084615305275467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purp Hunter Sprite-Sheet_24
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 128
+        width: 65
+        height: 109
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 859d834685fda6310800000000000000
+      internalID: 1399176204983523672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purp Hunter Sprite-Sheet_25
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 128
+        width: 70
+        height: 109
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 426aa3451e6c64db0800000000000000
+      internalID: -4807936881088354780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purp Hunter Sprite-Sheet_26
+      rect:
+        serializedVersion: 2
+        x: 297
+        y: 128
+        width: 72
+        height: 109
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 867903d87a754f7f0800000000000000
+      internalID: -579742074884024472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purp Hunter Sprite-Sheet_27
+      rect:
+        serializedVersion: 2
+        x: 425
+        y: 128
+        width: 83
+        height: 109
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c30d77b6438c41f90800000000000000
+      internalID: -6983736994677927876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purp Hunter Sprite-Sheet_28
+      rect:
+        serializedVersion: 2
+        x: 554
+        y: 128
+        width: 82
+        height: 109
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0b6cd9ce67caa8f0800000000000000
+      internalID: -528390727615616241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purp Hunter Sprite-Sheet_29
+      rect:
+        serializedVersion: 2
+        x: 682
+        y: 128
+        width: 85
+        height: 109
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff047fd65813a12b0800000000000000
+      internalID: -5613119536418569985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purp Hunter Sprite-Sheet_30
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 0
+        width: 81
+        height: 109
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf4546f2d2b0c8a80800000000000000
+      internalID: -8463377311039466244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purp Hunter Sprite-Sheet_31
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 0
+        width: 64
+        height: 109
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7d96d19f318547d0800000000000000
+      internalID: -2934797472132326022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 52f0e1a469564f94eb1acfdada5c868c
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

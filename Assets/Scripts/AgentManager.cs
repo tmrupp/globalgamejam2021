@@ -9,6 +9,14 @@ public enum AgentType {
     monster
 }
 
+public enum MonsterType {
+    human,
+    cornman, // rotate tiles?
+    beholder, // will ignore path if adjacent 
+    statue, // lure people 1 space away
+    cultist // Doesn't kill victims
+}
+
 public class AgentManager : MonoBehaviour
 {
     [SerializeField] private AnimatorMap animatorMap = null;
@@ -23,6 +31,7 @@ public class AgentManager : MonoBehaviour
     TileManager tileManager;
     private List<Vector2Int> pathToDestination = null;
     private VisiblePath vp; //The VisiblePath component attached to this game object
+    MonsterType monsterType = MonsterType.human;
 
     public static Dictionary<AgentType, Color> agentColors = new Dictionary<AgentType, Color>() {
         {AgentType.hunter, Color.red},
@@ -41,6 +50,15 @@ public class AgentManager : MonoBehaviour
         {AgentType.victim, HumanCondition},
         {AgentType.monster, MonsterCondition},
     };
+
+    public static Dictionary<MonsterType, MonsterBehavior> monsterBehaviours = new Dictionary<MonsterType, MonsterBehavior>() {
+        {MonsterType.cornman, CornmanBehavior}
+    };
+
+    public delegate void MonsterBehavior (AgentManager a);
+    public static void CornmanBehavior (AgentManager a) {
+        // do nothing
+    }
 
     public static void LoadPrefabs () {
         if (agentPrefab is null)
