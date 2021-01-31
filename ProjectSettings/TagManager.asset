@@ -41,6 +41,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Tiles
+    uniqueID: 4118125927
+    locked: 0
   - name: Agent
     uniqueID: 835536623
     locked: 0
