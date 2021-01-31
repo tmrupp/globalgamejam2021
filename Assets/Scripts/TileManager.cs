@@ -79,6 +79,10 @@ public class TileManager : MonoBehaviour {
 
     GameObject swapTile = null;
     GameObject secondSwapTile = null;
+    bool shownShufflePopup;
+    List<bool> spawnedYet;
+    public List<Popup> popup = new List<Popup>();
+    public Popup shufflePopup;
 
     public ScreenSplatter ss; //set in Start via searching the hierarchy
 
@@ -258,6 +262,7 @@ public class TileManager : MonoBehaviour {
     }
 
     void Start() {
+        spawnedYet = new List<bool>() { false, false, false };
         // load in the sprites
         foreach (var t in terrainFiles) {
             terrainSprites[t.Key] = t.Value.Select(x => (LoadSprite(x.Item1), LoadSprite(x.Item2))).ToList();
@@ -317,8 +322,7 @@ public class TileManager : MonoBehaviour {
         }
 
         // create a hunter
-        agents.Add(AgentManager.Create(AgentType.victim, 4, 2, gameObject));
-        agents.Add(AgentManager.Create(AgentType.monster, 5, 5, gameObject));
+        StartCoroutine(Spawn(AgentType.victim, 4, 2, gameObject));
         /*
         agents.Add(AgentManager.Create(AgentType.hunter, 0, 0, gameObject));
         agents.Add(AgentManager.Create(AgentType.hunter, 8, 8, gameObject));
@@ -330,6 +334,16 @@ public class TileManager : MonoBehaviour {
         agents.Add(AgentManager.Create(AgentType.monster, 8, 0, gameObject));
         */
         ss = GameObject.FindObjectOfType<ScreenSplatter>();
+    }
+
+    public IEnumerator<YieldInstruction> Spawn(AgentType type, int x, int y, GameObject caller)
+    {
+        agents.Add(AgentManager.Create(type, x, y, caller));
+        if (!spawnedYet[(int)type])
+        {
+            yield return StartCoroutine(popup[(int)type].Show());
+            spawnedYet[(int)type] = true;
+        }
     }
 
     public GameObject GetSwapTile()
@@ -351,15 +365,21 @@ public class TileManager : MonoBehaviour {
             var st = swapTile.GetComponent<GameTile>();
             yield return StartCoroutine(SwapTiles(st, o.GetComponent<GameTile>()));
             ++turnNumber;
-                                                                               // 1 0 0
-            if (turnNumber == 10) { ++victimCap; ++hunterCap; }                // 2 1 0
-            if (turnNumber == 20) { ++hunterCap; ++monsterCap; }               // 2 2 1
-            if (turnNumber == 30) { ++victimCap; ++monsterCap; }               // 3 2 2
-            if (turnNumber == 40) { ++victimCap; ++monsterCap; }               // 4 2 2
+            if (turnNumber == 5) { ++hunterCap; }
+            if (turnNumber == 7) { ++monsterCap; }
+            if (turnNumber == 12) { ++victimCap; }
+            if (turnNumber == 20) { ++victimCap; ++hunterCap; ++monsterCap; }
+            if (turnNumber == 30) { ++victimCap; }
+            if (turnNumber == 40) { ++victimCap; ++hunterCap; }
             if (turnNumber == 50) { throw new System.Exception("GAME OVER"); }
             if (turnNumber >= 20 && turnNumber % 7 == 0)
             {
                 ResolvingMovement = true;
+                if (!shownShufflePopup)
+                {
+                    shownShufflePopup = true;
+                    yield return StartCoroutine(shufflePopup.Show());
+                }
                 for (var i = 0; i < 5; ++i)
                 {
                     var src = new Vector2Int(Random.Range(0, 8), Random.Range(0, 8));
@@ -383,15 +403,15 @@ public class TileManager : MonoBehaviour {
                     }
                 }
             }
-            if (victimCount < victimCap) { TrySpawn(AgentType.victim); }
-            if (hunterCount < hunterCap) { TrySpawn(AgentType.hunter); }
-            if (monsterCount < monsterCap) { TrySpawn(AgentType.monster); }
+            if (victimCount < victimCap) { yield return StartCoroutine(TrySpawn(AgentType.victim)); }
+            if (hunterCount < hunterCap) { yield return StartCoroutine(TrySpawn(AgentType.hunter)); }
+            if (monsterCount < monsterCap) { yield return StartCoroutine(TrySpawn(AgentType.monster)); }
             swapTile = null;
             secondSwapTile = null;
         }
     }
 
-    private void TrySpawn(AgentType type)
+    private IEnumerator<YieldInstruction> TrySpawn(AgentType type)
     {
         for (int i = 0; i < candidates.Count; i++)
         {
@@ -415,7 +435,7 @@ public class TileManager : MonoBehaviour {
             }
             if (valid)
             {
-                agents.Add(AgentManager.Create(type, pos.x, pos.y, gameObject));
+                yield return StartCoroutine(Spawn(type, pos.x, pos.y, gameObject));
                 break;
             }
         }
