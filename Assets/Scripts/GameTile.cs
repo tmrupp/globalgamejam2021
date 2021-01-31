@@ -67,8 +67,15 @@ public class GameTile : MonoBehaviour
         // Debug.Log(s);
 
         // no swappa-da ritual
-        if (terrain != Terrain.ritual)
+        if (terrain != Terrain.ritual) {
             tileManager.SwapThis(gameObject);
+        }
+    }
+
+    public void SetColor (Color c) {
+        gameObject.transform.GetChild(0).GetComponent<SpriteRenderer>().color = c;
+        gameObject.transform.GetChild(1).GetComponent<SpriteRenderer>().color = c;
+
     }
 
     private void OnMouseEnter()
@@ -81,6 +88,8 @@ public class GameTile : MonoBehaviour
                 am.DrawPath();
             }
         }
+
+        SetColor(Color.yellow);
     }
 
     private void OnMouseExit()
@@ -93,5 +102,8 @@ public class GameTile : MonoBehaviour
                 am.ClearPath();
             }
         }
+
+        if ((tileManager.GetSwapTile() is null) || gameObject != tileManager.GetSwapTile())
+            SetColor(Color.white);
     }
 }

@@ -221,7 +221,6 @@ public class TileManager : MonoBehaviour {
 
     Sprite LoadSprite (string name) {
         Sprite s = (Sprite) Resources.Load("Sprites/backgroundtiles/" + name, typeof(Sprite));
-        // if (s is null)
             Debug.Log("laoding name=" + name);
         return s;
     }
@@ -283,11 +282,18 @@ public class TileManager : MonoBehaviour {
         agents.Add(AgentManager.Create(AgentType.monster, 5, 5, gameObject));
     }
 
+    public GameObject GetSwapTile () {
+        return swapTile;
+    }
+
     public void SwapThis (GameObject o) {
-        if (swapTile is null)
+        if (swapTile is null) {
             swapTile = o;
-        else {
-            SwapTiles(swapTile.GetComponent<GameTile>(), o.GetComponent<GameTile>());
+            swapTile.GetComponent<GameTile>().SetColor(Color.red);
+        } else {
+            var st = swapTile.GetComponent<GameTile>();
+            st.SetColor(Color.white);
+            SwapTiles(st, o.GetComponent<GameTile>());
             swapTile = null;
         }
     }
