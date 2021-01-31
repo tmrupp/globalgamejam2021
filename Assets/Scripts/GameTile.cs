@@ -19,6 +19,7 @@ public class GameTile : MonoBehaviour
     public Vector2Int Location { get { return location; } set { location = value; } }
     public int rotation = 0;
 
+    VisiblePath vp;
 
     // setup the tile prefab
     public static void LoadPrefabs () {
@@ -78,6 +79,14 @@ public class GameTile : MonoBehaviour
 
     }
 
+    public void DrawTileType()
+    {
+        for (int i = 0; i < directions.Count; i++)
+        {
+            vp?.DrawLine(tileManager.GridToActual(location), tileManager.GridToActual(directions[i]), Color.white, 1);
+        }
+    }
+
     private void OnMouseEnter()
     {
         foreach (var agent in tileManager.agents)
@@ -90,6 +99,8 @@ public class GameTile : MonoBehaviour
         }
 
         SetColor(Color.yellow);
+
+        DrawTileType();
     }
 
     private void OnMouseExit()
@@ -105,5 +116,10 @@ public class GameTile : MonoBehaviour
 
         if ((tileManager.GetSwapTile() is null) || gameObject != tileManager.GetSwapTile())
             SetColor(Color.white);
+    }
+
+    private void Start()
+    {
+        vp = GetComponent<VisiblePath>();
     }
 }

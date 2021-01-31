@@ -7,7 +7,7 @@ public class VisiblePath : MonoBehaviour
     [SerializeField] Sprite spriteToUse = null; //set in editor
     List<GameObject> lines = new List<GameObject>();
 
-    public void DrawLine(Vector2 start, Vector2 end, Color color)
+    public void DrawLine(Vector2 start, Vector2 end, Color color, int sortingOrder = 2)
     {
         string debugSummary = string.Empty;
 
@@ -16,7 +16,7 @@ public class VisiblePath : MonoBehaviour
         sr.sprite = spriteToUse;
         sr.color = color;
         sr.sortingLayerName = "Agent";
-        sr.sortingOrder = 1;
+        sr.sortingOrder = sortingOrder;
         Vector2 midpoint = (Vector2)(start + end) / 2f;
         line.transform.position = midpoint;
 
