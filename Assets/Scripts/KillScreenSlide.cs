@@ -57,13 +57,20 @@ public class KillScreenSlide : MonoBehaviour
         left.sprite = leftSprite;
         right.sprite = rightSprite;
 
-        if (semaphore == 0)
-        {
-            semaphore += 2;
+        StartCoroutine(TryAgainIfNecessary());
+    }
 
-            StartCoroutine(SlideIn(left, leftDestination, 0.2f, 0.5f, 0f));
-            StartCoroutine(SlideIn(right, rightDestination, 0.2f, 0.5f, 0.15f));
+    private IEnumerator TryAgainIfNecessary()
+    {
+        while (semaphore != 0)
+        {
+            yield return null;
         }
+
+        StartCoroutine(SlideIn(left, leftDestination, 0.2f, 1.5f, 0f));
+        StartCoroutine(SlideIn(right, rightDestination, 0.2f, 1.5f, 0.15f));
+
+        yield return null;
     }
 
     private IEnumerator SlideIn(SpriteRenderer thingToMove, Vector2 destination, float slideTime, float fadeTime, float delay)
