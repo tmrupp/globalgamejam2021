@@ -207,6 +207,7 @@ public class AgentManager : MonoBehaviour
                 if (a.monsterType != MonsterType.cultist || agent.agentType == AgentType.hunter) {
                     a.tileManager.ss?.MakeSplatter();
                     SFXPlayer.PlaySound("Kill");
+                    KillScreenSlide.PerformKillScreen(KillScreenSlide.GetKillScreenSprite(a.agentType, a.agentIndex), KillScreenSlide.GetKillScreenSprite(agent.agentType, agent.agentIndex));
                     agent.KillAgent();
                     Debug.Log("MUNCH points=" + a.tileManager.points.ToString());
                 }

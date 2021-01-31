@@ -47,6 +47,9 @@ TagManager:
   - name: Agent
     uniqueID: 835536623
     locked: 0
+  - name: KillScreen
+    uniqueID: 465209937
+    locked: 0
   - name: Blood
     uniqueID: 1556347771
     locked: 0
