@@ -23,13 +23,4 @@ public class ScreenSplatter : MonoBehaviour
             return true;
         }
     }
-
-    void Update()
-    {
-        //Debug
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            ps.Play();
-        }
-    }
 }
