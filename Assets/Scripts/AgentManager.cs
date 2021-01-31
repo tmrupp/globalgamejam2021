@@ -347,9 +347,11 @@ public class AgentManager : MonoBehaviour
             }
 
             foreach (var n in tileManager.GetNeighborsAtNoBounds(v)) {
+                bool isRitual = n == tileManager.GetRitualLocation();
                 if (!cameFrom.ContainsKey(n) && 
                     n != position &&
-                    n != prevPosition) {
+                    n != prevPosition && 
+                    !(isRitual && agentType == AgentType.monster)) {
                     cameFrom[n] = v;
                     search.Enqueue(n);
                 }
