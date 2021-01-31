@@ -73,6 +73,8 @@ public class TileManager : MonoBehaviour {
 
     GameObject swapTile = null;
 
+    public ScreenSplatter ss; //set in Start via searching the hierarchy
+
     public static (Sprite, Sprite) GetSpriteOfTerrain (Terrain t, int rotation) {
         var ts = terrainSprites[t];
         return ts[rotation % ts.Count];

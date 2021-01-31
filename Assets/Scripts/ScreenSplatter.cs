@@ -11,6 +11,19 @@ public class ScreenSplatter : MonoBehaviour
         ps = GetComponent<ParticleSystem>();
     }
 
+    public bool MakeSplatter()
+    {
+        if (ps.isPlaying)
+        {
+            return false;
+        }
+        else
+        {
+            ps.Play();
+            return true;
+        }
+    }
+
     void Update()
     {
         //Debug

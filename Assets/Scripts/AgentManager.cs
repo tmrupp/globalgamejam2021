@@ -97,6 +97,7 @@ public class AgentManager : MonoBehaviour
             if (agent.position == a.position && agent.agentType != AgentType.monster) {
                 a.tileManager.points++;
                 Debug.Log("MUNCH points=" + a.tileManager.points.ToString());
+                a.tileManager.ss.MakeSplatter();
                 agent.KillAgent();
             }
         }
