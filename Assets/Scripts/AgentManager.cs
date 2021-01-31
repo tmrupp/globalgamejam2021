@@ -150,14 +150,22 @@ public class AgentManager : MonoBehaviour
         targetGetters[type](agent);
         agent.FindNextMove();
 
-        /*
-        var counter = 0;
-        while (tm.GetEdges().Contains(agent.nextPosition)) {
-            GameTile.Create(tm.GetRandomTerrain(), i, j, caller);
-            agent.FindNextMove();
-            if (++counter > 20) { break; }
+        // var counter = 0;
+        // while (tm.GetEdges().Contains(agent.nextPosition)) {
+        //     GameTile.Create(tm.GetRandomTerrain(), i, j, caller);
+        //     agent.FindNextMove();
+        //     if (++counter > 20) { break; }
+        // }
+
+        foreach (var t in tm.terrains) { // for each terrain
+            for (int r = 0; r < 4; r++) { // for each rotation
+                if (tm.GetEdges().Contains(agent.nextPosition)) {
+                    // create a new tile and try it out
+                    GameTile.CreateAndReplace(t, v, r, caller);
+                    agent.FindNextMove();
+                }
+            }
         }
-        */
 
         return gO;
     }

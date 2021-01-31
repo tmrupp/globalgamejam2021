@@ -62,6 +62,16 @@ public class GameTile : MonoBehaviour
         return gameTile;
     }
 
+    public static GameObject CreateAndReplace (Terrain t, Vector2Int v, int rot, GameObject caller) {
+        var gt = Create (t, v.x, v.y, caller);
+
+        if (t != Terrain.ritual)
+            gt.GetComponent<GameTile>().Rotate(rot);
+        caller.GetComponent<TileManager>().ReplaceGameTile(v, gt.GetComponent<GameTile>());
+
+        return gt;
+    }
+
     private void OnMouseDown() {
         // string s = "neighbors for " + location.ToString() + ": ";
         // tileManager.GetNeighborsAt(location).ForEach(x => s = s + x.ToString() + " ");

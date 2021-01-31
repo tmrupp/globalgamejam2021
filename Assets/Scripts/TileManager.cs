@@ -59,7 +59,7 @@ public class TileManager : MonoBehaviour {
     
     // public static Dictionary<Terrain, Sprite> terrainSprites = new Dictionary<Terrain, Sprite> ();
     List<List<GameObject>> tiles = new List<List<GameObject>>();
-    List<Terrain> terrains = new List<Terrain>();
+    public List<Terrain> terrains = new List<Terrain>();
     
     public int length = 9, width = 9;
     public float spacing = 1f; // makes it easier to keep it 1...
@@ -236,6 +236,16 @@ public class TileManager : MonoBehaviour {
         {
             yield return StartCoroutine(agent.GetComponent<AgentManager>().Move());
         }
+    }
+
+    void SetTileAt (Vector2Int v, GameTile newTile) {
+        tiles[v.x][v.y] = newTile.gameObject;
+    }
+
+    public void ReplaceGameTile (Vector2Int v, GameTile newTile) {
+        var formerTile = GetTileAt(v);
+        SetTileAt(v, newTile);
+        Destroy(formerTile.gameObject);
     }
 
     Sprite LoadSprite (string name) {
