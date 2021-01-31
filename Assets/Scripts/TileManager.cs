@@ -183,10 +183,10 @@ public class TileManager : MonoBehaviour {
         SetTileLocation(first, secondCoord);
         SetTileLocation(second, firstCoord);
 
-        ResolveAllAgentsMovement();
+        StartCoroutine(ResolveAllAgentsMovement());
     }
 
-    void ResolveAllAgentsMovement()
+    private IEnumerator<YieldInstruction> ResolveAllAgentsMovement()
     {
         ResolvingMovement = true;
 
@@ -215,7 +215,7 @@ public class TileManager : MonoBehaviour {
 
         foreach (var agent in agents.ToList())
         {
-            agent.GetComponent<AgentManager>().Move();
+            yield return StartCoroutine(agent.GetComponent<AgentManager>().Move());
         }
 
         ResolvingMovement = false;

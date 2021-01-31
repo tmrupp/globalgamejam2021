@@ -67,7 +67,7 @@ public class GameTile : MonoBehaviour
         // Debug.Log(s);
 
         // no swappa-da ritual
-        if (terrain != Terrain.ritual) {
+        if (terrain != Terrain.ritual && !tileManager.ResolvingMovement) {
             tileManager.SwapThis(gameObject);
         }
     }
