@@ -15,8 +15,6 @@ public enum Terrain {
 
 public class TileManager : MonoBehaviour {
 
-    bool UsingIsometric = true;
-
     public static Dictionary<Terrain, List<(string, string)>> terrainFiles = new Dictionary<Terrain, List<(string, string)>>() {
         {Terrain.four, new List<(string, string)>() {("cross1", "cross2")}},
 

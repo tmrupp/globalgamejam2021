@@ -81,8 +81,9 @@ public class AgentManager : MonoBehaviour
         if (!a.targets.Contains(a.pathToDestination[0])) {
             Debug.Log("fliping");
             var gt = a.tileManager.GetTileAt(a.nextPosition);
-            gt.Rotate(Random.Range(0,4));
-            gt.SetSprite();
+
+            gt?.Rotate(Random.Range(0,4));
+            gt?.SetSprite();
         }
     }
 
@@ -113,6 +114,7 @@ public class AgentManager : MonoBehaviour
             if (a.tileManager.GetNeighborsAt(adj.position).Contains(a.position)) {
                 Debug.Log("jebaiting");
                 adj.nextPosition = a.position;
+                adj.pathToDestination = new List<Vector2Int>() {adj.nextPosition, adj.position};
                 adj.lanterned = true;
             }
         }
@@ -346,9 +348,11 @@ public class AgentManager : MonoBehaviour
             }
 
             foreach (var n in tileManager.GetNeighborsAtNoBounds(v)) {
+                bool isRitual = n == tileManager.GetRitualLocation();
                 if (!cameFrom.ContainsKey(n) && 
                     n != position &&
-                    n != prevPosition) {
+                    n != prevPosition && 
+                    !(isRitual && agentType == AgentType.monster)) {
                     cameFrom[n] = v;
                     search.Enqueue(n);
                 }
