@@ -162,10 +162,24 @@ public class TileManager : MonoBehaviour {
     //This is a dumb method.
     // > yes the location is already associated with the gametile (.location)
 
-    public void SetTileLocation (GameTile tile, Vector2Int v) {
-        tile.Location = v;
-        tiles[v.x][v.y] = tile.gameObject;
-        tile.gameObject.transform.position = GridToActual(tile.Location);
+    public IEnumerator<YieldInstruction> AnimateTileSwap (GameTile firstTile, GameTile secondTile) {
+        var firstActual = GridToActual(firstTile.Location);
+        var secondActual = GridToActual(secondTile.Location);
+        var progress = 0f;
+        while (progress < 1f)
+        {
+            yield return null;
+            progress += 2f * Time.deltaTime;
+            firstTile.transform.position = Vector3.Lerp(firstActual, secondActual, progress);
+            secondTile.transform.position = Vector3.Lerp(secondActual, firstActual, progress);
+        }
+        firstTile.transform.position = secondActual;
+        secondTile.transform.position = firstActual;
+        var temp = firstTile.Location;
+        firstTile.Location = secondTile.Location;
+        secondTile.Location = temp;
+        tiles[firstTile.Location.x][firstTile.Location.y] = firstTile.gameObject;
+        tiles[secondTile.Location.x][secondTile.Location.y] = secondTile.gameObject;
     }
 
     public List<(AgentType, Vector2Int)> GetAgentLocations () {
@@ -175,15 +189,12 @@ public class TileManager : MonoBehaviour {
     }
 
     //Swap the position of two passed in tiles
-    void SwapTiles(GameTile first, GameTile second)
+    private IEnumerator<YieldInstruction> SwapTiles(GameTile first, GameTile second)
     {
-        Vector2Int firstCoord = first.Location; 
-        Vector2Int secondCoord = second.Location; 
-
-        SetTileLocation(first, secondCoord);
-        SetTileLocation(second, firstCoord);
-
-        StartCoroutine(ResolveAllAgentsMovement());
+        Vector2Int firstCoord = first.Location;
+        Vector2Int secondCoord = second.Location;
+        yield return StartCoroutine(AnimateTileSwap(first, second));
+        yield return StartCoroutine(ResolveAllAgentsMovement());
     }
 
     private IEnumerator<YieldInstruction> ResolveAllAgentsMovement()
@@ -294,7 +305,7 @@ public class TileManager : MonoBehaviour {
         } else {
             var st = swapTile.GetComponent<GameTile>();
             st.SetColor(Color.white);
-            SwapTiles(st, o.GetComponent<GameTile>());
+            StartCoroutine(SwapTiles(st, o.GetComponent<GameTile>()));
             swapTile = null;
         }
     }
