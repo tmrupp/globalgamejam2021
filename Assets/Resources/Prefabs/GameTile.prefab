@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1091606701746690721}
   - component: {fileID: 3494560373183987936}
   - component: {fileID: 8374098585523736824}
+  - component: {fileID: 1700769154038212566}
   m_Layer: 0
   m_Name: GameTile
   m_TagString: Untagged
@@ -128,6 +129,19 @@ PolygonCollider2D:
       - {x: -8.78144, y: -0.9109073}
       - {x: -0.002838254, y: -5.963135}
       - {x: 9.037039, y: -0.90867966}
+--- !u!114 &1700769154038212566
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1971465383648464943}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54dfa749557df694ab624fe2d960a632, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteToUse: {fileID: 21300000, guid: 68eb99237c95b5a46b3b5a87e94319c6, type: 3}
 --- !u!1 &2767427424104792685
 GameObject:
   m_ObjectHideFlags: 0

@@ -81,9 +81,27 @@ public class GameTile : MonoBehaviour
 
     public void DrawTileType()
     {
-        for (int i = 0; i < directions.Count; i++)
+        for (int i = 0; i < Directions.Count; i++)
         {
-            vp?.DrawLine(tileManager.GridToActual(location), tileManager.GridToActual(directions[i]), Color.white, 1);
+            Vector2Int dir;
+            if (Directions[i] == 0)
+            {
+                dir = Vector2Int.up;
+            }
+            else if (Directions[i] == 1)
+            {
+                dir = Vector2Int.right;
+            }
+            else if (Directions[i] == 2)
+            {
+                dir = Vector2Int.down;
+            }
+            else //if (Directions[i] == 3)
+            {
+                dir = Vector2Int.left;
+            }
+
+            vp?.DrawLine(tileManager.GridToActual(location), tileManager.GridToActual(location + dir), Color.white, 1);
         }
     }
 
@@ -116,6 +134,8 @@ public class GameTile : MonoBehaviour
 
         if ((tileManager.GetSwapTile() is null) || gameObject != tileManager.GetSwapTile())
             SetColor(Color.white);
+
+        vp?.Clear();
     }
 
     private void Start()
