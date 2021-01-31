@@ -348,6 +348,7 @@ public class TileManager : MonoBehaviour {
             yield return StartCoroutine(popup[(int)type].Show());
             spawnedYet[(int)type] = true;
         }
+        yield return null;
     }
 
     public GameObject GetSwapTile()
