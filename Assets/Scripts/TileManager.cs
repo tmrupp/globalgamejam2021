@@ -264,6 +264,7 @@ public class TileManager : MonoBehaviour {
 
     private void Awake()
     {
+        endTurn = 50;
         tooltip = FindObjectOfType<Tooltip>();
     }
 
@@ -381,7 +382,7 @@ public class TileManager : MonoBehaviour {
             if (turnNumber == 20) { ++victimCap; ++hunterCap; ++monsterCap; }
             if (turnNumber == 30) { ++victimCap; }
             if (turnNumber == 40) { ++victimCap; ++hunterCap; }
-            if (turnNumber == 2) { endScreen.SetActive(true); }
+            if (turnNumber == endTurn) { endScreen.SetActive(true); }
             /*
             if (turnNumber >= 20 && turnNumber % 7 == 0)
             {
