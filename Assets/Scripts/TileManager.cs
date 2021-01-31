@@ -365,6 +365,9 @@ public class TileManager : MonoBehaviour {
         o.GetComponent<GameTile>().SetColor(Color.red);
         if (swapTile is null) {
             swapTile = o;
+        } else if (o == swapTile) {
+            swapTile = null;
+            yield return null;
         } else {
             secondSwapTile = o;
             var st = swapTile.GetComponent<GameTile>();
@@ -388,12 +391,21 @@ public class TileManager : MonoBehaviour {
                 }
                 for (var i = 0; i < 5; ++i)
                 {
-                    var src = new Vector2Int(Random.Range(0, 8), Random.Range(0, 8));
-                    var dst = new Vector2Int(Random.Range(0, 8), Random.Range(0, 8));
-                    var center = new Vector2Int(4, 4);
-                    if (src != center && dst != center) { yield return StartCoroutine(AnimateTileSwap(tiles[src.x][src.y].GetComponent<GameTile>(), tiles[dst.x][dst.y].GetComponent<GameTile>(), 5f)); }
+                    ResolvingMovement = true;
+                    if (!shownShufflePopup)
+                    {
+                        shownShufflePopup = true;
+                        yield return StartCoroutine(shufflePopup.Show());
+                    }
+                    for (var i = 0; i < 5; ++i)
+                    {
+                        var src = new Vector2Int(Random.Range(0, 8), Random.Range(0, 8));
+                        var dst = new Vector2Int(Random.Range(0, 8), Random.Range(0, 8));
+                        var center = new Vector2Int(4, 4);
+                        if (src != center && dst != center) { yield return StartCoroutine(AnimateTileSwap(tiles[src.x][src.y].GetComponent<GameTile>(), tiles[dst.x][dst.y].GetComponent<GameTile>(), 5f)); }
+                    }
+                    ResolvingMovement = false;
                 }
-                ResolvingMovement = false;
             }
             */
             int victimCount = 0, hunterCount = 0, monsterCount = 0;

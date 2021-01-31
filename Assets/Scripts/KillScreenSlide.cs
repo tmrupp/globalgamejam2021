@@ -9,12 +9,15 @@ public class KillScreenSlide : MonoBehaviour
 
     [SerializeField] Vector2 leftDestination; //set in editor
     [SerializeField] Vector2 rightDestination; //set in editor
+    [SerializeField] float globalSizeScaling; //set in editor
 
     private static KillScreenSlide instance = null;
 
     [SerializeField] List<Sprite> victim = null;
     [SerializeField] List<Sprite> hunter = null;
     [SerializeField] List<Sprite> monster = null;
+
+    private int semaphore = 0;
 
     public static Sprite GetKillScreenSprite(AgentType type, int index)
     {
@@ -54,12 +57,19 @@ public class KillScreenSlide : MonoBehaviour
         left.sprite = leftSprite;
         right.sprite = rightSprite;
 
-        StartCoroutine(SlideIn(left, leftDestination, 0.2f, 0.5f, 0f));
-        StartCoroutine(SlideIn(right, rightDestination, 0.2f, 0.5f, 0.15f));
+        if (semaphore == 0)
+        {
+            semaphore += 2;
+
+            StartCoroutine(SlideIn(left, leftDestination, 0.2f, 0.5f, 0f));
+            StartCoroutine(SlideIn(right, rightDestination, 0.2f, 0.5f, 0.15f));
+        }
     }
 
     private IEnumerator SlideIn(SpriteRenderer thingToMove, Vector2 destination, float slideTime, float fadeTime, float delay)
     {
+        thingToMove.transform.localScale = new Vector3(globalSizeScaling, globalSizeScaling, 1);
+
         if (delay > 0)
         {
             yield return new WaitForSeconds(delay);
@@ -89,6 +99,10 @@ public class KillScreenSlide : MonoBehaviour
         //Reset opacity and position
         thingToMove.transform.position = start;
         thingToMove.color = Color.white;
+
+        semaphore--;
+
+        yield return null;
     }
 
     void Update()
