@@ -128,6 +128,8 @@ public class GameTile : MonoBehaviour
             if (am.position == location)
             {
                 am.DrawPath();
+                tileManager.tooltip.transform.position = Camera.main.WorldToScreenPoint(transform.position);
+                tileManager.tooltip.Show(am.agentType, am.monsterType);
             }
         }
 
@@ -147,6 +149,7 @@ public class GameTile : MonoBehaviour
                 am.ClearPath();
             }
         }
+        tileManager.tooltip.Hide();
 
         if (gameObject != tileManager.GetSwapTile() && gameObject != tileManager.GetSecondSwapTile())
             SetColor(Color.white);

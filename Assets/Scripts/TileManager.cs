@@ -81,6 +81,7 @@ public class TileManager : MonoBehaviour {
     List<bool> spawnedYet;
     public List<Popup> popup = new List<Popup>();
     public Popup shufflePopup;
+    public Tooltip tooltip;
 
     public ScreenSplatter ss; //set in Start via searching the hierarchy
 
@@ -257,6 +258,11 @@ public class TileManager : MonoBehaviour {
     Sprite LoadSprite (string name) {
         Sprite s = (Sprite) Resources.Load("Sprites/backgroundtiles/" + name, typeof(Sprite));
         return s;
+    }
+
+    private void Awake()
+    {
+        tooltip = FindObjectOfType<Tooltip>();
     }
 
     void Start() {
