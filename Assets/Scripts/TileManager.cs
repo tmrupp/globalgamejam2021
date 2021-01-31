@@ -208,6 +208,7 @@ public class TileManager : MonoBehaviour {
         second.SetColor(Color.white);
         yield return StartCoroutine(AnimateTileSwap(first, second, 3f));
         ResolvingMovement = false;
+        agents.ForEach(a => a.GetComponent<AgentManager>().FindNextMove());
     }
 
     private IEnumerator<YieldInstruction> ResolveAllAgentsMovement()
