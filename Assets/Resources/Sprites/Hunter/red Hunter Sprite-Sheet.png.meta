@@ -1,0 +1,886 @@
+fileFormatVersion: 2
+guid: d4706ef7fcff0224d99319c669278c9e
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1748752105018526604
+    second: red Hunter Sprite-Sheet_0
+  - first:
+      213: -3537569448582624145
+    second: red Hunter Sprite-Sheet_1
+  - first:
+      213: -4021611446532785280
+    second: red Hunter Sprite-Sheet_2
+  - first:
+      213: -6203868895852546135
+    second: red Hunter Sprite-Sheet_3
+  - first:
+      213: -5403903982778044125
+    second: red Hunter Sprite-Sheet_4
+  - first:
+      213: -7206110164182083739
+    second: red Hunter Sprite-Sheet_5
+  - first:
+      213: -6832036916998417636
+    second: red Hunter Sprite-Sheet_6
+  - first:
+      213: -3457286097844998386
+    second: red Hunter Sprite-Sheet_7
+  - first:
+      213: -6105609479192939418
+    second: red Hunter Sprite-Sheet_8
+  - first:
+      213: -4286355088825797925
+    second: red Hunter Sprite-Sheet_9
+  - first:
+      213: 1329122550039847196
+    second: red Hunter Sprite-Sheet_10
+  - first:
+      213: -3861724064302447990
+    second: red Hunter Sprite-Sheet_11
+  - first:
+      213: -1281079636389211886
+    second: red Hunter Sprite-Sheet_12
+  - first:
+      213: -7070278619484999862
+    second: red Hunter Sprite-Sheet_13
+  - first:
+      213: 8625017459355027395
+    second: red Hunter Sprite-Sheet_14
+  - first:
+      213: 1874784170717454502
+    second: red Hunter Sprite-Sheet_15
+  - first:
+      213: -4121978106587466415
+    second: red Hunter Sprite-Sheet_16
+  - first:
+      213: 707399834598870460
+    second: red Hunter Sprite-Sheet_17
+  - first:
+      213: 4816274295978980420
+    second: red Hunter Sprite-Sheet_18
+  - first:
+      213: -5741971383079200357
+    second: red Hunter Sprite-Sheet_19
+  - first:
+      213: 4172529962559761332
+    second: red Hunter Sprite-Sheet_20
+  - first:
+      213: 9009436413983893259
+    second: red Hunter Sprite-Sheet_21
+  - first:
+      213: 1618607315082539301
+    second: red Hunter Sprite-Sheet_22
+  - first:
+      213: -2399720546416740458
+    second: red Hunter Sprite-Sheet_23
+  - first:
+      213: -4354710583958431969
+    second: red Hunter Sprite-Sheet_24
+  - first:
+      213: 334433211797720538
+    second: red Hunter Sprite-Sheet_25
+  - first:
+      213: -7864509352460215024
+    second: red Hunter Sprite-Sheet_26
+  - first:
+      213: -3645726327736264948
+    second: red Hunter Sprite-Sheet_27
+  - first:
+      213: -5540348654736160470
+    second: red Hunter Sprite-Sheet_28
+  - first:
+      213: 8791796896930983453
+    second: red Hunter Sprite-Sheet_29
+  - first:
+      213: 278006603229719176
+    second: red Hunter Sprite-Sheet_30
+  - first:
+      213: 6442728719714705243
+    second: red Hunter Sprite-Sheet_31
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: red Hunter Sprite-Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 640
+        width: 45
+        height: 110
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8b88d336c0d44810800000000000000
+      internalID: 1748752105018526604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red Hunter Sprite-Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 640
+        width: 45
+        height: 110
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6c45f0545708eec0800000000000000
+      internalID: -3537569448582624145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red Hunter Sprite-Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 640
+        width: 45
+        height: 110
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08bb4c062bd5038c0800000000000000
+      internalID: -4021611446532785280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red Hunter Sprite-Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 426
+        y: 640
+        width: 57
+        height: 110
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a73d95db1e67e9a0800000000000000
+      internalID: -6203868895852546135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red Hunter Sprite-Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 554
+        y: 640
+        width: 65
+        height: 109
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 321323275f97105b0800000000000000
+      internalID: -5403903982778044125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red Hunter Sprite-Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 682
+        y: 640
+        width: 65
+        height: 109
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 567589b3cf0cefb90800000000000000
+      internalID: -7206110164182083739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red Hunter Sprite-Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 512
+        width: 67
+        height: 109
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1354f52f9abf21a0800000000000000
+      internalID: -6832036916998417636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red Hunter Sprite-Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 512
+        width: 68
+        height: 109
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0f6d0b8c904500d0800000000000000
+      internalID: -3457286097844998386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red Hunter Sprite-Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 512
+        width: 68
+        height: 109
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 664727f0784844ba0800000000000000
+      internalID: -6105609479192939418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red Hunter Sprite-Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 426
+        y: 512
+        width: 64
+        height: 109
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd2b95db1cec384c0800000000000000
+      internalID: -4286355088825797925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red Hunter Sprite-Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 554
+        y: 512
+        width: 64
+        height: 109
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c112612daedf17210800000000000000
+      internalID: 1329122550039847196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red Hunter Sprite-Sheet_11
+      rect:
+        serializedVersion: 2
+        x: 682
+        y: 512
+        width: 64
+        height: 109
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a82ccae7c66686ac0800000000000000
+      internalID: -3861724064302447990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red Hunter Sprite-Sheet_12
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 384
+        width: 64
+        height: 108
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 211d800bbd0b83ee0800000000000000
+      internalID: -1281079636389211886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red Hunter Sprite-Sheet_13
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 384
+        width: 64
+        height: 108
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4fae863e0351ed90800000000000000
+      internalID: -7070278619484999862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red Hunter Sprite-Sheet_14
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 384
+        width: 64
+        height: 107
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c706669ea732b770800000000000000
+      internalID: 8625017459355027395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red Hunter Sprite-Sheet_15
+      rect:
+        serializedVersion: 2
+        x: 426
+        y: 384
+        width: 64
+        height: 107
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a0a32e2542940a10800000000000000
+      internalID: 1874784170717454502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red Hunter Sprite-Sheet_16
+      rect:
+        serializedVersion: 2
+        x: 554
+        y: 384
+        width: 64
+        height: 108
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 155bae050cacbc6c0800000000000000
+      internalID: -4121978106587466415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red Hunter Sprite-Sheet_17
+      rect:
+        serializedVersion: 2
+        x: 682
+        y: 384
+        width: 64
+        height: 108
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cbd8f6fc66031d900800000000000000
+      internalID: 707399834598870460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red Hunter Sprite-Sheet_18
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 256
+        width: 64
+        height: 109
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 444fba854f7d6d240800000000000000
+      internalID: 4816274295978980420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red Hunter Sprite-Sheet_19
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 256
+        width: 64
+        height: 109
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b991b19037b6050b0800000000000000
+      internalID: -5741971383079200357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red Hunter Sprite-Sheet_20
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 256
+        width: 65
+        height: 109
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4bb6c09d4edc7e930800000000000000
+      internalID: 4172529962559761332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red Hunter Sprite-Sheet_21
+      rect:
+        serializedVersion: 2
+        x: 426
+        y: 256
+        width: 65
+        height: 108
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b07aaf93fa2f70d70800000000000000
+      internalID: 9009436413983893259
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red Hunter Sprite-Sheet_22
+      rect:
+        serializedVersion: 2
+        x: 554
+        y: 256
+        width: 65
+        height: 107
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 521f75ef6c2767610800000000000000
+      internalID: 1618607315082539301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red Hunter Sprite-Sheet_23
+      rect:
+        serializedVersion: 2
+        x: 682
+        y: 256
+        width: 65
+        height: 108
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 697bf9690ea72bed0800000000000000
+      internalID: -2399720546416740458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red Hunter Sprite-Sheet_24
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 128
+        width: 65
+        height: 109
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f17168fcbc5f093c0800000000000000
+      internalID: -4354710583958431969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red Hunter Sprite-Sheet_25
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 128
+        width: 70
+        height: 109
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: addcb46fb3524a400800000000000000
+      internalID: 334433211797720538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red Hunter Sprite-Sheet_26
+      rect:
+        serializedVersion: 2
+        x: 297
+        y: 128
+        width: 72
+        height: 109
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01d1fd17966abd290800000000000000
+      internalID: -7864509352460215024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red Hunter Sprite-Sheet_27
+      rect:
+        serializedVersion: 2
+        x: 425
+        y: 128
+        width: 83
+        height: 109
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c079df68837c76dc0800000000000000
+      internalID: -3645726327736264948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red Hunter Sprite-Sheet_28
+      rect:
+        serializedVersion: 2
+        x: 554
+        y: 128
+        width: 82
+        height: 109
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2943a6a04abc13b0800000000000000
+      internalID: -5540348654736160470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red Hunter Sprite-Sheet_29
+      rect:
+        serializedVersion: 2
+        x: 682
+        y: 128
+        width: 85
+        height: 109
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1ee3f262bcb20a70800000000000000
+      internalID: 8791796896930983453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red Hunter Sprite-Sheet_30
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 0
+        width: 81
+        height: 109
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88a68be588dabd300800000000000000
+      internalID: 278006603229719176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red Hunter Sprite-Sheet_31
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 0
+        width: 64
+        height: 109
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5f5dc2b2ab296950800000000000000
+      internalID: 6442728719714705243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 132dd6353d8b01c4491bd91c5c756457
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
