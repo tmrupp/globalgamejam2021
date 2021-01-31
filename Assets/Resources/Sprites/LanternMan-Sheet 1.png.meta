@@ -1,88 +1,88 @@
 fileFormatVersion: 2
-guid: 5c2f474686a68fb4cb75375c4ca2f60e
+guid: e061cc0121afd2c4997ef8408e229597
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6562620583879961201
-    second: LanternMan-Sheet_0
+      213: 643548444658349338
+    second: LanternMan-Sheet 1_0
   - first:
-      213: 145784676003595452
-    second: LanternMan-Sheet_1
+      213: 867688138612232565
+    second: LanternMan-Sheet 1_1
   - first:
-      213: -3969553049576758025
-    second: LanternMan-Sheet_2
+      213: -2742140334879970537
+    second: LanternMan-Sheet 1_2
   - first:
-      213: 7147065176849375700
-    second: LanternMan-Sheet_3
+      213: 1468438560291369441
+    second: LanternMan-Sheet 1_3
   - first:
-      213: 7775720329419018377
-    second: LanternMan-Sheet_4
+      213: 1216393566498817942
+    second: LanternMan-Sheet 1_4
   - first:
-      213: 5004523568549103756
-    second: LanternMan-Sheet_5
+      213: 3514443124839428735
+    second: LanternMan-Sheet 1_5
   - first:
-      213: 656580022908238015
-    second: LanternMan-Sheet_6
+      213: 368006573132908610
+    second: LanternMan-Sheet 1_6
   - first:
-      213: -2058320106419815047
-    second: LanternMan-Sheet_7
+      213: 468787050422104447
+    second: LanternMan-Sheet 1_7
   - first:
-      213: -7298523166250637615
-    second: LanternMan-Sheet_8
+      213: 6579675108458671395
+    second: LanternMan-Sheet 1_8
   - first:
-      213: -8789942342342505991
-    second: LanternMan-Sheet_9
+      213: -717855443636047730
+    second: LanternMan-Sheet 1_9
   - first:
-      213: 1560868298184019998
-    second: LanternMan-Sheet_10
+      213: 5089177734449745981
+    second: LanternMan-Sheet 1_10
   - first:
-      213: -938567303927974589
-    second: LanternMan-Sheet_11
+      213: -9172910468894558411
+    second: LanternMan-Sheet 1_11
   - first:
-      213: -5928588577733364997
-    second: LanternMan-Sheet_12
+      213: -5952303796660529461
+    second: LanternMan-Sheet 1_12
   - first:
-      213: 5362187830231057885
-    second: LanternMan-Sheet_13
+      213: 220398990561908559
+    second: LanternMan-Sheet 1_13
   - first:
-      213: 8730308852238992496
-    second: LanternMan-Sheet_14
+      213: -48233861331008287
+    second: LanternMan-Sheet 1_14
   - first:
-      213: 7300894154795356174
-    second: LanternMan-Sheet_15
+      213: 6786463027597659581
+    second: LanternMan-Sheet 1_15
   - first:
-      213: 826367023055468738
-    second: LanternMan-Sheet_16
+      213: 4243860019741259795
+    second: LanternMan-Sheet 1_16
   - first:
-      213: 1041501025036619257
-    second: LanternMan-Sheet_17
+      213: -3229320896828574580
+    second: LanternMan-Sheet 1_17
   - first:
-      213: 6186417504400924249
-    second: LanternMan-Sheet_18
+      213: 1484691733874757161
+    second: LanternMan-Sheet 1_18
   - first:
-      213: 6970021633827607046
-    second: LanternMan-Sheet_19
+      213: -6941882541441816695
+    second: LanternMan-Sheet 1_19
   - first:
-      213: -2380158263760159782
-    second: LanternMan-Sheet_20
+      213: -1213653609350640255
+    second: LanternMan-Sheet 1_20
   - first:
-      213: -7743055098676953102
-    second: LanternMan-Sheet_21
+      213: -3528951912393311140
+    second: LanternMan-Sheet 1_21
   - first:
-      213: 305848646177379004
-    second: LanternMan-Sheet_22
+      213: 7931003382426113496
+    second: LanternMan-Sheet 1_22
   - first:
-      213: -2757787927011897913
-    second: LanternMan-Sheet_23
+      213: 4680845247786909997
+    second: LanternMan-Sheet 1_23
   - first:
-      213: -6895615548555442573
-    second: LanternMan-Sheet_24
+      213: -3037392709639915333
+    second: LanternMan-Sheet 1_24
   - first:
-      213: 4398074172271218489
-    second: LanternMan-Sheet_25
+      213: -7956960562806740479
+    second: LanternMan-Sheet 1_25
   - first:
-      213: -4942929792727232823
-    second: LanternMan-Sheet_26
+      213: 5256964903800813285
+    second: LanternMan-Sheet 1_26
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -182,568 +182,568 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: LanternMan-Sheet_0
+      name: LanternMan-Sheet 1_0
       rect:
         serializedVersion: 2
-        x: 67
-        y: 800
-        width: 118
-        height: 142
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 63
+        y: 39
+        width: 126
+        height: 150
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 17ae4d996ac131b50800000000000000
-      internalID: 6562620583879961201
+      spriteID: a15bd9796e75ee800800000000000000
+      internalID: 643548444658349338
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LanternMan-Sheet_1
+      name: LanternMan-Sheet 1_1
       rect:
         serializedVersion: 2
-        x: 325
-        y: 799
-        width: 118
-        height: 143
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 321
+        y: 39
+        width: 126
+        height: 157
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cb4c3e2f36ee50200800000000000000
-      internalID: 145784676003595452
+      spriteID: 5715dcdc3c5aa0c00800000000000000
+      internalID: 867688138612232565
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LanternMan-Sheet_2
+      name: LanternMan-Sheet 1_2
       rect:
         serializedVersion: 2
-        x: 583
-        y: 799
-        width: 118
-        height: 143
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 580
+        y: 39
+        width: 126
+        height: 150
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7f4a8e2788059e8c0800000000000000
-      internalID: -3969553049576758025
+      spriteID: 71b6537d4e5f1f9d0800000000000000
+      internalID: -2742140334879970537
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LanternMan-Sheet_3
+      name: LanternMan-Sheet 1_3
       rect:
         serializedVersion: 2
-        x: 841
-        y: 799
-        width: 118
-        height: 143
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 837
+        y: 39
+        width: 127
+        height: 150
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4d1ebac59e97f2360800000000000000
-      internalID: 7147065176849375700
+      spriteID: 1e137a82711f06410800000000000000
+      internalID: 1468438560291369441
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LanternMan-Sheet_4
+      name: LanternMan-Sheet 1_4
       rect:
         serializedVersion: 2
-        x: 1099
-        y: 800
-        width: 118
-        height: 142
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1094
+        y: 39
+        width: 128
+        height: 150
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 980ddcb2178e8eb60800000000000000
-      internalID: 7775720329419018377
+      spriteID: 6978b36018f71e010800000000000000
+      internalID: 1216393566498817942
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LanternMan-Sheet_5
+      name: LanternMan-Sheet 1_5
       rect:
         serializedVersion: 2
-        x: 1357
-        y: 800
-        width: 118
-        height: 142
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1352
+        y: 39
+        width: 126
+        height: 150
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c888075aba3a37540800000000000000
-      internalID: 5004523568549103756
+      spriteID: f723e57d66fc5c030800000000000000
+      internalID: 3514443124839428735
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LanternMan-Sheet_6
+      name: LanternMan-Sheet 1_6
       rect:
         serializedVersion: 2
-        x: 1615
-        y: 800
-        width: 118
-        height: 142
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1611
+        y: 39
+        width: 125
+        height: 150
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fb830185d04ac1900800000000000000
-      internalID: 656580022908238015
+      spriteID: 248889a470c6b1500800000000000000
+      internalID: 368006573132908610
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LanternMan-Sheet_7
+      name: LanternMan-Sheet 1_7
       rect:
         serializedVersion: 2
-        x: 67
-        y: 548
-        width: 118
-        height: 147
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1869
+        y: 39
+        width: 126
+        height: 150
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 97d7dc6c4c06f63e0800000000000000
-      internalID: -2058320106419815047
+      spriteID: f7176bfa657718600800000000000000
+      internalID: 468787050422104447
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LanternMan-Sheet_8
+      name: LanternMan-Sheet 1_8
       rect:
         serializedVersion: 2
-        x: 325
-        y: 547
-        width: 118
-        height: 143
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 2128
+        y: 39
+        width: 125
+        height: 150
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1d6ebaa79df66ba90800000000000000
-      internalID: -7298523166250637615
+      spriteID: 32da82986a3bf4b50800000000000000
+      internalID: 6579675108458671395
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LanternMan-Sheet_9
+      name: LanternMan-Sheet 1_9
       rect:
         serializedVersion: 2
-        x: 583
-        y: 547
-        width: 118
-        height: 143
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 2386
+        y: 39
+        width: 126
+        height: 150
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9f98280c20ad30680800000000000000
-      internalID: -8789942342342505991
+      spriteID: e803ef1074aa906f0800000000000000
+      internalID: -717855443636047730
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LanternMan-Sheet_10
+      name: LanternMan-Sheet 1_10
       rect:
         serializedVersion: 2
-        x: 841
-        y: 547
-        width: 118
-        height: 143
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 2642
+        y: 39
+        width: 128
+        height: 150
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e105d66827159a510800000000000000
-      internalID: 1560868298184019998
+      spriteID: d3054b49f2460a640800000000000000
+      internalID: 5089177734449745981
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LanternMan-Sheet_11
+      name: LanternMan-Sheet 1_11
       rect:
         serializedVersion: 2
-        x: 1099
-        y: 548
-        width: 118
-        height: 142
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 2900
+        y: 39
+        width: 128
+        height: 150
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 345b393820a89f2f0800000000000000
-      internalID: -938567303927974589
+      spriteID: 537f319578643b080800000000000000
+      internalID: -9172910468894558411
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LanternMan-Sheet_12
+      name: LanternMan-Sheet 1_12
       rect:
         serializedVersion: 2
-        x: 1357
-        y: 548
-        width: 118
-        height: 142
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 3158
+        y: 39
+        width: 126
+        height: 150
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bf2b3cc791c69bda0800000000000000
-      internalID: -5928588577733364997
+      spriteID: bc617dccb3b256da0800000000000000
+      internalID: -5952303796660529461
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LanternMan-Sheet_13
+      name: LanternMan-Sheet 1_13
       rect:
         serializedVersion: 2
-        x: 1615
-        y: 548
-        width: 118
-        height: 142
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 3417
+        y: 39
+        width: 126
+        height: 150
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dd548d7eb615a6a40800000000000000
-      internalID: 5362187830231057885
+      spriteID: f471c45d6b30f0300800000000000000
+      internalID: 220398990561908559
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LanternMan-Sheet_14
+      name: LanternMan-Sheet 1_14
       rect:
         serializedVersion: 2
-        x: 67
-        y: 295
-        width: 118
-        height: 143
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 3675
+        y: 39
+        width: 126
+        height: 153
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 074472d55a9482970800000000000000
-      internalID: 8730308852238992496
+      spriteID: 1e448350f83a45ff0800000000000000
+      internalID: -48233861331008287
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LanternMan-Sheet_15
+      name: LanternMan-Sheet 1_15
       rect:
         serializedVersion: 2
-        x: 325
-        y: 295
-        width: 118
-        height: 143
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 3934
+        y: 39
+        width: 125
+        height: 150
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e009d4f4d8cf15560800000000000000
-      internalID: 7300894154795356174
+      spriteID: dbdc749da2c5e2e50800000000000000
+      internalID: 6786463027597659581
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LanternMan-Sheet_16
+      name: LanternMan-Sheet 1_16
       rect:
         serializedVersion: 2
-        x: 583
-        y: 295
-        width: 118
-        height: 143
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 4192
+        y: 39
+        width: 126
+        height: 150
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2c8715fdd68d77b00800000000000000
-      internalID: 826367023055468738
+      spriteID: 318f829f33835ea30800000000000000
+      internalID: 4243860019741259795
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LanternMan-Sheet_17
+      name: LanternMan-Sheet 1_17
       rect:
         serializedVersion: 2
-        x: 841
-        y: 296
-        width: 118
-        height: 145
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 4448
+        y: 39
+        width: 128
+        height: 150
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9fd43860aa7247e00800000000000000
-      internalID: 1041501025036619257
+      spriteID: c8479c601c52f23d0800000000000000
+      internalID: -3229320896828574580
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LanternMan-Sheet_18
+      name: LanternMan-Sheet 1_18
       rect:
         serializedVersion: 2
-        x: 1099
-        y: 296
-        width: 118
-        height: 142
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 4706
+        y: 39
+        width: 127
+        height: 150
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 95e531671f19ad550800000000000000
-      internalID: 6186417504400924249
+      spriteID: 92e4096044faa9410800000000000000
+      internalID: 1484691733874757161
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LanternMan-Sheet_19
+      name: LanternMan-Sheet 1_19
       rect:
         serializedVersion: 2
-        x: 1357
-        y: 296
-        width: 118
-        height: 142
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 4964
+        y: 39
+        width: 126
+        height: 150
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 60215194fbd7ab060800000000000000
-      internalID: 6970021633827607046
+      spriteID: 987efd4bb9a79af90800000000000000
+      internalID: -6941882541441816695
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LanternMan-Sheet_20
+      name: LanternMan-Sheet 1_20
       rect:
         serializedVersion: 2
-        x: 1615
-        y: 296
-        width: 118
-        height: 142
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 5223
+        y: 39
+        width: 126
+        height: 150
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: adb7d537baaf7fed0800000000000000
-      internalID: -2380158263760159782
+      spriteID: 18dc846f87c382fe0800000000000000
+      internalID: -1213653609350640255
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LanternMan-Sheet_21
+      name: LanternMan-Sheet 1_21
       rect:
         serializedVersion: 2
-        x: 67
-        y: 43
-        width: 118
-        height: 143
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 5481
+        y: 39
+        width: 126
+        height: 150
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2ff351789642b8490800000000000000
-      internalID: -7743055098676953102
+      spriteID: c5c7c50dee4a60fc0800000000000000
+      internalID: -3528951912393311140
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LanternMan-Sheet_22
+      name: LanternMan-Sheet 1_22
       rect:
         serializedVersion: 2
-        x: 325
-        y: 43
-        width: 118
-        height: 143
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 5740
+        y: 39
+        width: 126
+        height: 150
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cb2df6629b79e3400800000000000000
-      internalID: 305848646177379004
+      spriteID: 8d51ee95e85901e60800000000000000
+      internalID: 7931003382426113496
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LanternMan-Sheet_23
+      name: LanternMan-Sheet 1_23
       rect:
         serializedVersion: 2
-        x: 583
-        y: 43
-        width: 118
-        height: 143
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 5998
+        y: 39
+        width: 126
+        height: 150
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7cd4894ed7e5ab9d0800000000000000
-      internalID: -2757787927011897913
+      spriteID: d210ae2e3f3b5f040800000000000000
+      internalID: 4680845247786909997
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LanternMan-Sheet_24
+      name: LanternMan-Sheet 1_24
       rect:
         serializedVersion: 2
-        x: 841
-        y: 44
-        width: 118
-        height: 142
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 6254
+        y: 39
+        width: 128
+        height: 150
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 37641b0713add40a0800000000000000
-      internalID: -6895615548555442573
+      spriteID: bb83d826c6309d5d0800000000000000
+      internalID: -3037392709639915333
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LanternMan-Sheet_25
+      name: LanternMan-Sheet 1_25
       rect:
         serializedVersion: 2
-        x: 1099
-        y: 44
-        width: 118
-        height: 142
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 6512
+        y: 39
+        width: 126
+        height: 150
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 93fcb0e5829190d30800000000000000
-      internalID: 4398074172271218489
+      spriteID: 10aac12a682339190800000000000000
+      internalID: -7956960562806740479
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LanternMan-Sheet_26
+      name: LanternMan-Sheet 1_26
       rect:
         serializedVersion: 2
-        x: 1357
-        y: 44
-        width: 118
-        height: 142
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 6770
+        y: 39
+        width: 126
+        height: 150
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9ce4cc2da8f276bb0800000000000000
-      internalID: -4942929792727232823
+      spriteID: 5e63eb73abd74f840800000000000000
+      internalID: 5256964903800813285
       vertices: []
       indices: 
       edges: []
@@ -751,7 +751,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 3639b9ee4fba45c428ffda85bafbbc11
+    spriteID: 1cfc51222f9ef90489ef08b990a39941
     internalID: 0
     vertices: []
     indices: 
