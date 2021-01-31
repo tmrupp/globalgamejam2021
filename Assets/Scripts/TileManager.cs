@@ -65,6 +65,8 @@ public class TileManager : MonoBehaviour {
     public float spacing = 1f; // makes it easier to keep it 1...
     public bool doublyConnected;
 
+    public int points = 0;
+
     public List<GameObject> agents = new List<GameObject>();
 
     public bool ResolvingMovement = false;

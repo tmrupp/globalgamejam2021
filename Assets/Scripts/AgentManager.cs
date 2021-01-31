@@ -96,21 +96,24 @@ public class AgentManager : MonoBehaviour
             var agent = g.GetComponent<AgentManager>();
             if (agent.position == a.position && agent.agentType != AgentType.monster) {
                 agent.KillAgent();
-                Debug.Log("MUNCH");
+                a.tileManager.points++;
+                Debug.Log("MUNCH points=" + a.tileManager.points.ToString());
             }
         }
     }
 
     public static void HumanCondition (AgentManager a) {
         if (a.targets.Contains(a.position)) {
+            a.tileManager.points--;
             a.KillAgent();
-            Debug.Log("got where I wanted to go");
+            Debug.Log("got where I wanted to go points=" + a.tileManager.points.ToString());
             return;
         }
 
         if (a.position == a.tileManager.GetRitualLocation()) {
+            a.tileManager.points++;
             a.KillAgent();
-            Debug.Log("Victim consumed!");
+            Debug.Log("Victim consumed! points=" + a.tileManager.points.ToString());
             return;
         }
     }
