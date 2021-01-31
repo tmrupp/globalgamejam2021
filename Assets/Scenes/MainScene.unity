@@ -395,8 +395,13 @@ MonoBehaviour:
   spacing: 1
   doublyConnected: 1
   points: 0
+  turnNumber: 0
+  victimCap: 1
+  hunterCap: 0
+  monsterCap: 0
   agents: []
   ResolvingMovement: 0
+  ss: {fileID: 0}
 --- !u!4 &776162048
 Transform:
   m_ObjectHideFlags: 0
@@ -819,7 +824,7 @@ ParticleSystem:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1486744550}
   serializedVersion: 6
-  lengthInSec: 1.5
+  lengthInSec: 1.75
   simulationSpeed: 1
   stopAction: 0
   cullingMode: 0
@@ -894,7 +899,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 10
+      scalar: 1.75
       minScalar: 5
       maxCurve:
         serializedVersion: 2
