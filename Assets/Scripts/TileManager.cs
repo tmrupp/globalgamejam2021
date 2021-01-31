@@ -366,53 +366,58 @@ public class TileManager : MonoBehaviour {
         if (swapTile is null) {
             swapTile = o;
         } else {
-            secondSwapTile = o;
-            var st = swapTile.GetComponent<GameTile>();
-            yield return StartCoroutine(SwapTiles(st, o.GetComponent<GameTile>()));
-            ++turnNumber;
-            if (turnNumber == 5) { ++hunterCap; }
-            if (turnNumber == 7) { ++monsterCap; }
-            if (turnNumber == 12) { ++victimCap; }
-            if (turnNumber == 20) { ++victimCap; ++hunterCap; ++monsterCap; }
-            if (turnNumber == 30) { ++victimCap; }
-            if (turnNumber == 40) { ++victimCap; ++hunterCap; }
-            if (turnNumber == 50) { throw new System.Exception("GAME OVER"); }
-            if (turnNumber >= 20 && turnNumber % 7 == 0)
-            {
-                ResolvingMovement = true;
-                if (!shownShufflePopup)
+            if (swapTile == o) {
+                swapTile = null;
+                yield return null;
+            } else {
+                secondSwapTile = o;
+                var st = swapTile.GetComponent<GameTile>();
+                yield return StartCoroutine(SwapTiles(st, o.GetComponent<GameTile>()));
+                ++turnNumber;
+                if (turnNumber == 5) { ++hunterCap; }
+                if (turnNumber == 7) { ++monsterCap; }
+                if (turnNumber == 12) { ++victimCap; }
+                if (turnNumber == 20) { ++victimCap; ++hunterCap; ++monsterCap; }
+                if (turnNumber == 30) { ++victimCap; }
+                if (turnNumber == 40) { ++victimCap; ++hunterCap; }
+                if (turnNumber == 50) { throw new System.Exception("GAME OVER"); }
+                if (turnNumber >= 20 && turnNumber % 7 == 0)
                 {
-                    shownShufflePopup = true;
-                    yield return StartCoroutine(shufflePopup.Show());
-                }
-                for (var i = 0; i < 5; ++i)
-                {
-                    var src = new Vector2Int(Random.Range(0, 8), Random.Range(0, 8));
-                    var dst = new Vector2Int(Random.Range(0, 8), Random.Range(0, 8));
-                    var center = new Vector2Int(4, 4);
-                    if (src != center && dst != center) { yield return StartCoroutine(AnimateTileSwap(tiles[src.x][src.y].GetComponent<GameTile>(), tiles[dst.x][dst.y].GetComponent<GameTile>(), 5f)); }
-                }
-                ResolvingMovement = false;
-            }
-            int victimCount = 0, hunterCount = 0, monsterCount = 0;
-            foreach (var agentObject in agents)
-            {
-                var agent = agentObject.GetComponent<AgentManager>();
-                if (agent)
-                {
-                    switch (agent.agentType)
+                    ResolvingMovement = true;
+                    if (!shownShufflePopup)
                     {
-                        case AgentType.victim: ++victimCount; break;
-                        case AgentType.hunter: ++hunterCount; break;
-                        case AgentType.monster: ++monsterCount; break;
+                        shownShufflePopup = true;
+                        yield return StartCoroutine(shufflePopup.Show());
+                    }
+                    for (var i = 0; i < 5; ++i)
+                    {
+                        var src = new Vector2Int(Random.Range(0, 8), Random.Range(0, 8));
+                        var dst = new Vector2Int(Random.Range(0, 8), Random.Range(0, 8));
+                        var center = new Vector2Int(4, 4);
+                        if (src != center && dst != center) { yield return StartCoroutine(AnimateTileSwap(tiles[src.x][src.y].GetComponent<GameTile>(), tiles[dst.x][dst.y].GetComponent<GameTile>(), 5f)); }
+                    }
+                    ResolvingMovement = false;
+                }
+                int victimCount = 0, hunterCount = 0, monsterCount = 0;
+                foreach (var agentObject in agents)
+                {
+                    var agent = agentObject.GetComponent<AgentManager>();
+                    if (agent)
+                    {
+                        switch (agent.agentType)
+                        {
+                            case AgentType.victim: ++victimCount; break;
+                            case AgentType.hunter: ++hunterCount; break;
+                            case AgentType.monster: ++monsterCount; break;
+                        }
                     }
                 }
+                if (victimCount < victimCap) { yield return StartCoroutine(TrySpawn(AgentType.victim)); }
+                if (hunterCount < hunterCap) { yield return StartCoroutine(TrySpawn(AgentType.hunter)); }
+                if (monsterCount < monsterCap) { yield return StartCoroutine(TrySpawn(AgentType.monster)); }
+                swapTile = null;
+                secondSwapTile = null;
             }
-            if (victimCount < victimCap) { yield return StartCoroutine(TrySpawn(AgentType.victim)); }
-            if (hunterCount < hunterCap) { yield return StartCoroutine(TrySpawn(AgentType.hunter)); }
-            if (monsterCount < monsterCap) { yield return StartCoroutine(TrySpawn(AgentType.monster)); }
-            swapTile = null;
-            secondSwapTile = null;
         }
     }
 
