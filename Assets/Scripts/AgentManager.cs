@@ -157,7 +157,7 @@ public class AgentManager : MonoBehaviour
             privateAgentType = value;
             switch (privateAgentType)
             {
-                case AgentType.victim: agentIndex = Random.Range(0, 3); break;
+                case AgentType.victim: agentIndex = Random.Range(0, 4); break;
                 case AgentType.hunter: agentIndex = Random.Range(0, 4); break;
                 case AgentType.monster:
                     var values = System.Enum.GetValues(typeof(MonsterType));
