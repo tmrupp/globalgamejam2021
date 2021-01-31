@@ -318,6 +318,7 @@ public class TileManager : MonoBehaviour {
 
         // create a hunter
         agents.Add(AgentManager.Create(AgentType.victim, 4, 2, gameObject));
+        agents.Add(AgentManager.Create(AgentType.monster, 5, 5, gameObject));
         /*
         agents.Add(AgentManager.Create(AgentType.hunter, 0, 0, gameObject));
         agents.Add(AgentManager.Create(AgentType.hunter, 8, 8, gameObject));

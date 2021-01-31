@@ -78,6 +78,7 @@ public class AgentManager : MonoBehaviour
     public static void CornmanBehavior (AgentManager a) {
         // if you can't find a dude to eat, randomly rotate a tile you're going to
         if (!a.targets.Contains(a.pathToDestination[0])) {
+            Debug.Log("fliping");
             var gt = a.tileManager.GetTileAt(a.nextPosition);
             gt.Rotate(Random.Range(0,4));
             gt.SetSprite();
@@ -99,6 +100,7 @@ public class AgentManager : MonoBehaviour
         // float to an adjacent victim
         var adjacentAgents = a.AdjacentHumans();
         if (adjacentAgents.Count > 0) {
+            Debug.Log("floating towards!");
             a.nextPosition = adjacentAgents[0].position;
         }
     }
@@ -108,6 +110,7 @@ public class AgentManager : MonoBehaviour
         var adjacentAgents = a.AdjacentHumans();
         foreach (var adj in adjacentAgents) {
             if (a.tileManager.GetNeighborsAt(adj.position).Contains(a.position)) {
+                Debug.Log("jebaiting");
                 adj.nextPosition = a.position;
                 adj.lanterned = true;
             }
