@@ -224,21 +224,21 @@ public class AgentManager : MonoBehaviour
         Face(nextPosition);
     }
 
-    private IEnumerator<WaitForSeconds> AnimateMovement()
-    {
-        if (animatingMovement) { yield break; }
-        animatingMovement = true;
-        animator.SetBool(walkParamId, true);
-        yield return new WaitForSeconds(1f);
-        animator.SetBool(walkParamId, false);
-        animatingMovement = false;
-    }
-
-    public void Move () {
+    public IEnumerator<YieldInstruction> Move() {
         ClearPath();
         agentConditions[agentType](this);
-        transform.position = tileManager.GridToActual(nextPosition);
-        StartCoroutine(AnimateMovement());
+        var src = tileManager.GridToActual(position);
+        var dst = tileManager.GridToActual(nextPosition);
+        animator.SetBool(walkParamId, true);
+        var progress = 0f;
+        while (progress < 1f)
+        {
+            yield return null;
+            progress += 1.25f * Time.deltaTime;
+            transform.position = Vector3.Lerp(src, dst, progress);
+        }
+        transform.position = dst;
+        animator.SetBool(walkParamId, false);
         prevPosition = position;
         position = nextPosition;
         agentConditions[agentType](this);
