@@ -297,6 +297,8 @@ public class TileManager : MonoBehaviour {
         agents.Add(AgentManager.Create(AgentType.victim, 5, 3, gameObject));
         agents.Add(AgentManager.Create(AgentType.monster, 0, 8, gameObject));
         agents.Add(AgentManager.Create(AgentType.monster, 8, 0, gameObject));
+
+        ss = GameObject.FindObjectOfType<ScreenSplatter>();
     }
 
     public GameObject GetSwapTile () {
