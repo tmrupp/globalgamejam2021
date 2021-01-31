@@ -160,7 +160,7 @@ public class AgentManager : MonoBehaviour
     private void UpdateSpriteFlip()
     {
         var displacement = nextPosition - position;
-        if (displacement.x != 0) { CharacterSR.flipX = (displacement.x == -1) ^ spriteReversed; }
+        CharacterSR.flipX = (displacement.x == -1 || displacement.y == 1) ^ spriteReversed;
     }
 
     void Face (Vector2Int v) {
