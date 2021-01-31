@@ -1,5 +1,5 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 using System.Linq;
 
@@ -82,6 +82,8 @@ public class TileManager : MonoBehaviour {
     public List<Popup> popup = new List<Popup>();
     public Popup shufflePopup;
     public Tooltip tooltip;
+    public GameObject endScreen;
+    public int endTurn = 50;
 
     public ScreenSplatter ss; //set in Start via searching the hierarchy
 
@@ -379,7 +381,7 @@ public class TileManager : MonoBehaviour {
             if (turnNumber == 20) { ++victimCap; ++hunterCap; ++monsterCap; }
             if (turnNumber == 30) { ++victimCap; }
             if (turnNumber == 40) { ++victimCap; ++hunterCap; }
-            //if (turnNumber == 50) { FindObjectOfType<EndScreen>().gameObject.SetActive(true); }
+            if (turnNumber == 2) { endScreen.SetActive(true); }
             /*
             if (turnNumber >= 20 && turnNumber % 7 == 0)
             {
@@ -468,6 +470,9 @@ public class TileManager : MonoBehaviour {
     }
 
     void Update () {
-        // ...
+        if (turnNumber >= endTurn && Input.GetMouseButtonUp(0))
+        {
+            SceneManager.LoadScene(0);
+        }
     }
 }

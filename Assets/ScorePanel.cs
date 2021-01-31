@@ -16,12 +16,12 @@ public class ScorePanel : MonoBehaviour
 
     public void SetScore(int score)
     {
-        scoreNum.text = String.Format("{0}", score * 1000);
+        scoreNum.text = String.Format("{0}", score);
     }
 
     public void SetTurn(int turn)
     {
-        turnNum.text = String.Format("{0} / 50", turn + 1);
+        turnNum.text = turn >= tileManager.endTurn ? "Morning" : String.Format("{0} / {1}", turn + 1, tileManager.endTurn);
     }
 
     private void Update()

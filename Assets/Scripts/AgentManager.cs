@@ -201,7 +201,7 @@ public class AgentManager : MonoBehaviour
             var agent = g.GetComponent<AgentManager>();
             if (agent.position == a.position && agent.agentType != AgentType.monster) {
                 if (agent.agentType == AgentType.hunter) {
-                    a.tileManager.points++;
+                    a.tileManager.points += 3000;
                 }
                 
                 if (a.monsterType != MonsterType.cultist || agent.agentType == AgentType.hunter) {
@@ -224,7 +224,14 @@ public class AgentManager : MonoBehaviour
 
     public static void HumanCondition (AgentManager a) {
         if (a.targets.Contains(a.position)) {
-            a.tileManager.points--;
+            if (a.agentType == AgentType.hunter)
+            {
+                a.tileManager.points = Mathf.Max(a.tileManager.points - 4000, 0);
+            }
+            else if (a.agentType == AgentType.victim)
+            {
+                a.tileManager.points = Mathf.Max(a.tileManager.points - 1000, 0);
+            }
             Debug.Log("got where I wanted to go points=" + a.tileManager.points.ToString());
             a.KillAgent();
             return;
@@ -237,7 +244,7 @@ public class AgentManager : MonoBehaviour
         }
 
         if (a.position == a.tileManager.GetRitualLocation()) {
-            a.tileManager.points++;
+            a.tileManager.points += 4000;
             Debug.Log("Victim consumed! points=" + a.tileManager.points.ToString());
             a.KillAgent();
             return;
