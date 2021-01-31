@@ -95,9 +95,12 @@ public class AgentManager : MonoBehaviour
         foreach (var g in a.tileManager.agents.ToList()) {
             var agent = g.GetComponent<AgentManager>();
             if (agent.position == a.position && agent.agentType != AgentType.monster) {
-                a.tileManager.points++;
+                if (agent.agentType == AgentType.hunter)
+                {
+                    a.tileManager.points++;
+                }
                 Debug.Log("MUNCH points=" + a.tileManager.points.ToString());
-                a.tileManager.ss.MakeSplatter();
+                a.tileManager.ss?.MakeSplatter();
                 agent.KillAgent();
             }
         }
