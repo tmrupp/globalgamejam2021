@@ -23,12 +23,4 @@ public class SFXPlayer : MonoBehaviour
     {
         soundNames[name].Play();
     }
-
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.R))
-        {
-            PlaySound("Kill");
-        }
-    }
 }
