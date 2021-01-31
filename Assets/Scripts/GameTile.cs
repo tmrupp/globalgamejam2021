@@ -79,7 +79,7 @@ public class GameTile : MonoBehaviour
 
         // no swappa-da ritual
         if (terrain != Terrain.ritual && !tileManager.ResolvingMovement) {
-            tileManager.SwapThis(gameObject);
+            StartCoroutine(tileManager.SwapThis(gameObject));
         }
     }
 
@@ -126,7 +126,8 @@ public class GameTile : MonoBehaviour
             }
         }
 
-        SetColor(Color.yellow);
+        if (gameObject != tileManager.GetSwapTile() && gameObject != tileManager.GetSecondSwapTile())
+            SetColor(Color.yellow);
 
         DrawTileType();
     }
@@ -142,7 +143,7 @@ public class GameTile : MonoBehaviour
             }
         }
 
-        if ((tileManager.GetSwapTile() is null) || gameObject != tileManager.GetSwapTile())
+        if (gameObject != tileManager.GetSwapTile() && gameObject != tileManager.GetSecondSwapTile())
             SetColor(Color.white);
 
         vp?.Clear();

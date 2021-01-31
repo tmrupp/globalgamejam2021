@@ -78,6 +78,7 @@ public class TileManager : MonoBehaviour {
     public bool ResolvingMovement = false;
 
     GameObject swapTile = null;
+    GameObject secondSwapTile = null;
 
     public ScreenSplatter ss; //set in Start via searching the hierarchy
 
@@ -170,14 +171,14 @@ public class TileManager : MonoBehaviour {
     //This is a dumb method.
     // > yes the location is already associated with the gametile (.location)
 
-    public IEnumerator<YieldInstruction> AnimateTileSwap (GameTile firstTile, GameTile secondTile) {
+    public IEnumerator<YieldInstruction> AnimateTileSwap (GameTile firstTile, GameTile secondTile, float speed) {
         var firstActual = GridToActual(firstTile.Location);
         var secondActual = GridToActual(secondTile.Location);
         var progress = 0f;
         while (progress < 1f)
         {
             yield return null;
-            progress += 2f * Time.deltaTime;
+            progress += speed * Time.deltaTime;
             firstTile.transform.position = Vector3.Lerp(firstActual, secondActual, progress);
             secondTile.transform.position = Vector3.Lerp(secondActual, firstActual, progress);
         }
@@ -203,7 +204,9 @@ public class TileManager : MonoBehaviour {
         Vector2Int firstCoord = first.Location;
         Vector2Int secondCoord = second.Location;
         yield return StartCoroutine(ResolveAllAgentsMovement());
-        yield return StartCoroutine(AnimateTileSwap(first, second));
+        first.SetColor(Color.white);
+        second.SetColor(Color.white);
+        yield return StartCoroutine(AnimateTileSwap(first, second, 3f));
         ResolvingMovement = false;
     }
 
@@ -327,30 +330,43 @@ public class TileManager : MonoBehaviour {
         ss = GameObject.FindObjectOfType<ScreenSplatter>();
     }
 
-    public GameObject GetSwapTile () {
+    public GameObject GetSwapTile()
+    {
         return swapTile;
     }
 
-    public void SwapThis (GameObject o) {
+    public GameObject GetSecondSwapTile()
+    {
+        return secondSwapTile;
+    }
+
+    public IEnumerator<YieldInstruction> SwapThis (GameObject o) {
+        o.GetComponent<GameTile>().SetColor(Color.red);
         if (swapTile is null) {
             swapTile = o;
-            swapTile.GetComponent<GameTile>().SetColor(Color.red);
         } else {
+            secondSwapTile = o;
             var st = swapTile.GetComponent<GameTile>();
-            st.SetColor(Color.white);
-            StartCoroutine(SwapTiles(st, o.GetComponent<GameTile>()));
+            yield return StartCoroutine(SwapTiles(st, o.GetComponent<GameTile>()));
             ++turnNumber;
                                                                                // 1 0 0
             if (turnNumber == 10) { ++victimCap; ++hunterCap; }                // 2 1 0
             if (turnNumber == 20) { ++hunterCap; ++monsterCap; }               // 2 2 1
             if (turnNumber == 30) { ++victimCap; ++monsterCap; }               // 3 2 2
             if (turnNumber == 40) { ++victimCap; ++monsterCap; }               // 4 2 2
-            if (turnNumber == 50) { ++victimCap; ++hunterCap; ++monsterCap; }  // 5 3 3
-            if (turnNumber == 60) { ++victimCap; ++hunterCap; }                // 6 4 3
-            if (turnNumber == 70) { ++hunterCap; ++monsterCap; }               // 6 5 4
-            if (turnNumber == 80) { ++victimCap; ++hunterCap; }                // 7 6 4
-            if (turnNumber == 90) { ++hunterCap; ++monsterCap; }               // 7 7 5
-            if (turnNumber == 100) { throw new System.Exception("GAME OVER"); }
+            if (turnNumber == 50) { throw new System.Exception("GAME OVER"); }
+            if (turnNumber >= 20 && turnNumber % 7 == 0)
+            {
+                ResolvingMovement = true;
+                for (var i = 0; i < 5; ++i)
+                {
+                    var src = new Vector2Int(Random.Range(0, 8), Random.Range(0, 8));
+                    var dst = new Vector2Int(Random.Range(0, 8), Random.Range(0, 8));
+                    var center = new Vector2Int(4, 4);
+                    if (src != center || dst != center) { yield return StartCoroutine(AnimateTileSwap(tiles[src.x][src.y].GetComponent<GameTile>(), tiles[dst.x][dst.y].GetComponent<GameTile>(), 5f)); }
+                }
+                ResolvingMovement = false;
+            }
             int victimCount = 0, hunterCount = 0, monsterCount = 0;
             foreach (var agentObject in agents)
             {
@@ -369,6 +385,7 @@ public class TileManager : MonoBehaviour {
             if (hunterCount < hunterCap) { TrySpawn(AgentType.hunter); }
             if (monsterCount < monsterCap) { TrySpawn(AgentType.monster); }
             swapTile = null;
+            secondSwapTile = null;
         }
     }
 
@@ -381,7 +398,6 @@ public class TileManager : MonoBehaviour {
             candidates[swap] = candidates[i];
             candidates[i] = temp;
         }
-        Debug.Log("try");
         foreach (var pos in candidates)
         {
             var valid = true;
