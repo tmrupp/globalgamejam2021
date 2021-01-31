@@ -6,7 +6,7 @@ AnimatorOverrideController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Hunter
+  m_Name: BlueHunter
   m_Controller: {fileID: 9100000, guid: f2da482c9c12a2746898aad859cadfc3, type: 2}
   m_Clips:
   - m_OriginalClip: {fileID: 7400000, guid: e8c054f6cb91f644ca1da2b08fcb7c6a, type: 2}

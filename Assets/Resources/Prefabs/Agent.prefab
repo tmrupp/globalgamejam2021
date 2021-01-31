@@ -125,9 +125,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ff0e46087f4a014a96a5670ea8e539e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  victim: {fileID: 22100000, guid: cf15bef34bad9564e9bcb9e719751750, type: 2}
-  hunter: {fileID: 22100000, guid: 9de65fc353038a5498494420476a9b1b, type: 2}
-  monster: {fileID: 22100000, guid: 9ad4a2e1e687dc54eacbcf9152e408fb, type: 2}
+  victim:
+  - {fileID: 22100000, guid: cf15bef34bad9564e9bcb9e719751750, type: 2}
+  - {fileID: 22100000, guid: d6bfdb15cc02c9947acff3163f9983ef, type: 2}
+  - {fileID: 22100000, guid: 9e50d88155c3ca045be1fdaadee08aaf, type: 2}
+  hunter:
+  - {fileID: 22100000, guid: 9de65fc353038a5498494420476a9b1b, type: 2}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  monster:
+  - {fileID: 22100000, guid: 9ad4a2e1e687dc54eacbcf9152e408fb, type: 2}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &9176452063329322187
 GameObject:
   m_ObjectHideFlags: 0
@@ -209,7 +220,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.37, y: 1.17}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 0
@@ -243,7 +254,7 @@ Animator:
   m_GameObject: {fileID: 9176452063329322187}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 22100000, guid: cf15bef34bad9564e9bcb9e719751750, type: 2}
+  m_Controller: {fileID: 22100000, guid: 431470588e126e9479721780dfb04176, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

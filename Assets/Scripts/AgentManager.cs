@@ -9,6 +9,7 @@ public enum AgentType {
     monster
 }
 
+// Update AnimatorMap if you change this
 public enum MonsterType {
     human,
     cornman, // rotate tiles?
@@ -31,7 +32,16 @@ public class AgentManager : MonoBehaviour
     TileManager tileManager;
     private List<Vector2Int> pathToDestination = null;
     private VisiblePath vp; //The VisiblePath component attached to this game object
-    MonsterType monsterType = MonsterType.human;
+    MonsterType privateMonsterType = MonsterType.human;
+    public MonsterType monsterType
+    {
+        get { return privateMonsterType; }
+        set
+        {
+            privateMonsterType = value;
+            agentIndex = (int)privateMonsterType - 1;
+        }
+    }
 
     public static Dictionary<AgentType, Color> agentColors = new Dictionary<AgentType, Color>() {
         {AgentType.hunter, Color.red},
@@ -87,15 +97,39 @@ public class AgentManager : MonoBehaviour
     }
 
     private AgentType privateAgentType = AgentType.hunter;
+    private int privateAgentIndex = 0;
     public AgentType agentType
     {
         get { return privateAgentType; }
         set
         {
             privateAgentType = value;
-            animator.runtimeAnimatorController = animatorMap.GetAnimator(privateAgentType);
-            UpdateSpriteFlip();
+            switch (privateAgentType)
+            {
+                case AgentType.victim: agentIndex = Random.Range(0, 3); break;
+                case AgentType.hunter: agentIndex = Random.Range(0, 4); break;
+                case AgentType.monster:
+                    var values = System.Enum.GetValues(typeof(MonsterType));
+                    monsterType = (MonsterType)values.GetValue(Random.Range(1, values.Length));
+                    break;
+            }
+            UpdateAnimator();
         }
+    }
+    public int agentIndex
+    {
+        get { return privateAgentIndex; }
+        set
+        {
+            privateAgentIndex = value;
+            UpdateAnimator();
+        }
+    }
+
+    private void UpdateAnimator()
+    {
+        animator.runtimeAnimatorController = animatorMap.GetAnimator(privateAgentType, privateAgentIndex);
+        UpdateSpriteFlip();
     }
 
     private void Awake()
