@@ -62,12 +62,16 @@ public class KillScreenSlide : MonoBehaviour
 
     private IEnumerator TryAgainIfNecessary()
     {
+        Debug.Log("1 semaphore: " + semaphore);
+
         while (semaphore != 0)
         {
+            Debug.Log("2 semaphore spin: " + semaphore);
             yield return null;
         }
 
         semaphore += 2;
+        Debug.Log("3 semaphore: " + semaphore);
 
         StartCoroutine(SlideIn(left, leftDestination, 0.2f, 1.5f, 0f));
         StartCoroutine(SlideIn(right, rightDestination, 0.2f, 1.5f, 0.15f));
@@ -110,6 +114,7 @@ public class KillScreenSlide : MonoBehaviour
         thingToMove.color = Color.white;
 
         semaphore--;
+        Debug.Log("4 semaphore: " + semaphore);
 
         yield return null;
     }
@@ -118,8 +123,7 @@ public class KillScreenSlide : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Y))
         {
-            StartCoroutine(SlideIn(left, leftDestination, 0.2f, 0.5f, 0f));
-            StartCoroutine(SlideIn(right, rightDestination, 0.2f, 0.5f, 0.15f));
+            StartCoroutine(TryAgainIfNecessary());
         }
     }
 }
