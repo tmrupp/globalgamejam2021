@@ -18,7 +18,7 @@ public class Tooltip : MonoBehaviour
                 text.text = fillText[1];
                 break;
             case AgentType.monster:
-                text.text = fillText[2 + (int)type];
+                text.text = fillText[1 + (int)type];
                 break;
         }
         panel.SetActive(true);
