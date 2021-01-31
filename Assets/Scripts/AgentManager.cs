@@ -78,7 +78,9 @@ public class AgentManager : MonoBehaviour
     public static void CornmanBehavior (AgentManager a) {
         // if you can't find a dude to eat, randomly rotate a tile you're going to
         if (!a.targets.Contains(a.pathToDestination[0])) {
-            a.tileManager.GetTileAt(a.nextPosition).Rotate(Random.Range(0,4));
+            var gt = a.tileManager.GetTileAt(a.nextPosition);
+            gt.Rotate(Random.Range(0,4));
+            gt.SetSprite();
         }
     }
 
@@ -374,7 +376,6 @@ public class AgentManager : MonoBehaviour
         prevPosition = position;
         position = nextPosition;
         agentConditions[agentType](this);
-        FindNextMove();
     }
 
     public void DrawPath()

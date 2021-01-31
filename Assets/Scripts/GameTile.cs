@@ -34,7 +34,7 @@ public class GameTile : MonoBehaviour
         rotation = r;
     }
 
-    void SetSprite () {
+    public void SetSprite () {
         var sprites = TileManager.GetSpriteOfTerrain(terrain, rotation);
         var renderers = gameObject.GetComponentsInChildren<SpriteRenderer>();
         gameObject.transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = sprites.Item1;
