@@ -1840,6 +1840,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   KillSound: {fileID: 8300000, guid: 893ceaf05cb1a504fb8bfbb126911d51, type: 3}
+  Success: {fileID: 8300000, guid: 832f3f1445a5ae04697513004d7b30be, type: 3}
+  Failure: {fileID: 8300000, guid: 46b64082c57df0d4ea4b196d74823bb6, type: 3}
 --- !u!4 &1194871260
 Transform:
   m_ObjectHideFlags: 0

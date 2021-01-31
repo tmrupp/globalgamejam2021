@@ -227,10 +227,12 @@ public class AgentManager : MonoBehaviour
             if (a.agentType == AgentType.hunter)
             {
                 a.tileManager.points = Mathf.Max(a.tileManager.points - 4000, 0);
+                SFXPlayer.PlaySound("Failure");
             }
             else if (a.agentType == AgentType.victim)
             {
                 a.tileManager.points = Mathf.Max(a.tileManager.points - 1000, 0);
+                SFXPlayer.PlaySound("Failure");
             }
             Debug.Log("got where I wanted to go points=" + a.tileManager.points.ToString());
             a.KillAgent();
@@ -245,6 +247,7 @@ public class AgentManager : MonoBehaviour
 
         if (a.position == a.tileManager.GetRitualLocation()) {
             a.tileManager.points += 4000;
+            SFXPlayer.PlaySound("Success");
             Debug.Log("Victim consumed! points=" + a.tileManager.points.ToString());
             a.KillAgent();
             return;
