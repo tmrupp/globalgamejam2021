@@ -67,6 +67,7 @@ public class TileManager : MonoBehaviour
         }
     }
 
+    // get the neighbors here, not including those out of bounds
     public List<Vector2Int> GetNeighborsAt (Vector2Int v)
     {
         return GetTileAt(v).GetDirections().Select(
