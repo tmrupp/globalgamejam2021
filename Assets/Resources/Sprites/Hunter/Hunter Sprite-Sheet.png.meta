@@ -1,0 +1,1270 @@
+fileFormatVersion: 2
+guid: 5cd49f510b38dae40acce5faae9ccd58
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4196767152586661619
+    second: Hunter Sprite-Sheet_0
+  - first:
+      213: 6998059854344783664
+    second: Hunter Sprite-Sheet_1
+  - first:
+      213: -4330735786053523170
+    second: Hunter Sprite-Sheet_2
+  - first:
+      213: -1679985127193105742
+    second: Hunter Sprite-Sheet_3
+  - first:
+      213: 6330008559095032896
+    second: Hunter Sprite-Sheet_4
+  - first:
+      213: -3667871827272229421
+    second: Hunter Sprite-Sheet_5
+  - first:
+      213: 2777137417152263834
+    second: Hunter Sprite-Sheet_6
+  - first:
+      213: 8415771962708393223
+    second: Hunter Sprite-Sheet_7
+  - first:
+      213: 5229544924149307015
+    second: Hunter Sprite-Sheet_8
+  - first:
+      213: -7364864854889255252
+    second: Hunter Sprite-Sheet_9
+  - first:
+      213: -4839874454970246993
+    second: Hunter Sprite-Sheet_10
+  - first:
+      213: 698059271921249827
+    second: Hunter Sprite-Sheet_11
+  - first:
+      213: 4228670459127385246
+    second: Hunter Sprite-Sheet_12
+  - first:
+      213: -8243171602356573288
+    second: Hunter Sprite-Sheet_13
+  - first:
+      213: 7017276055641863152
+    second: Hunter Sprite-Sheet_14
+  - first:
+      213: -815075871138983092
+    second: Hunter Sprite-Sheet_15
+  - first:
+      213: 6485018190904350697
+    second: Hunter Sprite-Sheet_16
+  - first:
+      213: -203197533609756447
+    second: Hunter Sprite-Sheet_17
+  - first:
+      213: 2781310776015707641
+    second: Hunter Sprite-Sheet_18
+  - first:
+      213: -3749196264121700991
+    second: Hunter Sprite-Sheet_19
+  - first:
+      213: 1217825749388984514
+    second: Hunter Sprite-Sheet_20
+  - first:
+      213: -5915227800565182979
+    second: Hunter Sprite-Sheet_21
+  - first:
+      213: -8579589651695087197
+    second: Hunter Sprite-Sheet_22
+  - first:
+      213: -8767141781637153974
+    second: Hunter Sprite-Sheet_23
+  - first:
+      213: 2570375742881449270
+    second: Hunter Sprite-Sheet_24
+  - first:
+      213: 4299367619503297942
+    second: Hunter Sprite-Sheet_25
+  - first:
+      213: -8251919899620415132
+    second: Hunter Sprite-Sheet_26
+  - first:
+      213: 8718097084689098823
+    second: Hunter Sprite-Sheet_27
+  - first:
+      213: 4037646643279754820
+    second: Hunter Sprite-Sheet_28
+  - first:
+      213: -2137549770195082258
+    second: Hunter Sprite-Sheet_29
+  - first:
+      213: -532860514200673719
+    second: Hunter Sprite-Sheet_30
+  - first:
+      213: -7751253096247142667
+    second: Hunter Sprite-Sheet_31
+  - first:
+      213: -4037829666525129960
+    second: Hunter Sprite-Sheet_32
+  - first:
+      213: -5590788838233497175
+    second: Hunter Sprite-Sheet_33
+  - first:
+      213: -4139302880455397213
+    second: Hunter Sprite-Sheet_34
+  - first:
+      213: 1386371168906423009
+    second: Hunter Sprite-Sheet_35
+  - first:
+      213: 1591141413000843613
+    second: Hunter Sprite-Sheet_36
+  - first:
+      213: -4233175102805403790
+    second: Hunter Sprite-Sheet_37
+  - first:
+      213: -5937818719149082755
+    second: Hunter Sprite-Sheet_38
+  - first:
+      213: -8083212510491656303
+    second: Hunter Sprite-Sheet_39
+  - first:
+      213: 7515510943659989929
+    second: Hunter Sprite-Sheet_40
+  - first:
+      213: -4894397767227608012
+    second: Hunter Sprite-Sheet_41
+  - first:
+      213: 2396335632889204992
+    second: Hunter Sprite-Sheet_42
+  - first:
+      213: -418934161389503514
+    second: Hunter Sprite-Sheet_43
+  - first:
+      213: 2296231166115808363
+    second: Hunter Sprite-Sheet_44
+  - first:
+      213: -7948304597523151065
+    second: Hunter Sprite-Sheet_45
+  - first:
+      213: -7328605203899177533
+    second: Hunter Sprite-Sheet_46
+  - first:
+      213: 1853691851964160142
+    second: Hunter Sprite-Sheet_47
+  - first:
+      213: 9072447827146466186
+    second: Hunter Sprite-Sheet_48
+  - first:
+      213: 8444869458237116245
+    second: Hunter Sprite-Sheet_49
+  - first:
+      213: 3327153818239339228
+    second: Hunter Sprite-Sheet_50
+  - first:
+      213: -3246391855188264118
+    second: Hunter Sprite-Sheet_51
+  - first:
+      213: -2154702599918350791
+    second: Hunter Sprite-Sheet_52
+  - first:
+      213: -4701135634155183727
+    second: Hunter Sprite-Sheet_53
+  - first:
+      213: 5806414798880752920
+    second: Hunter Sprite-Sheet_54
+  - first:
+      213: -154556543950340418
+    second: Hunter Sprite-Sheet_55
+  - first:
+      213: -273969470984923292
+    second: Hunter Sprite-Sheet_56
+  - first:
+      213: 6770305597841350000
+    second: Hunter Sprite-Sheet_57
+  - first:
+      213: 1551811797822535843
+    second: Hunter Sprite-Sheet_58
+  - first:
+      213: 6963886160034125601
+    second: Hunter Sprite-Sheet_59
+  - first:
+      213: 3561860319675914998
+    second: Hunter Sprite-Sheet_60
+  - first:
+      213: 6127885320655845962
+    second: Hunter Sprite-Sheet_61
+  - first:
+      213: 7306282586561159527
+    second: Hunter Sprite-Sheet_62
+  - first:
+      213: 3223912584531868134
+    second: Hunter Sprite-Sheet_63
+  - first:
+      213: -880293570385063674
+    second: Hunter Sprite-Sheet_64
+  - first:
+      213: 2733285007104065305
+    second: Hunter Sprite-Sheet_65
+  - first:
+      213: 3095707590460210171
+    second: Hunter Sprite-Sheet_66
+  - first:
+      213: -2560443196525746951
+    second: Hunter Sprite-Sheet_67
+  - first:
+      213: -4215101254884347834
+    second: Hunter Sprite-Sheet_68
+  - first:
+      213: 294245473566357672
+    second: Hunter Sprite-Sheet_69
+  - first:
+      213: -7695357515344611043
+    second: Hunter Sprite-Sheet_70
+  - first:
+      213: -4339059229403166396
+    second: Hunter Sprite-Sheet_71
+  - first:
+      213: -2208322576211890183
+    second: Hunter Sprite-Sheet_72
+  - first:
+      213: -3053674811787264282
+    second: Hunter Sprite-Sheet_73
+  - first:
+      213: 7028255820242451880
+    second: Hunter Sprite-Sheet_74
+  - first:
+      213: -4539889336736441772
+    second: Hunter Sprite-Sheet_75
+  - first:
+      213: -1129160330270217867
+    second: Hunter Sprite-Sheet_76
+  - first:
+      213: -6976450854328863899
+    second: Hunter Sprite-Sheet_77
+  - first:
+      213: 329599315301403744
+    second: Hunter Sprite-Sheet_78
+  - first:
+      213: -6321261573677409739
+    second: Hunter Sprite-Sheet_79
+  - first:
+      213: -5879422741451684961
+    second: Hunter Sprite-Sheet_80
+  - first:
+      213: -8917465231595727957
+    second: Hunter Sprite-Sheet_81
+  - first:
+      213: -2260661156320585505
+    second: Hunter Sprite-Sheet_82
+  - first:
+      213: 2554682748599230156
+    second: Hunter Sprite-Sheet_83
+  - first:
+      213: -5923186156243507587
+    second: Hunter Sprite-Sheet_84
+  - first:
+      213: 8481070546280175794
+    second: Hunter Sprite-Sheet_85
+  - first:
+      213: 4471135346275095480
+    second: Hunter Sprite-Sheet_86
+  - first:
+      213: -1050032828711361516
+    second: Hunter Sprite-Sheet_87
+  - first:
+      213: 7542403493340181757
+    second: Hunter Sprite-Sheet_88
+  - first:
+      213: -7734931667552941957
+    second: Hunter Sprite-Sheet_89
+  - first:
+      213: 8183316528554082859
+    second: Hunter Sprite-Sheet_90
+  - first:
+      213: -3758382553164344015
+    second: Hunter Sprite-Sheet_91
+  - first:
+      213: 2888711953257309332
+    second: Hunter Sprite-Sheet_92
+  - first:
+      213: -7454212447124300925
+    second: Hunter Sprite-Sheet_93
+  - first:
+      213: 3074184759330427708
+    second: Hunter Sprite-Sheet_94
+  - first:
+      213: -970912696325210596
+    second: Hunter Sprite-Sheet_95
+  - first:
+      213: 6156537804161988746
+    second: Hunter Sprite-Sheet_96
+  - first:
+      213: -739303064732287953
+    second: Hunter Sprite-Sheet_97
+  - first:
+      213: -370332259388451719
+    second: Hunter Sprite-Sheet_98
+  - first:
+      213: -7275956579258179080
+    second: Hunter Sprite-Sheet_99
+  - first:
+      213: 4326441837855458836
+    second: Hunter Sprite-Sheet_100
+  - first:
+      213: 7153474046757626534
+    second: Hunter Sprite-Sheet_101
+  - first:
+      213: 7206130522593902610
+    second: Hunter Sprite-Sheet_102
+  - first:
+      213: -1420719916054744946
+    second: Hunter Sprite-Sheet_103
+  - first:
+      213: 9179938575539703680
+    second: Hunter Sprite-Sheet_104
+  - first:
+      213: 8101238623993667589
+    second: Hunter Sprite-Sheet_105
+  - first:
+      213: -8327889681964543294
+    second: Hunter Sprite-Sheet_106
+  - first:
+      213: 5226243646347749051
+    second: Hunter Sprite-Sheet_107
+  - first:
+      213: 6192115760786955328
+    second: Hunter Sprite-Sheet_108
+  - first:
+      213: 8679490760733504280
+    second: Hunter Sprite-Sheet_109
+  - first:
+      213: 6665187098976491582
+    second: Hunter Sprite-Sheet_110
+  - first:
+      213: -5196010148468009362
+    second: Hunter Sprite-Sheet_111
+  - first:
+      213: 3191764974909399890
+    second: Hunter Sprite-Sheet_112
+  - first:
+      213: -706044991844767607
+    second: Hunter Sprite-Sheet_113
+  - first:
+      213: -1683797469201783611
+    second: Hunter Sprite-Sheet_114
+  - first:
+      213: -1877119803950318543
+    second: Hunter Sprite-Sheet_115
+  - first:
+      213: 6745834645003705630
+    second: Hunter Sprite-Sheet_116
+  - first:
+      213: -1312032790441664045
+    second: Hunter Sprite-Sheet_117
+  - first:
+      213: -6169056462373481098
+    second: Hunter Sprite-Sheet_118
+  - first:
+      213: -2007485636269570723
+    second: Hunter Sprite-Sheet_119
+  - first:
+      213: -3740756996346098519
+    second: Hunter Sprite-Sheet_120
+  - first:
+      213: 8976512370483363779
+    second: Hunter Sprite-Sheet_121
+  - first:
+      213: 7250446734594492892
+    second: Hunter Sprite-Sheet_122
+  - first:
+      213: -8189325539946594461
+    second: Hunter Sprite-Sheet_123
+  - first:
+      213: -7941390086032653090
+    second: Hunter Sprite-Sheet_124
+  - first:
+      213: -227696365653962781
+    second: Hunter Sprite-Sheet_125
+  - first:
+      213: 457695671905369362
+    second: Hunter Sprite-Sheet_126
+  - first:
+      213: -6124731646964615826
+    second: Hunter Sprite-Sheet_127
+  - first:
+      213: 5166976745454860524
+    second: Hunter Sprite-Sheet_0
+  - first:
+      213: -8459203946072997821
+    second: Hunter Sprite-Sheet_1
+  - first:
+      213: 4460497994334921000
+    second: Hunter Sprite-Sheet_2
+  - first:
+      213: 571041246324648413
+    second: Hunter Sprite-Sheet_3
+  - first:
+      213: 3997360503870970442
+    second: Hunter Sprite-Sheet_4
+  - first:
+      213: -14416175649638410
+    second: Hunter Sprite-Sheet_5
+  - first:
+      213: 4064669905189674871
+    second: Hunter Sprite-Sheet_6
+  - first:
+      213: 1130877110086868492
+    second: Hunter Sprite-Sheet_7
+  - first:
+      213: 1250041365525031518
+    second: Hunter Sprite-Sheet_8
+  - first:
+      213: -3438707657468029867
+    second: Hunter Sprite-Sheet_9
+  - first:
+      213: -2482156881412241227
+    second: Hunter Sprite-Sheet_10
+  - first:
+      213: 8458956880634433709
+    second: Hunter Sprite-Sheet_11
+  - first:
+      213: 3651288194488411036
+    second: Hunter Sprite-Sheet_12
+  - first:
+      213: 7693780510416344576
+    second: Hunter Sprite-Sheet_13
+  - first:
+      213: 1739277677653097522
+    second: Hunter Sprite-Sheet_14
+  - first:
+      213: 1637726428563983786
+    second: Hunter Sprite-Sheet_15
+  - first:
+      213: -6095895409646478073
+    second: Hunter Sprite-Sheet_16
+  - first:
+      213: 7360117410323813135
+    second: Hunter Sprite-Sheet_17
+  - first:
+      213: 9086674877327303703
+    second: Hunter Sprite-Sheet_18
+  - first:
+      213: 3052129455041627285
+    second: Hunter Sprite-Sheet_19
+  - first:
+      213: -429331465411019316
+    second: Hunter Sprite-Sheet_20
+  - first:
+      213: 8730692147233413155
+    second: Hunter Sprite-Sheet_21
+  - first:
+      213: 7295030291032216129
+    second: Hunter Sprite-Sheet_22
+  - first:
+      213: -8722078936103914376
+    second: Hunter Sprite-Sheet_23
+  - first:
+      213: 8362153639376214530
+    second: Hunter Sprite-Sheet_24
+  - first:
+      213: -6219641857349179157
+    second: Hunter Sprite-Sheet_25
+  - first:
+      213: -7650037812171867960
+    second: Hunter Sprite-Sheet_26
+  - first:
+      213: 1953273793266141520
+    second: Hunter Sprite-Sheet_27
+  - first:
+      213: -719576036656754802
+    second: Hunter Sprite-Sheet_28
+  - first:
+      213: 2261663149741596015
+    second: Hunter Sprite-Sheet_29
+  - first:
+      213: 4558509968355949894
+    second: Hunter Sprite-Sheet_30
+  - first:
+      213: 6960333650417164560
+    second: Hunter Sprite-Sheet_31
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Hunter Sprite-Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 640
+        width: 45
+        height: 110
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce87a8369f9c4b740800000000000000
+      internalID: 5166976745454860524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hunter Sprite-Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 640
+        width: 45
+        height: 110
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3408cbf64deda9a80800000000000000
+      internalID: -8459203946072997821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hunter Sprite-Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 640
+        width: 45
+        height: 110
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 821eca90b4fd6ed30800000000000000
+      internalID: 4460497994334921000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hunter Sprite-Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 426
+        y: 640
+        width: 57
+        height: 110
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd9e64fecfebce700800000000000000
+      internalID: 571041246324648413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hunter Sprite-Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 554
+        y: 640
+        width: 65
+        height: 109
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4ad768033a797730800000000000000
+      internalID: 3997360503870970442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hunter Sprite-Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 682
+        y: 640
+        width: 65
+        height: 109
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f7326b8098cccff0800000000000000
+      internalID: -14416175649638410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hunter Sprite-Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 512
+        width: 67
+        height: 109
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77f1d044ebb986830800000000000000
+      internalID: 4064669905189674871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hunter Sprite-Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 512
+        width: 68
+        height: 109
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0e195f6dbea1bf00800000000000000
+      internalID: 1130877110086868492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hunter Sprite-Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 512
+        width: 68
+        height: 109
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5ae9aabff9095110800000000000000
+      internalID: 1250041365525031518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hunter Sprite-Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 426
+        y: 512
+        width: 64
+        height: 109
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 554d336ca914740d0800000000000000
+      internalID: -3438707657468029867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hunter Sprite-Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 554
+        y: 512
+        width: 64
+        height: 109
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b8c1a6a77b9d8dd0800000000000000
+      internalID: -2482156881412241227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hunter Sprite-Sheet_11
+      rect:
+        serializedVersion: 2
+        x: 682
+        y: 512
+        width: 64
+        height: 109
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da0df882770446570800000000000000
+      internalID: 8458956880634433709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hunter Sprite-Sheet_12
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 384
+        width: 64
+        height: 108
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c932f0d744bfba230800000000000000
+      internalID: 3651288194488411036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hunter Sprite-Sheet_13
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 384
+        width: 64
+        height: 108
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 006903f5c9cc5ca60800000000000000
+      internalID: 7693780510416344576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hunter Sprite-Sheet_14
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 384
+        width: 64
+        height: 107
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23c774e25d7232810800000000000000
+      internalID: 1739277677653097522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hunter Sprite-Sheet_15
+      rect:
+        serializedVersion: 2
+        x: 426
+        y: 384
+        width: 64
+        height: 107
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aad43dd728f5ab610800000000000000
+      internalID: 1637726428563983786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hunter Sprite-Sheet_16
+      rect:
+        serializedVersion: 2
+        x: 554
+        y: 384
+        width: 64
+        height: 108
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70d56102c67076ba0800000000000000
+      internalID: -6095895409646478073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hunter Sprite-Sheet_17
+      rect:
+        serializedVersion: 2
+        x: 682
+        y: 384
+        width: 64
+        height: 108
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f03d4830ac3642660800000000000000
+      internalID: 7360117410323813135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hunter Sprite-Sheet_18
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 256
+        width: 64
+        height: 109
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7146f8c58aa5a1e70800000000000000
+      internalID: 9086674877327303703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hunter Sprite-Sheet_19
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 256
+        width: 64
+        height: 109
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 594434881975b5a20800000000000000
+      internalID: 3052129455041627285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hunter Sprite-Sheet_20
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 256
+        width: 65
+        height: 109
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ccd37419e45ba0af0800000000000000
+      internalID: -429331465411019316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hunter Sprite-Sheet_21
+      rect:
+        serializedVersion: 2
+        x: 426
+        y: 256
+        width: 65
+        height: 108
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 328d32f2046a92970800000000000000
+      internalID: 8730692147233413155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hunter Sprite-Sheet_22
+      rect:
+        serializedVersion: 2
+        x: 554
+        y: 256
+        width: 65
+        height: 107
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14290b226672d3560800000000000000
+      internalID: 7295030291032216129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hunter Sprite-Sheet_23
+      rect:
+        serializedVersion: 2
+        x: 682
+        y: 256
+        width: 65
+        height: 108
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 874fb9e4b63f4f680800000000000000
+      internalID: -8722078936103914376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hunter Sprite-Sheet_24
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 128
+        width: 65
+        height: 109
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20a52403e665c0470800000000000000
+      internalID: 8362153639376214530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hunter Sprite-Sheet_25
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 128
+        width: 70
+        height: 109
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be82d8e0fa46fa9a0800000000000000
+      internalID: -6219641857349179157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hunter Sprite-Sheet_26
+      rect:
+        serializedVersion: 2
+        x: 297
+        y: 128
+        width: 72
+        height: 109
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c87037342b95d590800000000000000
+      internalID: -7650037812171867960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hunter Sprite-Sheet_27
+      rect:
+        serializedVersion: 2
+        x: 425
+        y: 128
+        width: 83
+        height: 109
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05945b48a2c6b1b10800000000000000
+      internalID: 1953273793266141520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hunter Sprite-Sheet_28
+      rect:
+        serializedVersion: 2
+        x: 554
+        y: 128
+        width: 82
+        height: 109
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8fc03a386d8306f0800000000000000
+      internalID: -719576036656754802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hunter Sprite-Sheet_29
+      rect:
+        serializedVersion: 2
+        x: 682
+        y: 128
+        width: 85
+        height: 109
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6d50f1e6aa036f10800000000000000
+      internalID: 2261663149741596015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hunter Sprite-Sheet_30
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 0
+        width: 81
+        height: 109
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64dfee80aa4134f30800000000000000
+      internalID: 4558509968355949894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hunter Sprite-Sheet_31
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 0
+        width: 64
+        height: 109
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 011205fd392189060800000000000000
+      internalID: 6960333650417164560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 2ca6924a73104f046bd40142a3d1aad5
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

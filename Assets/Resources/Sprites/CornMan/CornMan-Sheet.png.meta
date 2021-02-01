@@ -1,0 +1,415 @@
+fileFormatVersion: 2
+guid: ed8a0cc6c4899a546a87d1f2e388cb45
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8733698485219860956
+    second: CornMan-Sheet_0
+  - first:
+      213: 7459374889790882611
+    second: CornMan-Sheet_1
+  - first:
+      213: 2938583188421421332
+    second: CornMan-Sheet_2
+  - first:
+      213: -4537875886378630301
+    second: CornMan-Sheet_3
+  - first:
+      213: 6851469826264527968
+    second: CornMan-Sheet_4
+  - first:
+      213: -4211284297067881262
+    second: CornMan-Sheet_5
+  - first:
+      213: -3692631180082699762
+    second: CornMan-Sheet_6
+  - first:
+      213: -122406232108510275
+    second: CornMan-Sheet_7
+  - first:
+      213: -3455207485402674046
+    second: CornMan-Sheet_8
+  - first:
+      213: -3631236635966039051
+    second: CornMan-Sheet_9
+  - first:
+      213: 6452661689552152167
+    second: CornMan-Sheet_10
+  - first:
+      213: -6430188656467789889
+    second: CornMan-Sheet_0
+  - first:
+      213: -3389589610616082905
+    second: CornMan-Sheet_1
+  - first:
+      213: 3168092744493282859
+    second: CornMan-Sheet_2
+  - first:
+      213: 8102490732685139267
+    second: CornMan-Sheet_3
+  - first:
+      213: 2271675343633488590
+    second: CornMan-Sheet_4
+  - first:
+      213: 862225965812003953
+    second: CornMan-Sheet_5
+  - first:
+      213: -5207207589291394083
+    second: CornMan-Sheet_6
+  - first:
+      213: 7457288281811747068
+    second: CornMan-Sheet_7
+  - first:
+      213: -5077310245939725101
+    second: CornMan-Sheet_8
+  - first:
+      213: 7658539877171234929
+    second: CornMan-Sheet_9
+  - first:
+      213: -3407445567404843020
+    second: CornMan-Sheet_10
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 200
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: CornMan-Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 521
+        width: 126
+        height: 224
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb7bd7c4c7163c6a0800000000000000
+      internalID: -6430188656467789889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CornMan-Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 253
+        y: 521
+        width: 126
+        height: 224
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72eafdc3532c5f0d0800000000000000
+      internalID: -3389589610616082905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CornMan-Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 454
+        y: 521
+        width: 126
+        height: 220
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b26b30bd09357fb20800000000000000
+      internalID: 3168092744493282859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CornMan-Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 654
+        y: 521
+        width: 126
+        height: 220
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34d979d7464d17070800000000000000
+      internalID: 8102490732685139267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CornMan-Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 271
+        width: 126
+        height: 216
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eca994e60bc968f10800000000000000
+      internalID: 2271675343633488590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CornMan-Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 271
+        width: 126
+        height: 216
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 174b75892fd37fb00800000000000000
+      internalID: 862225965812003953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CornMan-Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 454
+        y: 271
+        width: 126
+        height: 220
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ddb719859484cb7b0800000000000000
+      internalID: -5207207589291394083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CornMan-Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 654
+        y: 271
+        width: 126
+        height: 220
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf082119e2c9d7760800000000000000
+      internalID: 7457288281811747068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CornMan-Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 21
+        width: 126
+        height: 220
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3dcbf486b35c989b0800000000000000
+      internalID: -5077310245939725101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CornMan-Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 253
+        y: 21
+        width: 126
+        height: 224
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17884fc0179984a60800000000000000
+      internalID: 7658539877171234929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CornMan-Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 453
+        y: 21
+        width: 126
+        height: 224
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ffda535f4256b0d0800000000000000
+      internalID: -3407445567404843020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 0e8895ecf11f86f4e92b1b04938b8204
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
